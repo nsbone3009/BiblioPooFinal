@@ -48,7 +48,7 @@
             this.contenedorPerfil = new System.Windows.Forms.ListBox();
             this.ptbxPerfil = new System.Windows.Forms.PictureBox();
             this.lbUsuario = new System.Windows.Forms.Label();
-            this.btnReportes = new System.Windows.Forms.Panel();
+            this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.ListaFlecha = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbxPrestamo)).BeginInit();
@@ -333,12 +333,12 @@
             this.lbUsuario.TabIndex = 0;
             this.lbUsuario.Text = "Khriz Coronel";
             // 
-            // btnReportes
+            // pnlPrincipal
             // 
-            this.btnReportes.Location = new System.Drawing.Point(180, 60);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(1020, 640);
-            this.btnReportes.TabIndex = 5;
+            this.pnlPrincipal.Location = new System.Drawing.Point(180, 60);
+            this.pnlPrincipal.Name = "pnlPrincipal";
+            this.pnlPrincipal.Size = new System.Drawing.Size(1020, 640);
+            this.pnlPrincipal.TabIndex = 5;
             // 
             // ListaFlecha
             // 
@@ -355,7 +355,7 @@
             this.ClientSize = new System.Drawing.Size(1200, 700);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnReportes);
+            this.Controls.Add(this.pnlPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -382,7 +382,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnResumen;
-        private System.Windows.Forms.Panel btnReportes;
+        private System.Windows.Forms.Panel pnlPrincipal;
         private System.Windows.Forms.PictureBox ptbxPerfil;
         private System.Windows.Forms.Label lbUsuario;
         private System.Windows.Forms.PictureBox ptbxBiblioteca;

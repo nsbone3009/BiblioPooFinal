@@ -32,10 +32,10 @@ namespace Nueva_Biblioteca
         }
         private void btnResumen_Click(object sender, EventArgs e)
         {
-            btnReportes.Controls.Clear();
+            pnlPrincipal.Controls.Clear();
             frmResumen frm = frmResumen.LlamarFormulario();
             frm.TopLevel = false;
-            btnReportes.Controls.Add(frm);
+            pnlPrincipal.Controls.Add(frm);
             frm.Mostrar();
             frm.Show();
         }
@@ -51,7 +51,7 @@ namespace Nueva_Biblioteca
             ptbxPrestamo.BackgroundImage = ListaFlecha.Images[0];
             frmResumen frm = frmResumen.LlamarFormulario();
             frm.TopLevel = false;
-            btnReportes.Controls.Add(frm);
+            pnlPrincipal.Controls.Add(frm);
             frm.Show();
         }
 
@@ -84,9 +84,9 @@ namespace Nueva_Biblioteca
 
         private void LlamarFormulario(Form formulario)
         {
-            btnReportes.Controls.Clear();
+            pnlPrincipal.Controls.Clear();
             formulario.TopLevel = false;
-            btnReportes.Controls.Add(formulario);
+            pnlPrincipal.Controls.Add(formulario);
             formulario.Show();
         }
 
