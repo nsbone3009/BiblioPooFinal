@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\scarl\\onedrive\\escritorio\\nueva-bilbioteca\\nueva-biblioteca\\dsbiblioteca.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
-      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\dsbiblioteca.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\scarl\\onedrive\\escritorio\\nueva-bilbioteca\\nueva-biblioteca\\frmpantallaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmpantallaprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\scarl\\onedrive\\escritorio\\nueva-bilbioteca\\nueva-biblioteca\\frmreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\nueva-biblioteca\\frmreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\scarl\\onedrive\\escritorio\\nueva-bilbioteca\\nueva-biblioteca\\frmrepoporlector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmrepoporlector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\scarl\\onedrive\\escritorio\\nueva-bilbioteca\\nueva-biblioteca\\frmrepoporlector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmrepoporlector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\scarl\\onedrive\\escritorio\\nueva-bilbioteca\\nueva-biblioteca\\frmseleccionlectores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmseleccionlectores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\scarl\\onedrive\\escritorio\\nueva-bilbioteca\\nueva-biblioteca\\frmreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,41 +26,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmRepoPorLector.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\frmRepoPorLector.cs",
-              "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmRepoPorLector.cs",
-              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\frmRepoPorLector.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Nueva-Biblioteca\\frmRepoPorLector.cs [Dise\u00F1o]",
+              "DocumentIndex": 0,
+              "Title": "frmPantallaPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\frmPantallaPrincipal.cs",
+              "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmPantallaPrincipal.cs",
+              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\frmPantallaPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Nueva-Biblioteca\\frmPantallaPrincipal.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T06:31:34.624Z",
+              "WhenOpened": "2024-09-10T07:15:40.697Z",
               "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmRepoPorLector.cs",
-              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\frmRepoPorLector.cs",
-              "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmRepoPorLector.cs",
-              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\frmRepoPorLector.cs",
-              "RelativeToolTip": "Nueva-Biblioteca\\frmRepoPorLector.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAACNAQAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T06:23:58.526Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmSeleccionLectores.cs",
-              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\frmSeleccionLectores.cs",
-              "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmSeleccionLectores.cs",
-              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\frmSeleccionLectores.cs",
-              "RelativeToolTip": "Nueva-Biblioteca\\frmSeleccionLectores.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwCQAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T06:22:19.135Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -89,30 +47,6 @@
               "ViewState": "AQIAAAkAAAAAAAAAAAAqwA0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-10T05:24:47.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmReportes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\frmReportes.cs",
-              "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmReportes.cs",
-              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\frmReportes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Nueva-Biblioteca\\frmReportes.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T05:15:08.982Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DSbiblioteca.xsd",
-              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\DSbiblioteca.xsd",
-              "RelativeDocumentMoniker": "Nueva-Biblioteca\\DSbiblioteca.xsd",
-              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\DSbiblioteca.xsd",
-              "RelativeToolTip": "Nueva-Biblioteca\\DSbiblioteca.xsd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
-              "WhenOpened": "2024-09-10T05:09:27.043Z",
               "EditorCaption": ""
             }
           ]
