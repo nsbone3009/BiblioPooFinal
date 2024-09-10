@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nueva_Biblioteca</RootNamespace>
+    <AssemblyName>Nueva-Biblioteca</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="csAutores.cs" />
+    <Compile Include="csConexionDataBase.cs" />
+    <Compile Include="csCorreoElectronico.cs" />
+    <Compile Include="csEditorial.cs" />
+    <Compile Include="csGenero.cs" />
+    <Compile Include="csEnvioDeAvisoDevolucion.cs" />
+    <Compile Include="csGestionPrestamos.cs" />
+    <Compile Include="csLectores.cs" />
+    <Compile Include="csLLenarDataGridView.cs" />
+    <Compile Include="csPrestamos.cs" />
+    <Compile Include="csReutilización.cs" />
+    <Compile Include="csLibro.cs" />
+    <Compile Include="csEmail.cs" />
+    <Compile Include="csLogin.cs" />
+    <Compile Include="csUsuarios.cs" />
+    <Compile Include="DSbiblioteca.cs">
+      <DependentUpon>DSbiblioteca.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSbiblioteca.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSbiblioteca.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmActualizacionDContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmActualizacionDContraseña.Designer.cs">
+      <DependentUpon>FrmActualizacionDContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarOEditarLector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarOEditarLector.Designer.cs">
+      <DependentUpon>frmAgregarOEditarLector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarOEditarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarOEditarLibro.Designer.cs">
+      <DependentUpon>frmAgregarOEditarLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarOEditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarOEditarUsuario.Designer.cs">
+      <DependentUpon>frmAgregarOEditarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarPrestamos.Designer.cs">
+      <DependentUpon>frmConsultarPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDevolverLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDevolverLibro.Designer.cs">
+      <DependentUpon>frmDevolverLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLectores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLectores.Designer.cs">
+      <DependentUpon>frmLectores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLibros.Designer.cs">
+      <DependentUpon>frmLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarOEditarAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarOEditarAutor.Designer.cs">
+      <DependentUpon>frmAgregarOEditarAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAutores.Designer.cs">
+      <DependentUpon>frmAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarOEditarEditorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarOEditarEditorial.Designer.cs">
+      <DependentUpon>frmAgregarOEditarEditorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditorial.Designer.cs">
+      <DependentUpon>frmEditorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarOEditarGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarOEditarGenero.Designer.cs">
+      <DependentUpon>frmAgregarOEditarGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenero.Designer.cs">
+      <DependentUpon>frmGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrestamoRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrestamoRegistrar.Designer.cs">
+      <DependentUpon>frmPrestamoRegistrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRecuperacionDContrasña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRecuperacionDContrasña.Designer.cs">
+      <DependentUpon>FrmRecuperacionDContrasña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRepoLeccctorTOP1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRepoLeccctorTOP1.Designer.cs">
+      <DependentUpon>frmRepoLeccctorTOP1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRepoPorLector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRepoPorLector.Designer.cs">
+      <DependentUpon>frmRepoPorLector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRepoTOP1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRepoTOP1.Designer.cs">
+      <DependentUpon>frmRepoTOP1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRepoTOP5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRepoTOP5.Designer.cs">
+      <DependentUpon>frmRepoTOP5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmResumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResumen.Designer.cs">
+      <DependentUpon>frmResumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPantallaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPantallaPrincipal.Designer.cs">
+      <DependentUpon>frmPantallaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeleccionAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeleccionAutor.Designer.cs">
+      <DependentUpon>frmSeleccionAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeleccionLectores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeleccionLectores.Designer.cs">
+      <DependentUpon>frmSeleccionLectores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeleccionLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeleccionLibros.Designer.cs">
+      <DependentUpon>frmSeleccionLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="FrmActualizacionDContraseña.resx">
+      <DependentUpon>FrmActualizacionDContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarOEditarLector.resx">
+      <DependentUpon>frmAgregarOEditarLector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarOEditarLibro.resx">
+      <DependentUpon>frmAgregarOEditarLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarOEditarUsuario.resx">
+      <DependentUpon>frmAgregarOEditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarPrestamos.resx">
+      <DependentUpon>frmConsultarPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDevolverLibro.resx">
+      <DependentUpon>frmDevolverLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLectores.resx">
+      <DependentUpon>frmLectores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLibros.resx">
+      <DependentUpon>frmLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarOEditarAutor.resx">
+      <DependentUpon>frmAgregarOEditarAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAutores.resx">
+      <DependentUpon>frmAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarOEditarEditorial.resx">
+      <DependentUpon>frmAgregarOEditarEditorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditorial.resx">
+      <DependentUpon>frmEditorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarOEditarGenero.resx">
+      <DependentUpon>frmAgregarOEditarGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenero.resx">
+      <DependentUpon>frmGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrestamoRegistrar.resx">
+      <DependentUpon>frmPrestamoRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRecuperacionDContrasña.resx">
+      <DependentUpon>FrmRecuperacionDContrasña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRepoLeccctorTOP1.resx">
+      <DependentUpon>frmRepoLeccctorTOP1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRepoPorLector.resx">
+      <DependentUpon>frmRepoPorLector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRepoTOP1.resx">
+      <DependentUpon>frmRepoTOP1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRepoTOP5.resx">
+      <DependentUpon>frmRepoTOP5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResumen.resx">
+      <DependentUpon>frmResumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPantallaPrincipal.resx">
+      <DependentUpon>frmPantallaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeleccionAutor.resx">
+      <DependentUpon>frmSeleccionAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeleccionLectores.resx">
+      <DependentUpon>frmSeleccionLectores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeleccionLibros.resx">
+      <DependentUpon>frmSeleccionLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibroMasPrestado.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rpMejorLector.rdlc" />
+    <EmbeddedResource Include="rpPrestamoPorLector.rdlc" />
+    <EmbeddedResource Include="Top5Libros.rdlc" />
+    <None Include="DSbiblioteca.xsc">
+      <DependentUpon>DSbiblioteca.xsd</DependentUpon>
+    </None>
+    <None Include="DSbiblioteca.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSbiblioteca.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSbiblioteca.xss">
+      <DependentUpon>DSbiblioteca.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

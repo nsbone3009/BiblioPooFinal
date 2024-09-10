@@ -1,0 +1,72 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\scarl\\onedrive\\escritorio\\nueva-bilbioteca\\nueva-biblioteca\\frmagregaroeditarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmagregaroeditarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\nueva-biblioteca\\frmagregaroeditarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmagregaroeditarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\nueva-biblioteca\\frmagregaroeditargenero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmagregaroeditargenero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmAgregarOEditarAutor.cs",
+              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\frmAgregarOEditarAutor.cs",
+              "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmAgregarOEditarAutor.cs",
+              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\frmAgregarOEditarAutor.cs",
+              "RelativeToolTip": "Nueva-Biblioteca\\frmAgregarOEditarAutor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T01:36:40.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmAgregarOEditarAutor.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\frmAgregarOEditarAutor.cs",
+              "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmAgregarOEditarAutor.cs",
+              "ToolTip": "C:\\Users\\scarl\\source\\repos\\NUEVABIBLIOTECA2\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\frmAgregarOEditarAutor.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\source\\repos\\NUEVABIBLIOTECA2\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\frmAgregarOEditarAutor.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T01:36:39.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmAgregarOEditarGenero.cs",
+              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\frmAgregarOEditarGenero.cs",
+              "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmAgregarOEditarGenero.cs",
+              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\frmAgregarOEditarGenero.cs",
+              "RelativeToolTip": "Nueva-Biblioteca\\frmAgregarOEditarGenero.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAA6wDEAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-09T01:34:42.021Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
