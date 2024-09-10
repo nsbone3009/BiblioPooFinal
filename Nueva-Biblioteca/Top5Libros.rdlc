@@ -14,22 +14,20 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.02333cm</Height>
+              <Height>1.06302cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox1">
+                    <Textbox Name="Textbox5">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Numero de prestamos</Value>
+                              <Value>Numero de Prestamos</Value>
                               <Style>
-                                <FontFamily>microsoft sans Serif</FontFamily>
-                                <FontSize>16pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
+                                <FontSize>14pt</FontSize>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -39,7 +37,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox1</rd:DefaultName>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -56,18 +54,16 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox4">
+                    <Textbox Name="Textbox7">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Titulo</Value>
+                              <Value>Titulo del Libro</Value>
                               <Style>
-                                <FontFamily>microsoft sans Serif</FontFamily>
-                                <FontSize>16pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
+                                <FontSize>14pt</FontSize>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -77,7 +73,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox4</rd:DefaultName>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -95,7 +91,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>1.02333cm</Height>
+              <Height>1.06302cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -108,8 +104,7 @@
                             <TextRun>
                               <Value>=Fields!cant.Value</Value>
                               <Style>
-                                <FontFamily>microsoft sans Serif</FontFamily>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>14pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -143,8 +138,7 @@
                             <TextRun>
                               <Value>=Fields!Titulo.Value</Value>
                               <Style>
-                                <FontFamily>microsoft sans Serif</FontFamily>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>14pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -187,10 +181,10 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
-        <Top>0.79057cm</Top>
-        <Left>0.50271cm</Left>
-        <Height>2.04666cm</Height>
+        <DataSetName>dsTop5</DataSetName>
+        <Top>1.12544cm</Top>
+        <Left>3.36021cm</Left>
+        <Height>2.12604cm</Height>
         <Width>14.26344cm</Width>
         <Style>
           <Border>
@@ -199,13 +193,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>297mm</Height>
     <Style />
   </Body>
-  <Width>6.08428in</Width>
+  <Width>210mm</Width>
   <Page>
     <PageHeader>
-      <Height>5.38014cm</Height>
+      <Height>5.51243cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -231,7 +225,7 @@
             </Paragraph>
           </Paragraphs>
           <Top>0.97014cm</Top>
-          <Left>5.62511cm</Left>
+          <Left>8.48261cm</Left>
           <Height>1.20855cm</Height>
           <Width>9.14104cm</Width>
           <Style>
@@ -267,7 +261,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>3.43076cm</Top>
-          <Left>5.62511cm</Left>
+          <Left>8.48261cm</Left>
           <Height>1.31438cm</Height>
           <Width>9.14104cm</Width>
           <ZIndex>1</ZIndex>
@@ -283,7 +277,7 @@
         </Textbox>
         <Line Name="Line1">
           <Top>2.85777cm</Top>
-          <Left>5.62511cm</Left>
+          <Left>8.48261cm</Left>
           <Height>0cm</Height>
           <Width>9.14104cm</Width>
           <ZIndex>2</ZIndex>
@@ -298,7 +292,7 @@
           <Value>Logo_1</Value>
           <Sizing>FitProportional</Sizing>
           <Top>0.95208cm</Top>
-          <Left>0.50271cm</Left>
+          <Left>3.36021cm</Left>
           <Height>4.25167cm</Height>
           <Width>4.2252cm</Width>
           <ZIndex>3</ZIndex>
@@ -335,7 +329,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="dsTop5">
       <Query>
         <DataSourceName>DSbiblioteca</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -343,7 +337,7 @@
       <Fields>
         <Field Name="cant">
           <DataField>cant</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Titulo">
           <DataField>Titulo</DataField>
@@ -352,11 +346,11 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DSbiblioteca</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\scarl\source\repos\NUEVABIBLIOTECA2\NUEVA-BILBIOTECA\Nueva-Biblioteca\DSbiblioteca.xsd</rd:SchemaPath>
-        <rd:TableName>Top5</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>Top5TableAdapter</rd:TableAdapterName>
+        <rd:SchemaPath>C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\DSbiblioteca.xsd</rd:SchemaPath>
+        <rd:TableName>dtTop5</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

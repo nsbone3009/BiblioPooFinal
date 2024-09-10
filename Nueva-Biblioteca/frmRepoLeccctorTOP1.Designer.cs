@@ -31,18 +31,12 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dSbiblioteca = new Nueva_Biblioteca.DSbiblioteca();
-            this.lectorFrecuenteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lectorFrecuenteTableAdapter = new Nueva_Biblioteca.DSbibliotecaTableAdapters.LectorFrecuenteTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dSbiblioteca)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lectorFrecuenteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.lectorFrecuenteBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Nueva_Biblioteca.rpMejorLector.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -50,20 +44,6 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // dSbiblioteca
-            // 
-            this.dSbiblioteca.DataSetName = "DSbiblioteca";
-            this.dSbiblioteca.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lectorFrecuenteBindingSource
-            // 
-            this.lectorFrecuenteBindingSource.DataMember = "LectorFrecuente";
-            this.lectorFrecuenteBindingSource.DataSource = this.dSbiblioteca;
-            // 
-            // lectorFrecuenteTableAdapter
-            // 
-            this.lectorFrecuenteTableAdapter.ClearBeforeFill = true;
             // 
             // frmRepoLeccctorTOP1
             // 
@@ -75,8 +55,6 @@
             this.Name = "frmRepoLeccctorTOP1";
             this.Text = "frmRepoLeccctorTOP1";
             this.Load += new System.EventHandler(this.frmRepoLeccctorTOP1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dSbiblioteca)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lectorFrecuenteBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -84,8 +62,5 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private DSbiblioteca dSbiblioteca;
-        private System.Windows.Forms.BindingSource lectorFrecuenteBindingSource;
-        private DSbibliotecaTableAdapters.LectorFrecuenteTableAdapter lectorFrecuenteTableAdapter;
     }
 }

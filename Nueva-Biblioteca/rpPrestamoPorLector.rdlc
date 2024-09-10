@@ -2,61 +2,23 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Tablix Name="Tablix2">
+      <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.92823cm</Width>
+              <Width>6.34088cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.63188cm</Width>
+              <Width>6.34088cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.62938cm</Width>
+              <Width>3.77772cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.99688cm</Height>
+              <Height>0.81167cm</Height>
               <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox15">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Titulo</Value>
-                              <Style>
-                                <FontFamily>Microsoft Sans Serif</FontFamily>
-                                <FontSize>16pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox15</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>#0049ae</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="Textbox5">
@@ -66,10 +28,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Genero</Value>
+                              <Value>Titulo</Value>
                               <Style>
-                                <FontFamily>Microsoft Sans Serif</FontFamily>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -106,8 +67,7 @@
                             <TextRun>
                               <Value>Editorial</Value>
                               <Style>
-                                <FontFamily>Microsoft Sans Serif</FontFamily>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -133,10 +93,47 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox11">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Genero</Value>
+                              <Style>
+                                <FontSize>14pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>#0049ae</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.99688cm</Height>
+              <Height>0.89104cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -149,8 +146,7 @@
                             <TextRun>
                               <Value>=Fields!Titulo.Value</Value>
                               <Style>
-                                <FontFamily>Microsoft Sans Serif</FontFamily>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>14pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -175,17 +171,16 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Genero">
+                    <Textbox Name="Editorial">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Genero.Value</Value>
+                              <Value>=Fields!Editorial.Value</Value>
                               <Style>
-                                <FontFamily>Microsoft Sans Serif</FontFamily>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>14pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -194,7 +189,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Genero</rd:DefaultName>
+                      <rd:DefaultName>Editorial</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -210,17 +205,16 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Editorial">
+                    <Textbox Name="Genero">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Editorial.Value</Value>
+                              <Value>=Fields!Genero.Value</Value>
                               <Style>
-                                <FontFamily>Microsoft Sans Serif</FontFamily>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>14pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -229,7 +223,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Editorial</rd:DefaultName>
+                      <rd:DefaultName>Genero</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -264,11 +258,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
-        <Top>1.05516cm</Top>
-        <Left>1.29526cm</Left>
-        <Height>1.99376cm</Height>
-        <Width>15.18948cm</Width>
+        <DataSetName>dsPrestamoPorLector</DataSetName>
+        <Top>1.29329cm</Top>
+        <Left>2.56526cm</Left>
+        <Height>1.70271cm</Height>
+        <Width>16.45948cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -276,10 +270,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>297mm</Height>
     <Style />
   </Body>
-  <Width>6.96192in</Width>
+  <Width>210mm</Width>
   <Page>
     <PageHeader>
       <Height>5.31812cm</Height>
@@ -293,7 +287,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>BIBLIOTECA OMAIGA</Value>
+                  <Value>BIBLIOTECA</Value>
                   <Style>
                     <FontFamily>Microsoft Sans Serif</FontFamily>
                     <FontSize>22pt</FontSize>
@@ -308,7 +302,7 @@
             </Paragraph>
           </Paragraphs>
           <Top>0.60377cm</Top>
-          <Left>7.3437cm</Left>
+          <Left>9.8837cm</Left>
           <Height>1.20855cm</Height>
           <Width>9.14104cm</Width>
           <Style>
@@ -324,7 +318,7 @@
         </Textbox>
         <Line Name="Line1">
           <Top>2.22682cm</Top>
-          <Left>7.3437cm</Left>
+          <Left>9.8837cm</Left>
           <Height>0cm</Height>
           <Width>9.14104cm</Width>
           <ZIndex>1</ZIndex>
@@ -339,7 +333,7 @@
           <Value>Img1</Value>
           <Sizing>FitProportional</Sizing>
           <Top>0.60377cm</Top>
-          <Left>1.29526cm</Left>
+          <Left>2.56526cm</Left>
           <Height>4.25167cm</Height>
           <Width>4.25166cm</Width>
           <ZIndex>2</ZIndex>
@@ -369,7 +363,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
           <Top>2.7132cm</Top>
-          <Left>7.3437cm</Left>
+          <Left>9.8837cm</Left>
           <Height>0.65292cm</Height>
           <Width>1.78562cm</Width>
           <ZIndex>3</ZIndex>
@@ -390,7 +384,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!Nombre.Value, "DataSet1")</Value>
+                  <Value>=First(Fields!Nombre.Value, "dsPrestamoPorLector")</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                   </Style>
@@ -400,7 +394,7 @@
             </Paragraph>
           </Paragraphs>
           <Top>2.76612cm</Top>
-          <Left>9.35453cm</Left>
+          <Left>11.89453cm</Left>
           <Height>0.6cm</Height>
           <Width>7.13021cm</Width>
           <ZIndex>4</ZIndex>
@@ -434,7 +428,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
           <Top>3.80544cm</Top>
-          <Left>7.3437cm</Left>
+          <Left>9.8837cm</Left>
           <Height>0.65292cm</Height>
           <Width>1.78562cm</Width>
           <ZIndex>5</ZIndex>
@@ -465,7 +459,7 @@
             </Paragraph>
           </Paragraphs>
           <Top>3.85836cm</Top>
-          <Left>9.35453cm</Left>
+          <Left>11.89453cm</Left>
           <Height>0.6cm</Height>
           <Width>7.13021cm</Width>
           <ZIndex>6</ZIndex>
@@ -506,7 +500,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="dsPrestamoPorLector">
       <Query>
         <DataSourceName>DSbiblioteca</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -531,11 +525,11 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DSbiblioteca</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\scarl\source\repos\NUEVABIBLIOTECA2\NUEVA-BILBIOTECA\Nueva-Biblioteca\DSbiblioteca.xsd</rd:SchemaPath>
-        <rd:TableName>PrestamoPorLector</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>PrestamoPorLectorTableAdapter</rd:TableAdapterName>
+        <rd:SchemaPath>C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\DSbiblioteca.xsd</rd:SchemaPath>
+        <rd:TableName>dtPrestamoPorLector</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

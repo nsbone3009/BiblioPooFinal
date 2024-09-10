@@ -32,19 +32,16 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dSbiblioteca = new Nueva_Biblioteca.DSbiblioteca();
-            this.dSbibliotecaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.top1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.top1TableAdapter = new Nueva_Biblioteca.DSbibliotecaTableAdapters.Top1TableAdapter();
+            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dSbiblioteca)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSbibliotecaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.top1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.top1BindingSource;
+            reportDataSource1.Name = "dsLibroMasPrestado";
+            reportDataSource1.Value = this.dataTable1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Nueva_Biblioteca.LibroMasPrestado.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -58,19 +55,10 @@
             this.dSbiblioteca.DataSetName = "DSbiblioteca";
             this.dSbiblioteca.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dSbibliotecaBindingSource
+            // dataTable1BindingSource
             // 
-            this.dSbibliotecaBindingSource.DataSource = this.dSbiblioteca;
-            this.dSbibliotecaBindingSource.Position = 0;
-            // 
-            // top1BindingSource
-            // 
-            this.top1BindingSource.DataMember = "Top1";
-            this.top1BindingSource.DataSource = this.dSbiblioteca;
-            // 
-            // top1TableAdapter
-            // 
-            this.top1TableAdapter.ClearBeforeFill = true;
+            this.dataTable1BindingSource.DataMember = "DataTable1";
+            this.dataTable1BindingSource.DataSource = this.dSbiblioteca;
             // 
             // frmRepoTOP1
             // 
@@ -83,8 +71,7 @@
             this.Text = "frmRepoTOP1";
             this.Load += new System.EventHandler(this.frmRepoTOP1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dSbiblioteca)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSbibliotecaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.top1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -92,9 +79,7 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource dataTable1BindingSource;
         private DSbiblioteca dSbiblioteca;
-        private System.Windows.Forms.BindingSource dSbibliotecaBindingSource;
-        private System.Windows.Forms.BindingSource top1BindingSource;
-        private DSbibliotecaTableAdapters.Top1TableAdapter top1TableAdapter;
     }
 }

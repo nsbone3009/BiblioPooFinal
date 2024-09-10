@@ -12,8 +12,6 @@ namespace Nueva_Biblioteca
 {
     public partial class frmReportes : Form
     {
-        
-
         private Form activeForm = null;
         frmRepoPorLector lec = new frmRepoPorLector();
         static private frmReportes instancia = null;

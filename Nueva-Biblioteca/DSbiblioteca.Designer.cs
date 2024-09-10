@@ -24,13 +24,13 @@ namespace Nueva_Biblioteca {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DSbiblioteca : global::System.Data.DataSet {
         
-        private Top1DataTable tableTop1;
+        private DataTable1DataTable tableDataTable1;
         
-        private Top5DataTable tableTop5;
+        private dtTop5DataTable tabledtTop5;
         
-        private LectorFrecuenteDataTable tableLectorFrecuente;
+        private dtLectorFrecuenteDataTable tabledtLectorFrecuente;
         
-        private PrestamoPorLectorDataTable tablePrestamoPorLector;
+        private dtPrestamoPorLectorDataTable tabledtPrestamoPorLector;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -60,17 +60,17 @@ namespace Nueva_Biblioteca {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Top1"] != null)) {
-                    base.Tables.Add(new Top1DataTable(ds.Tables["Top1"]));
+                if ((ds.Tables["DataTable1"] != null)) {
+                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
                 }
-                if ((ds.Tables["Top5"] != null)) {
-                    base.Tables.Add(new Top5DataTable(ds.Tables["Top5"]));
+                if ((ds.Tables["dtTop5"] != null)) {
+                    base.Tables.Add(new dtTop5DataTable(ds.Tables["dtTop5"]));
                 }
-                if ((ds.Tables["LectorFrecuente"] != null)) {
-                    base.Tables.Add(new LectorFrecuenteDataTable(ds.Tables["LectorFrecuente"]));
+                if ((ds.Tables["dtLectorFrecuente"] != null)) {
+                    base.Tables.Add(new dtLectorFrecuenteDataTable(ds.Tables["dtLectorFrecuente"]));
                 }
-                if ((ds.Tables["PrestamoPorLector"] != null)) {
-                    base.Tables.Add(new PrestamoPorLectorDataTable(ds.Tables["PrestamoPorLector"]));
+                if ((ds.Tables["dtPrestamoPorLector"] != null)) {
+                    base.Tables.Add(new dtPrestamoPorLectorDataTable(ds.Tables["dtPrestamoPorLector"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -94,9 +94,9 @@ namespace Nueva_Biblioteca {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Top1DataTable Top1 {
+        public DataTable1DataTable DataTable1 {
             get {
-                return this.tableTop1;
+                return this.tableDataTable1;
             }
         }
         
@@ -104,9 +104,9 @@ namespace Nueva_Biblioteca {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Top5DataTable Top5 {
+        public dtTop5DataTable dtTop5 {
             get {
-                return this.tableTop5;
+                return this.tabledtTop5;
             }
         }
         
@@ -114,9 +114,9 @@ namespace Nueva_Biblioteca {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public LectorFrecuenteDataTable LectorFrecuente {
+        public dtLectorFrecuenteDataTable dtLectorFrecuente {
             get {
-                return this.tableLectorFrecuente;
+                return this.tabledtLectorFrecuente;
             }
         }
         
@@ -124,9 +124,9 @@ namespace Nueva_Biblioteca {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PrestamoPorLectorDataTable PrestamoPorLector {
+        public dtPrestamoPorLectorDataTable dtPrestamoPorLector {
             get {
-                return this.tablePrestamoPorLector;
+                return this.tabledtPrestamoPorLector;
             }
         }
         
@@ -197,17 +197,17 @@ namespace Nueva_Biblioteca {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Top1"] != null)) {
-                    base.Tables.Add(new Top1DataTable(ds.Tables["Top1"]));
+                if ((ds.Tables["DataTable1"] != null)) {
+                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
                 }
-                if ((ds.Tables["Top5"] != null)) {
-                    base.Tables.Add(new Top5DataTable(ds.Tables["Top5"]));
+                if ((ds.Tables["dtTop5"] != null)) {
+                    base.Tables.Add(new dtTop5DataTable(ds.Tables["dtTop5"]));
                 }
-                if ((ds.Tables["LectorFrecuente"] != null)) {
-                    base.Tables.Add(new LectorFrecuenteDataTable(ds.Tables["LectorFrecuente"]));
+                if ((ds.Tables["dtLectorFrecuente"] != null)) {
+                    base.Tables.Add(new dtLectorFrecuenteDataTable(ds.Tables["dtLectorFrecuente"]));
                 }
-                if ((ds.Tables["PrestamoPorLector"] != null)) {
-                    base.Tables.Add(new PrestamoPorLectorDataTable(ds.Tables["PrestamoPorLector"]));
+                if ((ds.Tables["dtPrestamoPorLector"] != null)) {
+                    base.Tables.Add(new dtPrestamoPorLectorDataTable(ds.Tables["dtPrestamoPorLector"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -242,28 +242,28 @@ namespace Nueva_Biblioteca {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableTop1 = ((Top1DataTable)(base.Tables["Top1"]));
+            this.tableDataTable1 = ((DataTable1DataTable)(base.Tables["DataTable1"]));
             if ((initTable == true)) {
-                if ((this.tableTop1 != null)) {
-                    this.tableTop1.InitVars();
+                if ((this.tableDataTable1 != null)) {
+                    this.tableDataTable1.InitVars();
                 }
             }
-            this.tableTop5 = ((Top5DataTable)(base.Tables["Top5"]));
+            this.tabledtTop5 = ((dtTop5DataTable)(base.Tables["dtTop5"]));
             if ((initTable == true)) {
-                if ((this.tableTop5 != null)) {
-                    this.tableTop5.InitVars();
+                if ((this.tabledtTop5 != null)) {
+                    this.tabledtTop5.InitVars();
                 }
             }
-            this.tableLectorFrecuente = ((LectorFrecuenteDataTable)(base.Tables["LectorFrecuente"]));
+            this.tabledtLectorFrecuente = ((dtLectorFrecuenteDataTable)(base.Tables["dtLectorFrecuente"]));
             if ((initTable == true)) {
-                if ((this.tableLectorFrecuente != null)) {
-                    this.tableLectorFrecuente.InitVars();
+                if ((this.tabledtLectorFrecuente != null)) {
+                    this.tabledtLectorFrecuente.InitVars();
                 }
             }
-            this.tablePrestamoPorLector = ((PrestamoPorLectorDataTable)(base.Tables["PrestamoPorLector"]));
+            this.tabledtPrestamoPorLector = ((dtPrestamoPorLectorDataTable)(base.Tables["dtPrestamoPorLector"]));
             if ((initTable == true)) {
-                if ((this.tablePrestamoPorLector != null)) {
-                    this.tablePrestamoPorLector.InitVars();
+                if ((this.tabledtPrestamoPorLector != null)) {
+                    this.tabledtPrestamoPorLector.InitVars();
                 }
             }
         }
@@ -276,37 +276,37 @@ namespace Nueva_Biblioteca {
             this.Namespace = "http://tempuri.org/DSbiblioteca.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableTop1 = new Top1DataTable();
-            base.Tables.Add(this.tableTop1);
-            this.tableTop5 = new Top5DataTable();
-            base.Tables.Add(this.tableTop5);
-            this.tableLectorFrecuente = new LectorFrecuenteDataTable();
-            base.Tables.Add(this.tableLectorFrecuente);
-            this.tablePrestamoPorLector = new PrestamoPorLectorDataTable();
-            base.Tables.Add(this.tablePrestamoPorLector);
+            this.tableDataTable1 = new DataTable1DataTable();
+            base.Tables.Add(this.tableDataTable1);
+            this.tabledtTop5 = new dtTop5DataTable();
+            base.Tables.Add(this.tabledtTop5);
+            this.tabledtLectorFrecuente = new dtLectorFrecuenteDataTable();
+            base.Tables.Add(this.tabledtLectorFrecuente);
+            this.tabledtPrestamoPorLector = new dtPrestamoPorLectorDataTable();
+            base.Tables.Add(this.tabledtPrestamoPorLector);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeTop1() {
+        private bool ShouldSerializeDataTable1() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeTop5() {
+        private bool ShouldSerializedtTop5() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeLectorFrecuente() {
+        private bool ShouldSerializedtLectorFrecuente() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializePrestamoPorLector() {
+        private bool ShouldSerializedtPrestamoPorLector() {
             return false;
         }
         
@@ -366,23 +366,23 @@ namespace Nueva_Biblioteca {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void Top1RowChangeEventHandler(object sender, Top1RowChangeEvent e);
+        public delegate void DataTable1RowChangeEventHandler(object sender, DataTable1RowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void Top5RowChangeEventHandler(object sender, Top5RowChangeEvent e);
+        public delegate void dtTop5RowChangeEventHandler(object sender, dtTop5RowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void LectorFrecuenteRowChangeEventHandler(object sender, LectorFrecuenteRowChangeEvent e);
+        public delegate void dtLectorFrecuenteRowChangeEventHandler(object sender, dtLectorFrecuenteRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void PrestamoPorLectorRowChangeEventHandler(object sender, PrestamoPorLectorRowChangeEvent e);
+        public delegate void dtPrestamoPorLectorRowChangeEventHandler(object sender, dtPrestamoPorLectorRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Top1DataTable : global::System.Data.TypedTableBase<Top1Row> {
+        public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
             private global::System.Data.DataColumn columncant;
             
@@ -390,8 +390,8 @@ namespace Nueva_Biblioteca {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Top1DataTable() {
-                this.TableName = "Top1";
+            public DataTable1DataTable() {
+                this.TableName = "DataTable1";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -399,7 +399,7 @@ namespace Nueva_Biblioteca {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal Top1DataTable(global::System.Data.DataTable table) {
+            internal DataTable1DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -416,7 +416,7 @@ namespace Nueva_Biblioteca {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected Top1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DataTable1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -448,46 +448,46 @@ namespace Nueva_Biblioteca {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Top1Row this[int index] {
+            public DataTable1Row this[int index] {
                 get {
-                    return ((Top1Row)(this.Rows[index]));
+                    return ((DataTable1Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Top1RowChangeEventHandler Top1RowChanging;
+            public event DataTable1RowChangeEventHandler DataTable1RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Top1RowChangeEventHandler Top1RowChanged;
+            public event DataTable1RowChangeEventHandler DataTable1RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Top1RowChangeEventHandler Top1RowDeleting;
+            public event DataTable1RowChangeEventHandler DataTable1RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Top1RowChangeEventHandler Top1RowDeleted;
+            public event DataTable1RowChangeEventHandler DataTable1RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddTop1Row(Top1Row row) {
+            public void AddDataTable1Row(DataTable1Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Top1Row AddTop1Row(int cant, string Titulo) {
-                Top1Row rowTop1Row = ((Top1Row)(this.NewRow()));
+            public DataTable1Row AddDataTable1Row(string cant, string Titulo) {
+                DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         cant,
                         Titulo};
-                rowTop1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTop1Row);
-                return rowTop1Row;
+                rowDataTable1Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDataTable1Row);
+                return rowDataTable1Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Top1DataTable cln = ((Top1DataTable)(base.Clone()));
+                DataTable1DataTable cln = ((DataTable1DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -495,7 +495,7 @@ namespace Nueva_Biblioteca {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Top1DataTable();
+                return new DataTable1DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -508,38 +508,36 @@ namespace Nueva_Biblioteca {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columncant = new global::System.Data.DataColumn("cant", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columncant = new global::System.Data.DataColumn("cant", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncant);
                 this.columnTitulo = new global::System.Data.DataColumn("Titulo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTitulo);
-                this.columncant.ReadOnly = true;
-                this.columnTitulo.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Top1Row NewTop1Row() {
-                return ((Top1Row)(this.NewRow()));
+            public DataTable1Row NewDataTable1Row() {
+                return ((DataTable1Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Top1Row(builder);
+                return new DataTable1Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Top1Row);
+                return typeof(DataTable1Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Top1RowChanged != null)) {
-                    this.Top1RowChanged(this, new Top1RowChangeEvent(((Top1Row)(e.Row)), e.Action));
+                if ((this.DataTable1RowChanged != null)) {
+                    this.DataTable1RowChanged(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -547,8 +545,8 @@ namespace Nueva_Biblioteca {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Top1RowChanging != null)) {
-                    this.Top1RowChanging(this, new Top1RowChangeEvent(((Top1Row)(e.Row)), e.Action));
+                if ((this.DataTable1RowChanging != null)) {
+                    this.DataTable1RowChanging(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -556,8 +554,8 @@ namespace Nueva_Biblioteca {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Top1RowDeleted != null)) {
-                    this.Top1RowDeleted(this, new Top1RowChangeEvent(((Top1Row)(e.Row)), e.Action));
+                if ((this.DataTable1RowDeleted != null)) {
+                    this.DataTable1RowDeleted(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -565,14 +563,14 @@ namespace Nueva_Biblioteca {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Top1RowDeleting != null)) {
-                    this.Top1RowDeleting(this, new Top1RowChangeEvent(((Top1Row)(e.Row)), e.Action));
+                if ((this.DataTable1RowDeleting != null)) {
+                    this.DataTable1RowDeleting(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveTop1Row(Top1Row row) {
+            public void RemoveDataTable1Row(DataTable1Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -599,7 +597,7 @@ namespace Nueva_Biblioteca {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Top1DataTable";
+                attribute2.FixedValue = "DataTable1DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -645,7 +643,7 @@ namespace Nueva_Biblioteca {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Top5DataTable : global::System.Data.TypedTableBase<Top5Row> {
+        public partial class dtTop5DataTable : global::System.Data.TypedTableBase<dtTop5Row> {
             
             private global::System.Data.DataColumn columncant;
             
@@ -653,8 +651,8 @@ namespace Nueva_Biblioteca {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Top5DataTable() {
-                this.TableName = "Top5";
+            public dtTop5DataTable() {
+                this.TableName = "dtTop5";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -662,7 +660,7 @@ namespace Nueva_Biblioteca {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal Top5DataTable(global::System.Data.DataTable table) {
+            internal dtTop5DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -679,7 +677,7 @@ namespace Nueva_Biblioteca {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected Top5DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected dtTop5DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -711,46 +709,46 @@ namespace Nueva_Biblioteca {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Top5Row this[int index] {
+            public dtTop5Row this[int index] {
                 get {
-                    return ((Top5Row)(this.Rows[index]));
+                    return ((dtTop5Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Top5RowChangeEventHandler Top5RowChanging;
+            public event dtTop5RowChangeEventHandler dtTop5RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Top5RowChangeEventHandler Top5RowChanged;
+            public event dtTop5RowChangeEventHandler dtTop5RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Top5RowChangeEventHandler Top5RowDeleting;
+            public event dtTop5RowChangeEventHandler dtTop5RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Top5RowChangeEventHandler Top5RowDeleted;
+            public event dtTop5RowChangeEventHandler dtTop5RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddTop5Row(Top5Row row) {
+            public void AdddtTop5Row(dtTop5Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Top5Row AddTop5Row(int cant, string Titulo) {
-                Top5Row rowTop5Row = ((Top5Row)(this.NewRow()));
+            public dtTop5Row AdddtTop5Row(string cant, string Titulo) {
+                dtTop5Row rowdtTop5Row = ((dtTop5Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         cant,
                         Titulo};
-                rowTop5Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTop5Row);
-                return rowTop5Row;
+                rowdtTop5Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdtTop5Row);
+                return rowdtTop5Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Top5DataTable cln = ((Top5DataTable)(base.Clone()));
+                dtTop5DataTable cln = ((dtTop5DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -758,7 +756,7 @@ namespace Nueva_Biblioteca {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Top5DataTable();
+                return new dtTop5DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -771,38 +769,36 @@ namespace Nueva_Biblioteca {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columncant = new global::System.Data.DataColumn("cant", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columncant = new global::System.Data.DataColumn("cant", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncant);
                 this.columnTitulo = new global::System.Data.DataColumn("Titulo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTitulo);
-                this.columncant.ReadOnly = true;
-                this.columnTitulo.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Top5Row NewTop5Row() {
-                return ((Top5Row)(this.NewRow()));
+            public dtTop5Row NewdtTop5Row() {
+                return ((dtTop5Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Top5Row(builder);
+                return new dtTop5Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Top5Row);
+                return typeof(dtTop5Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Top5RowChanged != null)) {
-                    this.Top5RowChanged(this, new Top5RowChangeEvent(((Top5Row)(e.Row)), e.Action));
+                if ((this.dtTop5RowChanged != null)) {
+                    this.dtTop5RowChanged(this, new dtTop5RowChangeEvent(((dtTop5Row)(e.Row)), e.Action));
                 }
             }
             
@@ -810,8 +806,8 @@ namespace Nueva_Biblioteca {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Top5RowChanging != null)) {
-                    this.Top5RowChanging(this, new Top5RowChangeEvent(((Top5Row)(e.Row)), e.Action));
+                if ((this.dtTop5RowChanging != null)) {
+                    this.dtTop5RowChanging(this, new dtTop5RowChangeEvent(((dtTop5Row)(e.Row)), e.Action));
                 }
             }
             
@@ -819,8 +815,8 @@ namespace Nueva_Biblioteca {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Top5RowDeleted != null)) {
-                    this.Top5RowDeleted(this, new Top5RowChangeEvent(((Top5Row)(e.Row)), e.Action));
+                if ((this.dtTop5RowDeleted != null)) {
+                    this.dtTop5RowDeleted(this, new dtTop5RowChangeEvent(((dtTop5Row)(e.Row)), e.Action));
                 }
             }
             
@@ -828,14 +824,14 @@ namespace Nueva_Biblioteca {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Top5RowDeleting != null)) {
-                    this.Top5RowDeleting(this, new Top5RowChangeEvent(((Top5Row)(e.Row)), e.Action));
+                if ((this.dtTop5RowDeleting != null)) {
+                    this.dtTop5RowDeleting(this, new dtTop5RowChangeEvent(((dtTop5Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveTop5Row(Top5Row row) {
+            public void RemovedtTop5Row(dtTop5Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -862,7 +858,7 @@ namespace Nueva_Biblioteca {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Top5DataTable";
+                attribute2.FixedValue = "dtTop5DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -908,7 +904,7 @@ namespace Nueva_Biblioteca {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class LectorFrecuenteDataTable : global::System.Data.TypedTableBase<LectorFrecuenteRow> {
+        public partial class dtLectorFrecuenteDataTable : global::System.Data.TypedTableBase<dtLectorFrecuenteRow> {
             
             private global::System.Data.DataColumn columncantidad;
             
@@ -916,8 +912,8 @@ namespace Nueva_Biblioteca {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LectorFrecuenteDataTable() {
-                this.TableName = "LectorFrecuente";
+            public dtLectorFrecuenteDataTable() {
+                this.TableName = "dtLectorFrecuente";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -925,7 +921,7 @@ namespace Nueva_Biblioteca {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal LectorFrecuenteDataTable(global::System.Data.DataTable table) {
+            internal dtLectorFrecuenteDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -942,7 +938,7 @@ namespace Nueva_Biblioteca {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected LectorFrecuenteDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected dtLectorFrecuenteDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -974,46 +970,46 @@ namespace Nueva_Biblioteca {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LectorFrecuenteRow this[int index] {
+            public dtLectorFrecuenteRow this[int index] {
                 get {
-                    return ((LectorFrecuenteRow)(this.Rows[index]));
+                    return ((dtLectorFrecuenteRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event LectorFrecuenteRowChangeEventHandler LectorFrecuenteRowChanging;
+            public event dtLectorFrecuenteRowChangeEventHandler dtLectorFrecuenteRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event LectorFrecuenteRowChangeEventHandler LectorFrecuenteRowChanged;
+            public event dtLectorFrecuenteRowChangeEventHandler dtLectorFrecuenteRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event LectorFrecuenteRowChangeEventHandler LectorFrecuenteRowDeleting;
+            public event dtLectorFrecuenteRowChangeEventHandler dtLectorFrecuenteRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event LectorFrecuenteRowChangeEventHandler LectorFrecuenteRowDeleted;
+            public event dtLectorFrecuenteRowChangeEventHandler dtLectorFrecuenteRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddLectorFrecuenteRow(LectorFrecuenteRow row) {
+            public void AdddtLectorFrecuenteRow(dtLectorFrecuenteRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LectorFrecuenteRow AddLectorFrecuenteRow(int cantidad, string Lector) {
-                LectorFrecuenteRow rowLectorFrecuenteRow = ((LectorFrecuenteRow)(this.NewRow()));
+            public dtLectorFrecuenteRow AdddtLectorFrecuenteRow(string cantidad, string Lector) {
+                dtLectorFrecuenteRow rowdtLectorFrecuenteRow = ((dtLectorFrecuenteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         cantidad,
                         Lector};
-                rowLectorFrecuenteRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowLectorFrecuenteRow);
-                return rowLectorFrecuenteRow;
+                rowdtLectorFrecuenteRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdtLectorFrecuenteRow);
+                return rowdtLectorFrecuenteRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                LectorFrecuenteDataTable cln = ((LectorFrecuenteDataTable)(base.Clone()));
+                dtLectorFrecuenteDataTable cln = ((dtLectorFrecuenteDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1021,7 +1017,7 @@ namespace Nueva_Biblioteca {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new LectorFrecuenteDataTable();
+                return new dtLectorFrecuenteDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1034,39 +1030,36 @@ namespace Nueva_Biblioteca {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncantidad);
                 this.columnLector = new global::System.Data.DataColumn("Lector", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLector);
-                this.columncantidad.ReadOnly = true;
-                this.columnLector.ReadOnly = true;
-                this.columnLector.MaxLength = 101;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LectorFrecuenteRow NewLectorFrecuenteRow() {
-                return ((LectorFrecuenteRow)(this.NewRow()));
+            public dtLectorFrecuenteRow NewdtLectorFrecuenteRow() {
+                return ((dtLectorFrecuenteRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new LectorFrecuenteRow(builder);
+                return new dtLectorFrecuenteRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(LectorFrecuenteRow);
+                return typeof(dtLectorFrecuenteRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.LectorFrecuenteRowChanged != null)) {
-                    this.LectorFrecuenteRowChanged(this, new LectorFrecuenteRowChangeEvent(((LectorFrecuenteRow)(e.Row)), e.Action));
+                if ((this.dtLectorFrecuenteRowChanged != null)) {
+                    this.dtLectorFrecuenteRowChanged(this, new dtLectorFrecuenteRowChangeEvent(((dtLectorFrecuenteRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1074,8 +1067,8 @@ namespace Nueva_Biblioteca {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.LectorFrecuenteRowChanging != null)) {
-                    this.LectorFrecuenteRowChanging(this, new LectorFrecuenteRowChangeEvent(((LectorFrecuenteRow)(e.Row)), e.Action));
+                if ((this.dtLectorFrecuenteRowChanging != null)) {
+                    this.dtLectorFrecuenteRowChanging(this, new dtLectorFrecuenteRowChangeEvent(((dtLectorFrecuenteRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1083,8 +1076,8 @@ namespace Nueva_Biblioteca {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.LectorFrecuenteRowDeleted != null)) {
-                    this.LectorFrecuenteRowDeleted(this, new LectorFrecuenteRowChangeEvent(((LectorFrecuenteRow)(e.Row)), e.Action));
+                if ((this.dtLectorFrecuenteRowDeleted != null)) {
+                    this.dtLectorFrecuenteRowDeleted(this, new dtLectorFrecuenteRowChangeEvent(((dtLectorFrecuenteRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1092,14 +1085,14 @@ namespace Nueva_Biblioteca {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.LectorFrecuenteRowDeleting != null)) {
-                    this.LectorFrecuenteRowDeleting(this, new LectorFrecuenteRowChangeEvent(((LectorFrecuenteRow)(e.Row)), e.Action));
+                if ((this.dtLectorFrecuenteRowDeleting != null)) {
+                    this.dtLectorFrecuenteRowDeleting(this, new dtLectorFrecuenteRowChangeEvent(((dtLectorFrecuenteRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveLectorFrecuenteRow(LectorFrecuenteRow row) {
+            public void RemovedtLectorFrecuenteRow(dtLectorFrecuenteRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1126,7 +1119,7 @@ namespace Nueva_Biblioteca {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "LectorFrecuenteDataTable";
+                attribute2.FixedValue = "dtLectorFrecuenteDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1172,7 +1165,7 @@ namespace Nueva_Biblioteca {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PrestamoPorLectorDataTable : global::System.Data.TypedTableBase<PrestamoPorLectorRow> {
+        public partial class dtPrestamoPorLectorDataTable : global::System.Data.TypedTableBase<dtPrestamoPorLectorRow> {
             
             private global::System.Data.DataColumn columnNombre;
             
@@ -1184,8 +1177,8 @@ namespace Nueva_Biblioteca {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PrestamoPorLectorDataTable() {
-                this.TableName = "PrestamoPorLector";
+            public dtPrestamoPorLectorDataTable() {
+                this.TableName = "dtPrestamoPorLector";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1193,7 +1186,7 @@ namespace Nueva_Biblioteca {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal PrestamoPorLectorDataTable(global::System.Data.DataTable table) {
+            internal dtPrestamoPorLectorDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1210,7 +1203,7 @@ namespace Nueva_Biblioteca {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected PrestamoPorLectorDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected dtPrestamoPorLectorDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1258,48 +1251,48 @@ namespace Nueva_Biblioteca {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PrestamoPorLectorRow this[int index] {
+            public dtPrestamoPorLectorRow this[int index] {
                 get {
-                    return ((PrestamoPorLectorRow)(this.Rows[index]));
+                    return ((dtPrestamoPorLectorRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PrestamoPorLectorRowChangeEventHandler PrestamoPorLectorRowChanging;
+            public event dtPrestamoPorLectorRowChangeEventHandler dtPrestamoPorLectorRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PrestamoPorLectorRowChangeEventHandler PrestamoPorLectorRowChanged;
+            public event dtPrestamoPorLectorRowChangeEventHandler dtPrestamoPorLectorRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PrestamoPorLectorRowChangeEventHandler PrestamoPorLectorRowDeleting;
+            public event dtPrestamoPorLectorRowChangeEventHandler dtPrestamoPorLectorRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PrestamoPorLectorRowChangeEventHandler PrestamoPorLectorRowDeleted;
+            public event dtPrestamoPorLectorRowChangeEventHandler dtPrestamoPorLectorRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddPrestamoPorLectorRow(PrestamoPorLectorRow row) {
+            public void AdddtPrestamoPorLectorRow(dtPrestamoPorLectorRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PrestamoPorLectorRow AddPrestamoPorLectorRow(string Nombre, string Titulo, string Editorial, string Genero) {
-                PrestamoPorLectorRow rowPrestamoPorLectorRow = ((PrestamoPorLectorRow)(this.NewRow()));
+            public dtPrestamoPorLectorRow AdddtPrestamoPorLectorRow(string Nombre, string Titulo, string Editorial, string Genero) {
+                dtPrestamoPorLectorRow rowdtPrestamoPorLectorRow = ((dtPrestamoPorLectorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nombre,
                         Titulo,
                         Editorial,
                         Genero};
-                rowPrestamoPorLectorRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPrestamoPorLectorRow);
-                return rowPrestamoPorLectorRow;
+                rowdtPrestamoPorLectorRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdtPrestamoPorLectorRow);
+                return rowdtPrestamoPorLectorRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                PrestamoPorLectorDataTable cln = ((PrestamoPorLectorDataTable)(base.Clone()));
+                dtPrestamoPorLectorDataTable cln = ((dtPrestamoPorLectorDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1307,7 +1300,7 @@ namespace Nueva_Biblioteca {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new PrestamoPorLectorDataTable();
+                return new dtPrestamoPorLectorDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1330,37 +1323,32 @@ namespace Nueva_Biblioteca {
                 base.Columns.Add(this.columnEditorial);
                 this.columnGenero = new global::System.Data.DataColumn("Genero", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGenero);
-                this.columnNombre.ReadOnly = true;
-                this.columnNombre.MaxLength = 101;
-                this.columnTitulo.MaxLength = 100;
-                this.columnEditorial.MaxLength = 50;
-                this.columnGenero.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PrestamoPorLectorRow NewPrestamoPorLectorRow() {
-                return ((PrestamoPorLectorRow)(this.NewRow()));
+            public dtPrestamoPorLectorRow NewdtPrestamoPorLectorRow() {
+                return ((dtPrestamoPorLectorRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PrestamoPorLectorRow(builder);
+                return new dtPrestamoPorLectorRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(PrestamoPorLectorRow);
+                return typeof(dtPrestamoPorLectorRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.PrestamoPorLectorRowChanged != null)) {
-                    this.PrestamoPorLectorRowChanged(this, new PrestamoPorLectorRowChangeEvent(((PrestamoPorLectorRow)(e.Row)), e.Action));
+                if ((this.dtPrestamoPorLectorRowChanged != null)) {
+                    this.dtPrestamoPorLectorRowChanged(this, new dtPrestamoPorLectorRowChangeEvent(((dtPrestamoPorLectorRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1368,8 +1356,8 @@ namespace Nueva_Biblioteca {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.PrestamoPorLectorRowChanging != null)) {
-                    this.PrestamoPorLectorRowChanging(this, new PrestamoPorLectorRowChangeEvent(((PrestamoPorLectorRow)(e.Row)), e.Action));
+                if ((this.dtPrestamoPorLectorRowChanging != null)) {
+                    this.dtPrestamoPorLectorRowChanging(this, new dtPrestamoPorLectorRowChangeEvent(((dtPrestamoPorLectorRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1377,8 +1365,8 @@ namespace Nueva_Biblioteca {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.PrestamoPorLectorRowDeleted != null)) {
-                    this.PrestamoPorLectorRowDeleted(this, new PrestamoPorLectorRowChangeEvent(((PrestamoPorLectorRow)(e.Row)), e.Action));
+                if ((this.dtPrestamoPorLectorRowDeleted != null)) {
+                    this.dtPrestamoPorLectorRowDeleted(this, new dtPrestamoPorLectorRowChangeEvent(((dtPrestamoPorLectorRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1386,14 +1374,14 @@ namespace Nueva_Biblioteca {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.PrestamoPorLectorRowDeleting != null)) {
-                    this.PrestamoPorLectorRowDeleting(this, new PrestamoPorLectorRowChangeEvent(((PrestamoPorLectorRow)(e.Row)), e.Action));
+                if ((this.dtPrestamoPorLectorRowDeleting != null)) {
+                    this.dtPrestamoPorLectorRowDeleting(this, new dtPrestamoPorLectorRowChangeEvent(((dtPrestamoPorLectorRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemovePrestamoPorLectorRow(PrestamoPorLectorRow row) {
+            public void RemovedtPrestamoPorLectorRow(dtPrestamoPorLectorRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1420,7 +1408,7 @@ namespace Nueva_Biblioteca {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PrestamoPorLectorDataTable";
+                attribute2.FixedValue = "dtPrestamoPorLectorDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1464,30 +1452,30 @@ namespace Nueva_Biblioteca {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Top1Row : global::System.Data.DataRow {
+        public partial class DataTable1Row : global::System.Data.DataRow {
             
-            private Top1DataTable tableTop1;
+            private DataTable1DataTable tableDataTable1;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal Top1Row(global::System.Data.DataRowBuilder rb) : 
+            internal DataTable1Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTop1 = ((Top1DataTable)(this.Table));
+                this.tableDataTable1 = ((DataTable1DataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int cant {
+            public string cant {
                 get {
                     try {
-                        return ((int)(this[this.tableTop1.cantColumn]));
+                        return ((string)(this[this.tableDataTable1.cantColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cant\' de la tabla \'Top1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cant\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTop1.cantColumn] = value;
+                    this[this.tableDataTable1.cantColumn] = value;
                 }
             }
             
@@ -1496,69 +1484,69 @@ namespace Nueva_Biblioteca {
             public string Titulo {
                 get {
                     try {
-                        return ((string)(this[this.tableTop1.TituloColumn]));
+                        return ((string)(this[this.tableDataTable1.TituloColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Titulo\' de la tabla \'Top1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Titulo\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTop1.TituloColumn] = value;
+                    this[this.tableDataTable1.TituloColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IscantNull() {
-                return this.IsNull(this.tableTop1.cantColumn);
+                return this.IsNull(this.tableDataTable1.cantColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetcantNull() {
-                this[this.tableTop1.cantColumn] = global::System.Convert.DBNull;
+                this[this.tableDataTable1.cantColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsTituloNull() {
-                return this.IsNull(this.tableTop1.TituloColumn);
+                return this.IsNull(this.tableDataTable1.TituloColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetTituloNull() {
-                this[this.tableTop1.TituloColumn] = global::System.Convert.DBNull;
+                this[this.tableDataTable1.TituloColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Top5Row : global::System.Data.DataRow {
+        public partial class dtTop5Row : global::System.Data.DataRow {
             
-            private Top5DataTable tableTop5;
+            private dtTop5DataTable tabledtTop5;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal Top5Row(global::System.Data.DataRowBuilder rb) : 
+            internal dtTop5Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTop5 = ((Top5DataTable)(this.Table));
+                this.tabledtTop5 = ((dtTop5DataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int cant {
+            public string cant {
                 get {
                     try {
-                        return ((int)(this[this.tableTop5.cantColumn]));
+                        return ((string)(this[this.tabledtTop5.cantColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cant\' de la tabla \'Top5\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cant\' de la tabla \'dtTop5\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTop5.cantColumn] = value;
+                    this[this.tabledtTop5.cantColumn] = value;
                 }
             }
             
@@ -1567,69 +1555,69 @@ namespace Nueva_Biblioteca {
             public string Titulo {
                 get {
                     try {
-                        return ((string)(this[this.tableTop5.TituloColumn]));
+                        return ((string)(this[this.tabledtTop5.TituloColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Titulo\' de la tabla \'Top5\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Titulo\' de la tabla \'dtTop5\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTop5.TituloColumn] = value;
+                    this[this.tabledtTop5.TituloColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IscantNull() {
-                return this.IsNull(this.tableTop5.cantColumn);
+                return this.IsNull(this.tabledtTop5.cantColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetcantNull() {
-                this[this.tableTop5.cantColumn] = global::System.Convert.DBNull;
+                this[this.tabledtTop5.cantColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsTituloNull() {
-                return this.IsNull(this.tableTop5.TituloColumn);
+                return this.IsNull(this.tabledtTop5.TituloColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetTituloNull() {
-                this[this.tableTop5.TituloColumn] = global::System.Convert.DBNull;
+                this[this.tabledtTop5.TituloColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class LectorFrecuenteRow : global::System.Data.DataRow {
+        public partial class dtLectorFrecuenteRow : global::System.Data.DataRow {
             
-            private LectorFrecuenteDataTable tableLectorFrecuente;
+            private dtLectorFrecuenteDataTable tabledtLectorFrecuente;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal LectorFrecuenteRow(global::System.Data.DataRowBuilder rb) : 
+            internal dtLectorFrecuenteRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableLectorFrecuente = ((LectorFrecuenteDataTable)(this.Table));
+                this.tabledtLectorFrecuente = ((dtLectorFrecuenteDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int cantidad {
+            public string cantidad {
                 get {
                     try {
-                        return ((int)(this[this.tableLectorFrecuente.cantidadColumn]));
+                        return ((string)(this[this.tabledtLectorFrecuente.cantidadColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidad\' de la tabla \'LectorFrecuente\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidad\' de la tabla \'dtLectorFrecuente\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLectorFrecuente.cantidadColumn] = value;
+                    this[this.tabledtLectorFrecuente.cantidadColumn] = value;
                 }
             }
             
@@ -1638,54 +1626,54 @@ namespace Nueva_Biblioteca {
             public string Lector {
                 get {
                     try {
-                        return ((string)(this[this.tableLectorFrecuente.LectorColumn]));
+                        return ((string)(this[this.tabledtLectorFrecuente.LectorColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Lector\' de la tabla \'LectorFrecuente\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Lector\' de la tabla \'dtLectorFrecuente\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLectorFrecuente.LectorColumn] = value;
+                    this[this.tabledtLectorFrecuente.LectorColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IscantidadNull() {
-                return this.IsNull(this.tableLectorFrecuente.cantidadColumn);
+                return this.IsNull(this.tabledtLectorFrecuente.cantidadColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetcantidadNull() {
-                this[this.tableLectorFrecuente.cantidadColumn] = global::System.Convert.DBNull;
+                this[this.tabledtLectorFrecuente.cantidadColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsLectorNull() {
-                return this.IsNull(this.tableLectorFrecuente.LectorColumn);
+                return this.IsNull(this.tabledtLectorFrecuente.LectorColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetLectorNull() {
-                this[this.tableLectorFrecuente.LectorColumn] = global::System.Convert.DBNull;
+                this[this.tabledtLectorFrecuente.LectorColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class PrestamoPorLectorRow : global::System.Data.DataRow {
+        public partial class dtPrestamoPorLectorRow : global::System.Data.DataRow {
             
-            private PrestamoPorLectorDataTable tablePrestamoPorLector;
+            private dtPrestamoPorLectorDataTable tabledtPrestamoPorLector;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal PrestamoPorLectorRow(global::System.Data.DataRowBuilder rb) : 
+            internal dtPrestamoPorLectorRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablePrestamoPorLector = ((PrestamoPorLectorDataTable)(this.Table));
+                this.tabledtPrestamoPorLector = ((dtPrestamoPorLectorDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1693,14 +1681,14 @@ namespace Nueva_Biblioteca {
             public string Nombre {
                 get {
                     try {
-                        return ((string)(this[this.tablePrestamoPorLector.NombreColumn]));
+                        return ((string)(this[this.tabledtPrestamoPorLector.NombreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'PrestamoPorLector\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'dtPrestamoPorLector\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePrestamoPorLector.NombreColumn] = value;
+                    this[this.tabledtPrestamoPorLector.NombreColumn] = value;
                 }
             }
             
@@ -1709,14 +1697,14 @@ namespace Nueva_Biblioteca {
             public string Titulo {
                 get {
                     try {
-                        return ((string)(this[this.tablePrestamoPorLector.TituloColumn]));
+                        return ((string)(this[this.tabledtPrestamoPorLector.TituloColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Titulo\' de la tabla \'PrestamoPorLector\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Titulo\' de la tabla \'dtPrestamoPorLector\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePrestamoPorLector.TituloColumn] = value;
+                    this[this.tabledtPrestamoPorLector.TituloColumn] = value;
                 }
             }
             
@@ -1725,14 +1713,14 @@ namespace Nueva_Biblioteca {
             public string Editorial {
                 get {
                     try {
-                        return ((string)(this[this.tablePrestamoPorLector.EditorialColumn]));
+                        return ((string)(this[this.tabledtPrestamoPorLector.EditorialColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Editorial\' de la tabla \'PrestamoPorLector\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Editorial\' de la tabla \'dtPrestamoPorLector\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePrestamoPorLector.EditorialColumn] = value;
+                    this[this.tabledtPrestamoPorLector.EditorialColumn] = value;
                 }
             }
             
@@ -1741,63 +1729,63 @@ namespace Nueva_Biblioteca {
             public string Genero {
                 get {
                     try {
-                        return ((string)(this[this.tablePrestamoPorLector.GeneroColumn]));
+                        return ((string)(this[this.tabledtPrestamoPorLector.GeneroColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Genero\' de la tabla \'PrestamoPorLector\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Genero\' de la tabla \'dtPrestamoPorLector\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePrestamoPorLector.GeneroColumn] = value;
+                    this[this.tabledtPrestamoPorLector.GeneroColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsNombreNull() {
-                return this.IsNull(this.tablePrestamoPorLector.NombreColumn);
+                return this.IsNull(this.tabledtPrestamoPorLector.NombreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetNombreNull() {
-                this[this.tablePrestamoPorLector.NombreColumn] = global::System.Convert.DBNull;
+                this[this.tabledtPrestamoPorLector.NombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsTituloNull() {
-                return this.IsNull(this.tablePrestamoPorLector.TituloColumn);
+                return this.IsNull(this.tabledtPrestamoPorLector.TituloColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetTituloNull() {
-                this[this.tablePrestamoPorLector.TituloColumn] = global::System.Convert.DBNull;
+                this[this.tabledtPrestamoPorLector.TituloColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsEditorialNull() {
-                return this.IsNull(this.tablePrestamoPorLector.EditorialColumn);
+                return this.IsNull(this.tabledtPrestamoPorLector.EditorialColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetEditorialNull() {
-                this[this.tablePrestamoPorLector.EditorialColumn] = global::System.Convert.DBNull;
+                this[this.tabledtPrestamoPorLector.EditorialColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsGeneroNull() {
-                return this.IsNull(this.tablePrestamoPorLector.GeneroColumn);
+                return this.IsNull(this.tabledtPrestamoPorLector.GeneroColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetGeneroNull() {
-                this[this.tablePrestamoPorLector.GeneroColumn] = global::System.Convert.DBNull;
+                this[this.tabledtPrestamoPorLector.GeneroColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1805,22 +1793,22 @@ namespace Nueva_Biblioteca {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class Top1RowChangeEvent : global::System.EventArgs {
+        public class DataTable1RowChangeEvent : global::System.EventArgs {
             
-            private Top1Row eventRow;
+            private DataTable1Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Top1RowChangeEvent(Top1Row row, global::System.Data.DataRowAction action) {
+            public DataTable1RowChangeEvent(DataTable1Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Top1Row Row {
+            public DataTable1Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -1839,22 +1827,22 @@ namespace Nueva_Biblioteca {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class Top5RowChangeEvent : global::System.EventArgs {
+        public class dtTop5RowChangeEvent : global::System.EventArgs {
             
-            private Top5Row eventRow;
+            private dtTop5Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Top5RowChangeEvent(Top5Row row, global::System.Data.DataRowAction action) {
+            public dtTop5RowChangeEvent(dtTop5Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Top5Row Row {
+            public dtTop5Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -1873,22 +1861,22 @@ namespace Nueva_Biblioteca {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class LectorFrecuenteRowChangeEvent : global::System.EventArgs {
+        public class dtLectorFrecuenteRowChangeEvent : global::System.EventArgs {
             
-            private LectorFrecuenteRow eventRow;
+            private dtLectorFrecuenteRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LectorFrecuenteRowChangeEvent(LectorFrecuenteRow row, global::System.Data.DataRowAction action) {
+            public dtLectorFrecuenteRowChangeEvent(dtLectorFrecuenteRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LectorFrecuenteRow Row {
+            public dtLectorFrecuenteRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1907,22 +1895,22 @@ namespace Nueva_Biblioteca {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class PrestamoPorLectorRowChangeEvent : global::System.EventArgs {
+        public class dtPrestamoPorLectorRowChangeEvent : global::System.EventArgs {
             
-            private PrestamoPorLectorRow eventRow;
+            private dtPrestamoPorLectorRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PrestamoPorLectorRowChangeEvent(PrestamoPorLectorRow row, global::System.Data.DataRowAction action) {
+            public dtPrestamoPorLectorRowChangeEvent(dtPrestamoPorLectorRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PrestamoPorLectorRow Row {
+            public dtPrestamoPorLectorRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1933,1078 +1921,6 @@ namespace Nueva_Biblioteca {
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
-                }
-            }
-        }
-    }
-}
-namespace Nueva_Biblioteca.DSbibliotecaTableAdapters {
-    
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Top1TableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public Top1TableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Top1";
-            tableMapping.ColumnMappings.Add("cant", "cant");
-            tableMapping.ColumnMappings.Add("Titulo", "Titulo");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Nueva_Biblioteca.Properties.Settings.Default.BIBLIOTECAConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        TOP (1) COUNT(IdLibro) AS cant, Titulo
-FROM            (SELECT        P.IdPrestamo, P.IdLibro, L.Titulo
-                          FROM            PRESTAMO AS P INNER JOIN
-                                                    LIBRO AS L ON P.IdLibro = L.IdLibro) AS x
-GROUP BY Titulo
-ORDER BY cant DESC";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DSbiblioteca.Top1DataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DSbiblioteca.Top1DataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            DSbiblioteca.Top1DataTable dataTable = new DSbiblioteca.Top1DataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Top5TableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public Top5TableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Top5";
-            tableMapping.ColumnMappings.Add("cant", "cant");
-            tableMapping.ColumnMappings.Add("Titulo", "Titulo");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Nueva_Biblioteca.Properties.Settings.Default.BIBLIOTECAConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        TOP (5) COUNT(IdLibro) AS cant, Titulo
-FROM            (SELECT        P.IdPrestamo, P.IdLibro, L.Titulo
-                          FROM            PRESTAMO AS P INNER JOIN
-                                                    LIBRO AS L ON P.IdLibro = L.IdLibro) AS x
-GROUP BY Titulo
-ORDER BY cant DESC";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DSbiblioteca.Top5DataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DSbiblioteca.Top5DataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            DSbiblioteca.Top5DataTable dataTable = new DSbiblioteca.Top5DataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class LectorFrecuenteTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public LectorFrecuenteTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "LectorFrecuente";
-            tableMapping.ColumnMappings.Add("cantidad", "cantidad");
-            tableMapping.ColumnMappings.Add("Lector", "Lector");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Nueva_Biblioteca.Properties.Settings.Default.BIBLIOTECAConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        TOP (1) COUNT(p.IdLector) AS cantidad, L.Nombres + ' ' + L.Apellidos AS Lector
-FROM            PRESTAMO AS p INNER JOIN
-                         LECTOR AS L ON p.IdLector = L.IdLector
-GROUP BY L.Nombres, L.Apellidos
-ORDER BY cantidad DESC";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DSbiblioteca.LectorFrecuenteDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DSbiblioteca.LectorFrecuenteDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            DSbiblioteca.LectorFrecuenteDataTable dataTable = new DSbiblioteca.LectorFrecuenteDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class PrestamoPorLectorTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public PrestamoPorLectorTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "PrestamoPorLector";
-            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
-            tableMapping.ColumnMappings.Add("Titulo", "Titulo");
-            tableMapping.ColumnMappings.Add("Editorial", "Editorial");
-            tableMapping.ColumnMappings.Add("Genero", "Genero");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Nueva_Biblioteca.Properties.Settings.Default.BIBLIOTECAConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        L.Nombres + ' ' + L.Apellidos AS Nombre, LB.Titulo, E.Editorial, G.Genero
-FROM            PRESTAMO AS p INNER JOIN
-                         LECTOR AS L ON p.IdLector = L.IdLector INNER JOIN
-                         LIBRO AS LB ON p.IdLibro = LB.IdLibro INNER JOIN
-                         EDITORIAL AS E ON LB.IdEditorial = E.IdEditorial INNER JOIN
-                         GENERO AS G ON G.IdGenero = LB.IdGenero
-WHERE        (L.Nombres = @nombre)
-GROUP BY LB.Titulo, L.Nombres, L.Apellidos, E.Editorial, G.Genero";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombres", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DSbiblioteca.PrestamoPorLectorDataTable dataTable, string nombre) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((nombre == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nombre));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DSbiblioteca.PrestamoPorLectorDataTable GetData(string nombre) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((nombre == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nombre));
-            }
-            DSbiblioteca.PrestamoPorLectorDataTable dataTable = new DSbiblioteca.PrestamoPorLectorDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerDesigner, Microsoft.VSD" +
-        "esigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapterManager")]
-    public partial class TableAdapterManager : global::System.ComponentModel.Component {
-        
-        private UpdateOrderOption _updateOrder;
-        
-        private bool _backupDataSetBeforeUpdate;
-        
-        private global::System.Data.IDbConnection _connection;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public UpdateOrderOption UpdateOrder {
-            get {
-                return this._updateOrder;
-            }
-            set {
-                this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool BackupDataSetBeforeUpdate {
-            get {
-                return this._backupDataSetBeforeUpdate;
-            }
-            set {
-                this._backupDataSetBeforeUpdate = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        public global::System.Data.IDbConnection Connection {
-            get {
-                if ((this._connection != null)) {
-                    return this._connection;
-                }
-                return null;
-            }
-            set {
-                this._connection = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        public int TableAdapterInstanceCount {
-            get {
-                int count = 0;
-                return count;
-            }
-        }
-        
-        /// <summary>
-        ///Update rows in top-down order.
-        ///</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(DSbiblioteca dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
-            int result = 0;
-            return result;
-        }
-        
-        /// <summary>
-        ///Insert rows in top-down order.
-        ///</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(DSbiblioteca dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
-            int result = 0;
-            return result;
-        }
-        
-        /// <summary>
-        ///Delete rows in bottom-up order.
-        ///</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(DSbiblioteca dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
-            int result = 0;
-            return result;
-        }
-        
-        /// <summary>
-        ///Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-        ///</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private global::System.Data.DataRow[] GetRealUpdatedRows(global::System.Data.DataRow[] updatedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
-            if (((updatedRows == null) 
-                        || (updatedRows.Length < 1))) {
-                return updatedRows;
-            }
-            if (((allAddedRows == null) 
-                        || (allAddedRows.Count < 1))) {
-                return updatedRows;
-            }
-            global::System.Collections.Generic.List<global::System.Data.DataRow> realUpdatedRows = new global::System.Collections.Generic.List<global::System.Data.DataRow>();
-            for (int i = 0; (i < updatedRows.Length); i = (i + 1)) {
-                global::System.Data.DataRow row = updatedRows[i];
-                if ((allAddedRows.Contains(row) == false)) {
-                    realUpdatedRows.Add(row);
-                }
-            }
-            return realUpdatedRows.ToArray();
-        }
-        
-        /// <summary>
-        ///Update all changes to the dataset.
-        ///</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(DSbiblioteca dataSet) {
-            if ((dataSet == null)) {
-                throw new global::System.ArgumentNullException("dataSet");
-            }
-            if ((dataSet.HasChanges() == false)) {
-                return 0;
-            }
-            global::System.Data.IDbConnection workConnection = this.Connection;
-            if ((workConnection == null)) {
-                throw new global::System.ApplicationException("TableAdapterManager no contiene información de conexión. Establezca cada propieda" +
-                        "d TableAdapterManager TableAdapter en una instancia TableAdapter válida.");
-            }
-            bool workConnOpened = false;
-            if (((workConnection.State & global::System.Data.ConnectionState.Broken) 
-                        == global::System.Data.ConnectionState.Broken)) {
-                workConnection.Close();
-            }
-            if ((workConnection.State == global::System.Data.ConnectionState.Closed)) {
-                workConnection.Open();
-                workConnOpened = true;
-            }
-            global::System.Data.IDbTransaction workTransaction = workConnection.BeginTransaction();
-            if ((workTransaction == null)) {
-                throw new global::System.ApplicationException("La transacción no puede comenzar. La conexión de datos actual no es compatible co" +
-                        "n las transacciones o el estado actual no permite que comience la transacción.");
-            }
-            global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows = new global::System.Collections.Generic.List<global::System.Data.DataRow>();
-            global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows = new global::System.Collections.Generic.List<global::System.Data.DataRow>();
-            global::System.Collections.Generic.List<global::System.Data.Common.DataAdapter> adaptersWithAcceptChangesDuringUpdate = new global::System.Collections.Generic.List<global::System.Data.Common.DataAdapter>();
-            global::System.Collections.Generic.Dictionary<object, global::System.Data.IDbConnection> revertConnections = new global::System.Collections.Generic.Dictionary<object, global::System.Data.IDbConnection>();
-            int result = 0;
-            global::System.Data.DataSet backupDataSet = null;
-            if (this.BackupDataSetBeforeUpdate) {
-                backupDataSet = new global::System.Data.DataSet();
-                backupDataSet.Merge(dataSet);
-            }
-            try {
-                // ---- Prepare for update -----------
-                //
-                // 
-                //---- Perform updates -----------
-                //
-                if ((this.UpdateOrder == UpdateOrderOption.UpdateInsertDelete)) {
-                    result = (result + this.UpdateUpdatedRows(dataSet, allChangedRows, allAddedRows));
-                    result = (result + this.UpdateInsertedRows(dataSet, allAddedRows));
-                }
-                else {
-                    result = (result + this.UpdateInsertedRows(dataSet, allAddedRows));
-                    result = (result + this.UpdateUpdatedRows(dataSet, allChangedRows, allAddedRows));
-                }
-                result = (result + this.UpdateDeletedRows(dataSet, allChangedRows));
-                // 
-                //---- Commit updates -----------
-                //
-                workTransaction.Commit();
-                if ((0 < allAddedRows.Count)) {
-                    global::System.Data.DataRow[] rows = new System.Data.DataRow[allAddedRows.Count];
-                    allAddedRows.CopyTo(rows);
-                    for (int i = 0; (i < rows.Length); i = (i + 1)) {
-                        global::System.Data.DataRow row = rows[i];
-                        row.AcceptChanges();
-                    }
-                }
-                if ((0 < allChangedRows.Count)) {
-                    global::System.Data.DataRow[] rows = new System.Data.DataRow[allChangedRows.Count];
-                    allChangedRows.CopyTo(rows);
-                    for (int i = 0; (i < rows.Length); i = (i + 1)) {
-                        global::System.Data.DataRow row = rows[i];
-                        row.AcceptChanges();
-                    }
-                }
-            }
-            catch (global::System.Exception ex) {
-                workTransaction.Rollback();
-                // ---- Restore the dataset -----------
-                if (this.BackupDataSetBeforeUpdate) {
-                    global::System.Diagnostics.Debug.Assert((backupDataSet != null));
-                    dataSet.Clear();
-                    dataSet.Merge(backupDataSet);
-                }
-                else {
-                    if ((0 < allAddedRows.Count)) {
-                        global::System.Data.DataRow[] rows = new System.Data.DataRow[allAddedRows.Count];
-                        allAddedRows.CopyTo(rows);
-                        for (int i = 0; (i < rows.Length); i = (i + 1)) {
-                            global::System.Data.DataRow row = rows[i];
-                            row.AcceptChanges();
-                            row.SetAdded();
-                        }
-                    }
-                }
-                throw ex;
-            }
-            finally {
-                if (workConnOpened) {
-                    workConnection.Close();
-                }
-                if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
-                    global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
-                    adaptersWithAcceptChangesDuringUpdate.CopyTo(adapters);
-                    for (int i = 0; (i < adapters.Length); i = (i + 1)) {
-                        global::System.Data.Common.DataAdapter adapter = adapters[i];
-                        adapter.AcceptChangesDuringUpdate = true;
-                    }
-                }
-            }
-            return result;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected virtual void SortSelfReferenceRows(global::System.Data.DataRow[] rows, global::System.Data.DataRelation relation, bool childFirst) {
-            global::System.Array.Sort<global::System.Data.DataRow>(rows, new SelfReferenceComparer(relation, childFirst));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected virtual bool MatchTableAdapterConnection(global::System.Data.IDbConnection inputConnection) {
-            if ((this._connection != null)) {
-                return true;
-            }
-            if (((this.Connection == null) 
-                        || (inputConnection == null))) {
-                return true;
-            }
-            if (string.Equals(this.Connection.ConnectionString, inputConnection.ConnectionString, global::System.StringComparison.Ordinal)) {
-                return true;
-            }
-            return false;
-        }
-        
-        /// <summary>
-        ///Update Order Option
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public enum UpdateOrderOption {
-            
-            InsertUpdateDelete = 0,
-            
-            UpdateInsertDelete = 1,
-        }
-        
-        /// <summary>
-        ///Used to sort self-referenced table's rows
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private class SelfReferenceComparer : object, global::System.Collections.Generic.IComparer<global::System.Data.DataRow> {
-            
-            private global::System.Data.DataRelation _relation;
-            
-            private int _childFirst;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal SelfReferenceComparer(global::System.Data.DataRelation relation, bool childFirst) {
-                this._relation = relation;
-                if (childFirst) {
-                    this._childFirst = -1;
-                }
-                else {
-                    this._childFirst = 1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            private global::System.Data.DataRow GetRoot(global::System.Data.DataRow row, out int distance) {
-                global::System.Diagnostics.Debug.Assert((row != null));
-                global::System.Data.DataRow root = row;
-                distance = 0;
-
-                global::System.Collections.Generic.IDictionary<global::System.Data.DataRow, global::System.Data.DataRow> traversedRows = new global::System.Collections.Generic.Dictionary<global::System.Data.DataRow, global::System.Data.DataRow>();
-                traversedRows[row] = row;
-
-                global::System.Data.DataRow parent = row.GetParentRow(this._relation, global::System.Data.DataRowVersion.Default);
-                for (
-                ; ((parent != null) 
-                            && (traversedRows.ContainsKey(parent) == false)); 
-                ) {
-                    distance = (distance + 1);
-                    root = parent;
-                    traversedRows[parent] = parent;
-                    parent = parent.GetParentRow(this._relation, global::System.Data.DataRowVersion.Default);
-                }
-
-                if ((distance == 0)) {
-                    traversedRows.Clear();
-                    traversedRows[row] = row;
-                    parent = row.GetParentRow(this._relation, global::System.Data.DataRowVersion.Original);
-                    for (
-                    ; ((parent != null) 
-                                && (traversedRows.ContainsKey(parent) == false)); 
-                    ) {
-                        distance = (distance + 1);
-                        root = parent;
-                        traversedRows[parent] = parent;
-                        parent = parent.GetParentRow(this._relation, global::System.Data.DataRowVersion.Original);
-                    }
-                }
-
-                return root;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Compare(global::System.Data.DataRow row1, global::System.Data.DataRow row2) {
-                if (object.ReferenceEquals(row1, row2)) {
-                    return 0;
-                }
-                if ((row1 == null)) {
-                    return -1;
-                }
-                if ((row2 == null)) {
-                    return 1;
-                }
-
-                int distance1 = 0;
-                global::System.Data.DataRow root1 = this.GetRoot(row1, out distance1);
-
-                int distance2 = 0;
-                global::System.Data.DataRow root2 = this.GetRoot(row2, out distance2);
-
-                if (object.ReferenceEquals(root1, root2)) {
-                    return (this._childFirst * distance1.CompareTo(distance2));
-                }
-                else {
-                    global::System.Diagnostics.Debug.Assert(((root1.Table != null) 
-                                    && (root2.Table != null)));
-                    if ((root1.Table.Rows.IndexOf(root1) < root2.Table.Rows.IndexOf(root2))) {
-                        return -1;
-                    }
-                    else {
-                        return 1;
-                    }
                 }
             }
         }

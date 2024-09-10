@@ -6,101 +6,7 @@
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BIBLIOTECAConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BIBLIOTECAConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Nueva_Biblioteca.Properties.Settings.GlobalReference.Default.BIBLIOTECAConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
-        <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Top1TableAdapter" GeneratorDataComponentClassName="Top1TableAdapter" Name="Top1" UserDataComponentName="Top1TableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="BIBLIOTECAConnectionString (Settings)" DbObjectName="SELECT P.IdPrestamo, P.IdLibro, L.Titulo FROM PRESTAMO AS P INNER JOIN LIBRO AS L ON P.IdLibro = L.IdLibro" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        TOP (1) COUNT(IdLibro) AS cant, Titulo
-FROM            (SELECT        P.IdPrestamo, P.IdLibro, L.Titulo
-                          FROM            PRESTAMO AS P INNER JOIN
-                                                    LIBRO AS L ON P.IdLibro = L.IdLibro) AS x
-GROUP BY Titulo
-ORDER BY cant DESC</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="cant" DataSetColumn="cant" />
-              <Mapping SourceColumn="Titulo" DataSetColumn="Titulo" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Top5TableAdapter" GeneratorDataComponentClassName="Top5TableAdapter" Name="Top5" UserDataComponentName="Top5TableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="BIBLIOTECAConnectionString (Settings)" DbObjectName="SELECT P.IdPrestamo, P.IdLibro, L.Titulo FROM PRESTAMO AS P INNER JOIN LIBRO AS L ON P.IdLibro = L.IdLibro" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        TOP (5) COUNT(IdLibro) AS cant, Titulo
-FROM            (SELECT        P.IdPrestamo, P.IdLibro, L.Titulo
-                          FROM            PRESTAMO AS P INNER JOIN
-                                                    LIBRO AS L ON P.IdLibro = L.IdLibro) AS x
-GROUP BY Titulo
-ORDER BY cant DESC</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="cant" DataSetColumn="cant" />
-              <Mapping SourceColumn="Titulo" DataSetColumn="Titulo" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LectorFrecuenteTableAdapter" GeneratorDataComponentClassName="LectorFrecuenteTableAdapter" Name="LectorFrecuente" UserDataComponentName="LectorFrecuenteTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="BIBLIOTECAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        TOP (1) COUNT(p.IdLector) AS cantidad, L.Nombres + ' ' + L.Apellidos AS Lector
-FROM            PRESTAMO AS p INNER JOIN
-                         LECTOR AS L ON p.IdLector = L.IdLector
-GROUP BY L.Nombres, L.Apellidos
-ORDER BY cantidad DESC</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="cantidad" DataSetColumn="cantidad" />
-              <Mapping SourceColumn="Lector" DataSetColumn="Lector" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PrestamoPorLectorTableAdapter" GeneratorDataComponentClassName="PrestamoPorLectorTableAdapter" Name="PrestamoPorLector" UserDataComponentName="PrestamoPorLectorTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="BIBLIOTECAConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        L.Nombres + ' ' + L.Apellidos AS Nombre, LB.Titulo, E.Editorial, G.Genero
-FROM            PRESTAMO AS p INNER JOIN
-                         LECTOR AS L ON p.IdLector = L.IdLector INNER JOIN
-                         LIBRO AS LB ON p.IdLibro = LB.IdLibro INNER JOIN
-                         EDITORIAL AS E ON LB.IdEditorial = E.IdEditorial INNER JOIN
-                         GENERO AS G ON G.IdGenero = LB.IdGenero
-WHERE        (L.Nombres = @nombre)
-GROUP BY LB.Titulo, L.Nombres, L.Apellidos, E.Editorial, G.Genero</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="nombre" ColumnName="Nombres" DataSourceName="BIBLIOTECA.dbo.LECTOR" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@nombre" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="Nombres" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
-              <Mapping SourceColumn="Titulo" DataSetColumn="Titulo" />
-              <Mapping SourceColumn="Editorial" DataSetColumn="Editorial" />
-              <Mapping SourceColumn="Genero" DataSetColumn="Genero" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
-        </Tables>
+        <Tables />
         <Sources />
       </DataSource>
     </xs:appinfo>
@@ -108,79 +14,37 @@ GROUP BY LB.Titulo, L.Nombres, L.Apellidos, E.Editorial, G.Genero</CommandText>
   <xs:element name="DSbiblioteca" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSbiblioteca" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSbiblioteca">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Top1" msprop:Generator_RowClassName="Top1Row" msprop:Generator_RowEvHandlerName="Top1RowChangeEventHandler" msprop:Generator_RowDeletedName="Top1RowDeleted" msprop:Generator_RowDeletingName="Top1RowDeleting" msprop:Generator_RowEvArgName="Top1RowChangeEvent" msprop:Generator_TablePropName="Top1" msprop:Generator_RowChangedName="Top1RowChanged" msprop:Generator_UserTableName="Top1" msprop:Generator_RowChangingName="Top1RowChanging" msprop:Generator_TableClassName="Top1DataTable" msprop:Generator_TableVarName="tableTop1">
+        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_UserTableName="DataTable1">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="cant" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cant" msprop:Generator_ColumnPropNameInTable="cantColumn" msprop:Generator_ColumnPropNameInRow="cant" msprop:Generator_ColumnVarNameInTable="columncant" type="xs:int" minOccurs="0" />
-              <xs:element name="Titulo" msprop:Generator_UserColumnName="Titulo" msprop:Generator_ColumnPropNameInTable="TituloColumn" msprop:Generator_ColumnPropNameInRow="Titulo" msprop:Generator_ColumnVarNameInTable="columnTitulo" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="cant" msprop:Generator_ColumnPropNameInRow="cant" msprop:Generator_ColumnPropNameInTable="cantColumn" msprop:Generator_ColumnVarNameInTable="columncant" msprop:Generator_UserColumnName="cant" type="xs:string" minOccurs="0" />
+              <xs:element name="Titulo" msprop:Generator_ColumnPropNameInRow="Titulo" msprop:Generator_ColumnPropNameInTable="TituloColumn" msprop:Generator_ColumnVarNameInTable="columnTitulo" msprop:Generator_UserColumnName="Titulo" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Top5" msprop:Generator_RowClassName="Top5Row" msprop:Generator_RowEvHandlerName="Top5RowChangeEventHandler" msprop:Generator_RowDeletedName="Top5RowDeleted" msprop:Generator_RowDeletingName="Top5RowDeleting" msprop:Generator_RowEvArgName="Top5RowChangeEvent" msprop:Generator_TablePropName="Top5" msprop:Generator_RowChangedName="Top5RowChanged" msprop:Generator_UserTableName="Top5" msprop:Generator_RowChangingName="Top5RowChanging" msprop:Generator_TableClassName="Top5DataTable" msprop:Generator_TableVarName="tableTop5">
+        <xs:element name="dtTop5" msprop:Generator_RowEvHandlerName="dtTop5RowChangeEventHandler" msprop:Generator_RowDeletedName="dtTop5RowDeleted" msprop:Generator_RowDeletingName="dtTop5RowDeleting" msprop:Generator_RowEvArgName="dtTop5RowChangeEvent" msprop:Generator_TablePropName="dtTop5" msprop:Generator_RowChangedName="dtTop5RowChanged" msprop:Generator_RowChangingName="dtTop5RowChanging" msprop:Generator_TableClassName="dtTop5DataTable" msprop:Generator_RowClassName="dtTop5Row" msprop:Generator_TableVarName="tabledtTop5" msprop:Generator_UserTableName="dtTop5">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="cant" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cant" msprop:Generator_ColumnPropNameInTable="cantColumn" msprop:Generator_ColumnPropNameInRow="cant" msprop:Generator_ColumnVarNameInTable="columncant" type="xs:int" minOccurs="0" />
-              <xs:element name="Titulo" msprop:Generator_UserColumnName="Titulo" msprop:Generator_ColumnPropNameInTable="TituloColumn" msprop:Generator_ColumnPropNameInRow="Titulo" msprop:Generator_ColumnVarNameInTable="columnTitulo" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="cant" msprop:Generator_ColumnPropNameInRow="cant" msprop:Generator_ColumnPropNameInTable="cantColumn" msprop:Generator_ColumnVarNameInTable="columncant" msprop:Generator_UserColumnName="cant" type="xs:string" minOccurs="0" />
+              <xs:element name="Titulo" msprop:Generator_ColumnPropNameInRow="Titulo" msprop:Generator_ColumnPropNameInTable="TituloColumn" msprop:Generator_ColumnVarNameInTable="columnTitulo" msprop:Generator_UserColumnName="Titulo" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="LectorFrecuente" msprop:Generator_RowClassName="LectorFrecuenteRow" msprop:Generator_RowEvHandlerName="LectorFrecuenteRowChangeEventHandler" msprop:Generator_RowDeletedName="LectorFrecuenteRowDeleted" msprop:Generator_RowDeletingName="LectorFrecuenteRowDeleting" msprop:Generator_RowEvArgName="LectorFrecuenteRowChangeEvent" msprop:Generator_TablePropName="LectorFrecuente" msprop:Generator_RowChangedName="LectorFrecuenteRowChanged" msprop:Generator_UserTableName="LectorFrecuente" msprop:Generator_RowChangingName="LectorFrecuenteRowChanging" msprop:Generator_TableClassName="LectorFrecuenteDataTable" msprop:Generator_TableVarName="tableLectorFrecuente">
+        <xs:element name="dtLectorFrecuente" msprop:Generator_RowEvHandlerName="dtLectorFrecuenteRowChangeEventHandler" msprop:Generator_RowDeletedName="dtLectorFrecuenteRowDeleted" msprop:Generator_RowDeletingName="dtLectorFrecuenteRowDeleting" msprop:Generator_RowEvArgName="dtLectorFrecuenteRowChangeEvent" msprop:Generator_TablePropName="dtLectorFrecuente" msprop:Generator_RowChangedName="dtLectorFrecuenteRowChanged" msprop:Generator_RowChangingName="dtLectorFrecuenteRowChanging" msprop:Generator_TableClassName="dtLectorFrecuenteDataTable" msprop:Generator_RowClassName="dtLectorFrecuenteRow" msprop:Generator_TableVarName="tabledtLectorFrecuente" msprop:Generator_UserTableName="dtLectorFrecuente">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="cantidad" msdata:ReadOnly="true" msprop:Generator_UserColumnName="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" type="xs:int" minOccurs="0" />
-              <xs:element name="Lector" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Lector" msprop:Generator_ColumnPropNameInTable="LectorColumn" msprop:Generator_ColumnPropNameInRow="Lector" msprop:Generator_ColumnVarNameInTable="columnLector" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="101" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="cantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_UserColumnName="cantidad" type="xs:string" minOccurs="0" />
+              <xs:element name="Lector" msprop:Generator_ColumnPropNameInRow="Lector" msprop:Generator_ColumnPropNameInTable="LectorColumn" msprop:Generator_ColumnVarNameInTable="columnLector" msprop:Generator_UserColumnName="Lector" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PrestamoPorLector" msprop:Generator_RowClassName="PrestamoPorLectorRow" msprop:Generator_RowEvHandlerName="PrestamoPorLectorRowChangeEventHandler" msprop:Generator_RowDeletedName="PrestamoPorLectorRowDeleted" msprop:Generator_RowDeletingName="PrestamoPorLectorRowDeleting" msprop:Generator_RowEvArgName="PrestamoPorLectorRowChangeEvent" msprop:Generator_TablePropName="PrestamoPorLector" msprop:Generator_RowChangedName="PrestamoPorLectorRowChanged" msprop:Generator_UserTableName="PrestamoPorLector" msprop:Generator_RowChangingName="PrestamoPorLectorRowChanging" msprop:Generator_TableClassName="PrestamoPorLectorDataTable" msprop:Generator_TableVarName="tablePrestamoPorLector">
+        <xs:element name="dtPrestamoPorLector" msprop:Generator_RowEvHandlerName="dtPrestamoPorLectorRowChangeEventHandler" msprop:Generator_RowDeletedName="dtPrestamoPorLectorRowDeleted" msprop:Generator_RowDeletingName="dtPrestamoPorLectorRowDeleting" msprop:Generator_RowEvArgName="dtPrestamoPorLectorRowChangeEvent" msprop:Generator_TablePropName="dtPrestamoPorLector" msprop:Generator_RowChangedName="dtPrestamoPorLectorRowChanged" msprop:Generator_RowChangingName="dtPrestamoPorLectorRowChanging" msprop:Generator_TableClassName="dtPrestamoPorLectorDataTable" msprop:Generator_RowClassName="dtPrestamoPorLectorRow" msprop:Generator_TableVarName="tabledtPrestamoPorLector" msprop:Generator_UserTableName="dtPrestamoPorLector">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Nombre" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="101" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Titulo" msprop:Generator_UserColumnName="Titulo" msprop:Generator_ColumnPropNameInTable="TituloColumn" msprop:Generator_ColumnPropNameInRow="Titulo" msprop:Generator_ColumnVarNameInTable="columnTitulo" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Editorial" msprop:Generator_ColumnPropNameInRow="Editorial" msprop:Generator_ColumnPropNameInTable="EditorialColumn" msprop:Generator_ColumnVarNameInTable="columnEditorial" msprop:Generator_UserColumnName="Editorial" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Genero" msprop:Generator_ColumnPropNameInRow="Genero" msprop:Generator_ColumnPropNameInTable="GeneroColumn" msprop:Generator_ColumnVarNameInTable="columnGenero" msprop:Generator_UserColumnName="Genero" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="Nombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_UserColumnName="Nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="Titulo" msprop:Generator_ColumnPropNameInRow="Titulo" msprop:Generator_ColumnPropNameInTable="TituloColumn" msprop:Generator_ColumnVarNameInTable="columnTitulo" msprop:Generator_UserColumnName="Titulo" type="xs:string" minOccurs="0" />
+              <xs:element name="Editorial" msprop:Generator_ColumnPropNameInRow="Editorial" msprop:Generator_ColumnPropNameInTable="EditorialColumn" msprop:Generator_ColumnVarNameInTable="columnEditorial" msprop:Generator_UserColumnName="Editorial" type="xs:string" minOccurs="0" />
+              <xs:element name="Genero" msprop:Generator_ColumnPropNameInRow="Genero" msprop:Generator_ColumnPropNameInTable="GeneroColumn" msprop:Generator_ColumnVarNameInTable="columnGenero" msprop:Generator_UserColumnName="Genero" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

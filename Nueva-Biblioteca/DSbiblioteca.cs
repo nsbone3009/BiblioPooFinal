@@ -4,5 +4,8 @@
 
     public partial class DSbiblioteca
     {
+        partial class DataTable1DataTable
+        {
+        }
     }
 }

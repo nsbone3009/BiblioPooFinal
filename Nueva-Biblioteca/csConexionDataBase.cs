@@ -102,29 +102,6 @@ namespace Nueva_Biblioteca
             conexion.Close();
             return numero;
         }
-        //esto es para buscar en los reportes
-        public DataTable BuscarLectores(string nombre)
-        {
-            DataTable dt = new DataTable();
-            try
-            {
-                string query = "SELECT * FROM LECTOR WHERE Nombres LIKE @Nombre + '%'";
-                using (SqlCommand comando = new SqlCommand(query, conexion))
-                {
-                    comando.Parameters.AddWithValue("@Nombre", nombre);
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(comando))
-                    {
-                        adapter.Fill(dt);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al buscar lectores: " + ex.Message);
-            }
-            return dt;
-        }
-
         public void CerrarConexion()
         {
             conexion.Close();

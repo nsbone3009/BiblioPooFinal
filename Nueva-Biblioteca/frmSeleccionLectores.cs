@@ -45,7 +45,6 @@ namespace Nueva_Biblioteca
                     frm.txtCodigo.Text = dgvLectores.Rows[e.RowIndex].Cells[0].Value.ToString();
                     frm.txtNombre.Text = dgvLectores.Rows[e.RowIndex].Cells[1].Value.ToString() + " " + dgvLectores.Rows[e.RowIndex].Cells[2].Value.ToString();
                     frm.correo = dgvLectores.Rows[e.RowIndex].Cells[3].Value.ToString();
-
                     this.Close();
                 }
                 
