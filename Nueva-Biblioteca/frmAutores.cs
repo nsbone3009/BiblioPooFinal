@@ -38,7 +38,7 @@ namespace Nueva_Biblioteca
         {
             frmAgregarOEditarAutor frm = new frmAgregarOEditarAutor();
             this.AddOwnedForm(frm);
-            if (e.ColumnIndex == dgvAutores.Columns[dgvAutores.ColumnCount - 2].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == dgvAutores.Columns[dgvAutores.ColumnCount - 1].Index && e.RowIndex >= 0)
             {
                 validacion2 = true;
                 frm.identificador = dgvAutores.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -56,6 +56,7 @@ namespace Nueva_Biblioteca
             frmAgregarOEditarAutor frm = new frmAgregarOEditarAutor();
             this.AddOwnedForm(frm);
             frm.btnEditar.Visible = false;
+            frm.cbEstado.SelectedItem = "Activo";
             frm.ShowDialog();
         }
     }

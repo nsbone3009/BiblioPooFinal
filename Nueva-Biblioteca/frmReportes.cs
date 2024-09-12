@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Nueva_Biblioteca
 {
     public partial class frmReportes : Form
     {
-        private Form activeForm = null;
-        frmRepoPorLector lec = new frmRepoPorLector();
+        static csReporte claseReporte = new csReporte();
         static private frmReportes instancia = null;
         public static frmReportes Formulario()
         {
@@ -23,46 +23,19 @@ namespace Nueva_Biblioteca
         public frmReportes()
         {
             InitializeComponent();
-            txtBuscarLector.TextChanged += txtBuscarLector_TextChanged;
-
-
         }
-        private void MostrarFormularioHijo(object hijo)
-        {
-            if (activeForm != null)
-            {
-                activeForm.Close();
-            }
-
-            if (this.pnlReportes.Controls.Count > 0)
-            {
-                this.pnlReportes.Controls.RemoveAt(0);
-            }
-            Form fh = hijo as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.pnlReportes.Controls.Add(fh);
-            this.pnlReportes.Tag = fh;
-            fh.Show();
-        }
-        private void frmReportes_Load(object sender, EventArgs e)
-        {
-        }
-        private void ocultar()
+        private void OcultarBarraBusqueda()
         {
             lbBuscarLector.Visible = false;
             txtBuscarLector.Visible = false;
             btnBuscarLector.Visible = false;
         }
-
-        csConexionDataBase con =new csConexionDataBase();
-
-
         private void cbReporte_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cbReporte.SelectedItem.ToString())
             {
                 case "Prestamos por lector":
+
                     btnGenerar.Enabled = true;
                     lbBuscarLector.Visible = true;
                     txtBuscarLector.Visible = true;
@@ -70,82 +43,25 @@ namespace Nueva_Biblioteca
                     btnGenerar.Enabled = true;
                     btnLimpiarRepo.Enabled = true;
                     break;
-                case "Libro con mayor numero de prestamos":
-                    btnGenerar.Enabled= true;
-                    btnLimpiarRepo.Enabled = true;
-                    ocultar();
-                    break;
-                case "Lector mas frecuente":
-                    btnGenerar.Enabled = true;
-                    btnLimpiarRepo.Enabled = true;
-                    ocultar();
-                    break;
-                case "Top 5 Libros mas prestados":
-                    btnGenerar.Enabled = true;
-                    btnLimpiarRepo.Enabled = true;
-                    ocultar();
-                    break;
             }
         }
-
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            try
+            switch (cbReporte.SelectedIndex)
             {
-                if (cbReporte.Text!=string.Empty)
-                {
-                    pnlReportes.Visible=true;
-                    if (cbReporte.SelectedItem.ToString()== "Libro con mayor numero de prestamos")
-                    {
-                        MostrarFormularioHijo(new frmRepoTOP1());
-                    }
-                    else if (cbReporte.SelectedItem.ToString() == "Prestamos por lector")
-                    {
-                        if (!string.IsNullOrEmpty(txtBuscarLector.Text))
-                        {
-                            frmRepoPorLector reporteForm = new frmRepoPorLector();
-                            reporteForm.generarReporte(txtBuscarLector.Text);
-                            MostrarFormularioHijo(reporteForm);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Por favor, ingrese el nombre del lector.");
-                        }
-                    }
-                    else if (cbReporte.SelectedItem.ToString() == "Top 5 Libros mas prestados")
-                    {
-                        MostrarFormularioHijo(new frmRepoTOP5());
-                    }
-                    else if (cbReporte.SelectedItem.ToString() == "Lector mas frecuente" )
-                    {
-                        MostrarFormularioHijo(new frmRepoLeccctorTOP1());
-                    }
-                    else
-                    {
-                        MessageBox.Show("Por favor seleccion el tipo de reporte que desea generar");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: "+ ex);
+                case 0:
+                    string sentencia1 = "SELECT L.Nombres + ' ' + L.Apellidos AS Nombre, LB.Titulo, E.Editorial, G.Genero " +
+                         "FROM PRESTAMO AS p INNER JOIN " +
+                         "LECTOR AS L ON p.IdLector = L.IdLector INNER JOIN " +
+                         "LIBRO AS LB ON p.IdLibro = LB.IdLibro INNER JOIN " +
+                         "EDITORIAL AS E ON LB.IdEditorial = E.IdEditorial INNER JOIN " +
+                         "GENERO AS G ON G.IdGenero = LB.IdGenero " +
+                         $"WHERE(L.Nombres = '{txtBuscarLector.Text}')";
+                    claseReporte.GenerarReporte(rptReporte, sentencia1, "informeLectores.rdlc", "dtsLectores");
+                    this.rptReporte.RefreshReport();
+                    break;
             }
         }
-        public void clear()
-        {
-            cbReporte.Text=string.Empty;
-            txtBuscarLector.Text=string.Empty;
-            ocultar();
-            pnlReportes.Visible= false;
-            btnGenerar.Enabled = false;
-            btnLimpiarRepo.Enabled = false;
-        }
-
-        private void btnLimpiarRepo_Click(object sender, EventArgs e)
-        {
-            clear();
-        }
-
         private void btnBuscarLector_Click(object sender, EventArgs e)
         {
             frmSeleccionLectores frm = new frmSeleccionLectores();
@@ -153,10 +69,5 @@ namespace Nueva_Biblioteca
             this.AddOwnedForm(frm);
             frm.ShowDialog();
         }
-
-        private void txtBuscarLector_TextChanged(object sender, EventArgs e)
-        {
-        }
-
     }
 }

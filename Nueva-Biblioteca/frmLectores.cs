@@ -29,7 +29,7 @@ namespace Nueva_Biblioteca
         {
             frmAgregarOEditarLector frm = new frmAgregarOEditarLector();
             this.AddOwnedForm(frm);
-            if (e.ColumnIndex == dgvLectores.Columns[dgvLectores.ColumnCount-2].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == dgvLectores.Columns[dgvLectores.ColumnCount - 1].Index && e.RowIndex >= 0)
             {
                 validacion2 = true;
                 frm.identificador = dgvLectores.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -51,7 +51,6 @@ namespace Nueva_Biblioteca
         }
         private void btnCrear_Click(object sender, EventArgs e)
         {
-
             validacion1 = true;
             frmAgregarOEditarLector frm = new frmAgregarOEditarLector();
             this.AddOwnedForm(frm);

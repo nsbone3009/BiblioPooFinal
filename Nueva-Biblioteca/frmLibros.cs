@@ -33,6 +33,7 @@ namespace Nueva_Biblioteca
             bandera = true;
             claseLibro.MostrarListas(frm);
             frm.btnEditar.Visible = false;
+            frm.cbEstado.SelectedItem = "Activo";
             frm.ShowDialog();
             claseLibro.LimpiarCampos(frm);
         }
@@ -44,7 +45,7 @@ namespace Nueva_Biblioteca
 
         private void dgvLibros_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {   
-            if (e.ColumnIndex == dgvLibros.Columns[dgvLibros.ColumnCount - 2].Index && e.RowIndex >= 0) //Boton Editar
+            if (e.ColumnIndex == dgvLibros.Columns[dgvLibros.ColumnCount - 1].Index && e.RowIndex >= 0) //Boton Editar
             {
                 frmAgregarOEditarLibro frm = new frmAgregarOEditarLibro();
                 this.AddOwnedForm(frm);

@@ -39,7 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbReportes = new System.Windows.Forms.Label();
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
-            this.pnlReportes = new System.Windows.Forms.Panel();
+            this.rptReporte = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
             // btnLimpiarRepo
@@ -54,7 +54,6 @@
             this.btnLimpiarRepo.Size = new System.Drawing.Size(41, 37);
             this.btnLimpiarRepo.TabIndex = 40;
             this.btnLimpiarRepo.UseVisualStyleBackColor = false;
-            this.btnLimpiarRepo.Click += new System.EventHandler(this.btnLimpiarRepo_Click);
             // 
             // btnGenerar
             // 
@@ -95,7 +94,6 @@
             this.txtBuscarLector.Size = new System.Drawing.Size(397, 29);
             this.txtBuscarLector.TabIndex = 37;
             this.txtBuscarLector.Visible = false;
-            this.txtBuscarLector.TextChanged += new System.EventHandler(this.txtBuscarLector_TextChanged);
             // 
             // lbBuscarLector
             // 
@@ -115,10 +113,7 @@
             this.cbReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbReporte.FormattingEnabled = true;
             this.cbReporte.Items.AddRange(new object[] {
-            "Prestamos por lector",
-            "Libro con mayor numero de prestamos",
-            "Lector mas frecuente",
-            "Top 5 Libros mas prestados"});
+            "Prestamos por lector"});
             this.cbReporte.Location = new System.Drawing.Point(65, 145);
             this.cbReporte.Name = "cbReporte";
             this.cbReporte.Size = new System.Drawing.Size(338, 32);
@@ -162,20 +157,20 @@
             this.lbReportes.TabIndex = 32;
             this.lbReportes.Text = "Reportes";
             // 
-            // pnlReportes
+            // rptReporte
             // 
-            this.pnlReportes.BackColor = System.Drawing.Color.White;
-            this.pnlReportes.Location = new System.Drawing.Point(44, 233);
-            this.pnlReportes.Name = "pnlReportes";
-            this.pnlReportes.Size = new System.Drawing.Size(934, 333);
-            this.pnlReportes.TabIndex = 43;
+            this.rptReporte.Location = new System.Drawing.Point(63, 252);
+            this.rptReporte.Name = "rptReporte";
+            this.rptReporte.ServerReport.BearerToken = null;
+            this.rptReporte.Size = new System.Drawing.Size(901, 293);
+            this.rptReporte.TabIndex = 41;
             // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1020, 628);
-            this.Controls.Add(this.pnlReportes);
+            this.Controls.Add(this.rptReporte);
             this.Controls.Add(this.btnLimpiarRepo);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.btnBuscarLector);
@@ -189,7 +184,6 @@
             this.Name = "frmReportes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReportes";
-            this.Load += new System.EventHandler(this.frmReportes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,6 +200,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbReportes;
         private System.DirectoryServices.DirectoryEntry directoryEntry1;
-        private System.Windows.Forms.Panel pnlReportes;
+        private Microsoft.Reporting.WinForms.ReportViewer rptReporte;
     }
 }

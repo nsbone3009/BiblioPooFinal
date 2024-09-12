@@ -50,7 +50,7 @@ namespace Nueva_Biblioteca
         {
             frmAgregarOEditarUsuario frm = new frmAgregarOEditarUsuario();
             this.AddOwnedForm(frm);
-            if (e.ColumnIndex == dgvUsuarios.Columns[6].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == dgvUsuarios.Columns[dgvUsuarios.ColumnCount - 1].Index && e.RowIndex >= 0)
             {
                 validacion2 = true;
                 frm.identificador= dgvUsuarios.Rows[e.RowIndex].Cells[0].Value.ToString();

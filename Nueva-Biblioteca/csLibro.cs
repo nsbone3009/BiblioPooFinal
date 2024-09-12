@@ -42,7 +42,7 @@ namespace Nueva_Biblioteca
                 Tabla.Rows.Add();
                 object[] vector = row.ItemArray;
                 Tabla.Rows[f].Height = 50;
-                for (int c = 0; c < Tabla.ColumnCount - 2; c++)
+                for (int c = 0; c < Tabla.ColumnCount - 1; c++)
                 {
                     if (c != 2)
                         Tabla.Rows[f].Cells[c].Value = vector[x++].ToString();
@@ -60,13 +60,12 @@ namespace Nueva_Biblioteca
                     }
                 }
                 Tabla.Rows[f].Cells["Estado"].Value = Tabla.Rows[f].Cells["Estado"].Value.ToString() == "True" ? Tabla.Rows[f].Cells["Estado"].Value = "Activo" : Tabla.Rows[f].Cells["Estado"].Value = "Inactivo";
-                Tabla.Columns[Tabla.ColumnCount - 2].Width = 50;
                 Tabla.Columns[Tabla.ColumnCount - 1].Width = 50;
                 f++;
             }
-            for (int i = 0; i < Tabla.ColumnCount - 2; i++)
+            for (int i = 0; i < Tabla.ColumnCount - 1; i++)
             {
-                Tabla.Columns[i].Width = ((Tabla.Width - 100) / (Tabla.ColumnCount - 2));
+                Tabla.Columns[i].Width = ((Tabla.Width - 50) / (Tabla.ColumnCount - 1));
                 Tabla.Columns[i].Resizable = DataGridViewTriState.False;
             }
         }

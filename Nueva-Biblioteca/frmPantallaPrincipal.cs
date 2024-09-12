@@ -12,13 +12,24 @@ namespace Nueva_Biblioteca
 {
     public partial class frmPantallaPrincipal : Form
     {
-        static bool biblioteca = false, persona = false, prestamo = false, perfil = false;
+        static csConexionDataBase conexion = new csConexionDataBase();
+        static frmContenedorPerfil frmMenuPerfil = new frmContenedorPerfil();
+        static bool biblioteca = false, persona = false, prestamo = false, perfil = false, reporte = false, configuracion = false;
         private Timer timer;
+
+        static private frmPantallaPrincipal instancia = null;
+        public static frmPantallaPrincipal Formulario()
+        {
+            if (instancia == null) { instancia = new frmPantallaPrincipal(); }
+            return instancia;
+        }
+
         public frmPantallaPrincipal()
         {
             InitializeComponent();
             Confi();
         }
+
         private void Confi()
         {
             timer = new Timer();
@@ -26,10 +37,12 @@ namespace Nueva_Biblioteca
             timer.Tick += Timer_Tick;
             timer.Start();
         }
+
         private void Timer_Tick(object sender, EventArgs e)
         {
             new csEnvioDeAvisoDevolucion().Comparar();
         }
+
         private void btnResumen_Click(object sender, EventArgs e)
         {
             pnlPrincipal.Controls.Clear();
@@ -44,15 +57,16 @@ namespace Nueva_Biblioteca
         {
             contenedorBiblioteca.Visible = false;
             contenedorPersonas.Visible = false;
-            contenedorPerfil.Visible = false;
             contenedorPrestamos.Visible = false;
+            contenedorReportes.Visible = false;
+            contenedorConfiguracion.Visible = false;
             ptbxBiblioteca.BackgroundImage = ListaFlecha.Images[0];
             ptbxPersona.BackgroundImage = ListaFlecha.Images[0];
             ptbxPrestamo.BackgroundImage = ListaFlecha.Images[0];
-            frmResumen frm = frmResumen.LlamarFormulario();
-            frm.TopLevel = false;
-            pnlPrincipal.Controls.Add(frm);
-            frm.Show();
+            ptbxReporte.BackgroundImage = ListaFlecha.Images[0];
+            ptbxConfiguracion.BackgroundImage = ListaFlecha.Images[0];
+            string consulta = "Select * from CONFIGURACION where IdConfiguracion = (Select max(IdConfiguracion) from CONFIGURACION)";
+            ptbxLogoMenu = conexion.ExtraerImagen(consulta, "Imagen", ptbxLogoMenu);
         }
 
         private void btnBiblioteca_Click(object sender, EventArgs e)
@@ -88,26 +102,6 @@ namespace Nueva_Biblioteca
             formulario.TopLevel = false;
             pnlPrincipal.Controls.Add(formulario);
             formulario.Show();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void ptbxPerfil_Click(object sender, EventArgs e)
-        {
-            if (!perfil)
-            {
-                contenedorPerfil.Visible = true;
-                contenedorPerfil.Location = new Point(889, 6);
-                perfil = true;
-            }
-            else
-            {
-                contenedorPerfil.Visible = false;
-                perfil = false;
-            }
         }
 
         private void btnPersona_Click(object sender, EventArgs e)
@@ -183,25 +177,95 @@ namespace Nueva_Biblioteca
             }
         }
 
-        private void btnRepo_Click(object sender, EventArgs e)
+        private void ptbxPerfil_Click(object sender, EventArgs e)
         {
-            frmReportes frm= frmReportes.Formulario();
-            LlamarFormulario(frm);
+            this.AddOwnedForm(frmMenuPerfil);
+            if (!perfil)
+            {
+                frmMenuPerfil.Location = new Point(1140, 78);
+                frmMenuPerfil.Show();
+                perfil = true;
+            }
+            else
+            {
+                frmMenuPerfil.Hide();
+                perfil = false;
+            }
         }
 
-        private void contenedorPerfil_SelectedIndexChanged(object sender, EventArgs e)
+        public void CerrarSesion()
         {
-            switch (contenedorPerfil.SelectedIndex)
+            Application.Exit();
+        }
+
+        private void ptbxPersona_Click(object sender, EventArgs e)
+        {
+            btnPersona.PerformClick();
+        }
+
+        private void ptbxBiblioteca_Click(object sender, EventArgs e)
+        {
+            btnBiblioteca.PerformClick();
+        }
+
+        private void ptbxPrestamo_Click(object sender, EventArgs e)
+        {
+            btnPrestamo.PerformClick();
+        }
+
+        private void contenedorConfiguracion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch(contenedorConfiguracion.SelectedIndex)
             {
                 case 0:
-                    {
-                        break;
-                    }
-                case 1:
-                    {
-                        Application.Exit();
-                        break;
-                    }
+                    frmConfiguracionGeneral frm = frmConfiguracionGeneral.Formulario();
+                    LlamarFormulario(frm);
+                    break;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(!configuracion)
+            {
+                contenedorConfiguracion.Visible = true;
+                contenedorConfiguracion.Location = new Point(12, 425);
+                ptbxConfiguracion.BackgroundImage = ListaFlecha.Images[1];
+                configuracion = true;
+            }
+            else
+            {
+                contenedorConfiguracion.Visible = false;
+                ptbxConfiguracion.BackgroundImage = ListaFlecha.Images[0];
+                configuracion = false;
+            }
+        }
+
+        private void contenedorReportes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch(contenedorReportes.SelectedIndex)
+            {
+                case 0:
+                    frmReportes frm = frmReportes.Formulario();
+                    LlamarFormulario(frm);
+                    break;
+            }  
+        }
+
+        private void btnRepo_Click(object sender, EventArgs e)
+        {
+            if (!reporte)
+            {
+                ptbxReporte.BackgroundImage = ListaFlecha.Images[1];
+                contenedorReportes.Visible = true;
+                contenedorReportes.Location = new Point(12, 372);
+                reporte = true;
+            }
+            else
+            {
+                ptbxReporte.BackgroundImage = ListaFlecha.Images[0];
+                contenedorReportes.Visible = false;
+                reporte = false;
             }
         }
 
@@ -233,11 +297,15 @@ namespace Nueva_Biblioteca
                 ptbxPrestamo.BackgroundImage = ListaFlecha.Images[1];
                 contenedorPrestamos.Visible = true;
                 contenedorPrestamos.Location = new Point(12, 316);
+                btnReportes.Location = new Point(0, 360);
+                ptbxReporte.Location = new Point(150, 372);
                 prestamo = true;
             }
             else
             {
                 ptbxPrestamo.BackgroundImage = ListaFlecha.Images[0];
+                btnReportes.Location = new Point(0, 331);
+                ptbxReporte.Location = new Point(150, 347);
                 contenedorPrestamos.Visible = false;
                 prestamo = false;
             }

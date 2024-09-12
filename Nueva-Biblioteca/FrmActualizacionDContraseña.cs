@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Nueva_Biblioteca
 {
-    public partial class FrmActualizacionDContraseña : Form
+    public partial class frmActualizacionDContraseña : Form
     {
-        public FrmActualizacionDContraseña()
+        public frmActualizacionDContraseña()
         {
             InitializeComponent();
         }

@@ -82,5 +82,13 @@ namespace Nueva_Biblioteca
             if (frm.validacion2) { btnGuardar.Enabled = false; }
             identificador = new csConexionDataBase().Extraer("Select * From AUTOR where Autor = '" + txtDescripcion.Text.Trim() + "'", "IdAutor");
         }
+
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar)  && char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

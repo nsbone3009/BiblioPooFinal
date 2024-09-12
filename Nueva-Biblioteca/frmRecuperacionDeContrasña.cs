@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Nueva_Biblioteca
 {
-    public partial class FrmRecuperacionDContrasña : Form
+    public partial class frmRecuperacionDeContrasña : Form
     {
         static long codigo = 0; static string correo = "";
-        public FrmRecuperacionDContrasña()
+        public frmRecuperacionDeContrasña()
         {
             InitializeComponent();
         }
@@ -59,7 +59,7 @@ namespace Nueva_Biblioteca
                 if (long.Parse(txtCodigo.Text) == codigo)
                 {
                     
-                    FrmActualizacionDContraseña frm = new FrmActualizacionDContraseña();
+                    frmActualizacionDContraseña frm = new frmActualizacionDContraseña();
                     frm.txtCorreo.Text = correo;
                     frm.ShowDialog();
                     this .Close();

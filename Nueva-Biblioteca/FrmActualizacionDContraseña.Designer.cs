@@ -1,6 +1,6 @@
 ﻿namespace Nueva_Biblioteca
 {
-    partial class FrmActualizacionDContraseña
+    partial class frmActualizacionDContraseña
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmActualizacionDContraseña));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActualizacionDContraseña));
             this.label2 = new System.Windows.Forms.Label();
             this.bntocultaNueva = new System.Windows.Forms.Button();
             this.bntnuevacontra = new System.Windows.Forms.Button();

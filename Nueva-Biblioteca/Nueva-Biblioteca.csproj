@@ -74,24 +74,37 @@
     <Compile Include="csLectores.cs" />
     <Compile Include="csLLenarDataGridView.cs" />
     <Compile Include="csPrestamos.cs" />
+    <Compile Include="csReporte.cs" />
     <Compile Include="csReutilización.cs" />
     <Compile Include="csLibro.cs" />
     <Compile Include="csEmail.cs" />
     <Compile Include="csLogin.cs" />
     <Compile Include="csUsuarios.cs" />
-    <Compile Include="DSbiblioteca.cs">
-      <DependentUpon>DSbiblioteca.xsd</DependentUpon>
+    <Compile Include="dtsDatos.cs">
+      <DependentUpon>dtsDatos.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DSbiblioteca.Designer.cs">
+    <Compile Include="dtsDatos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DSbiblioteca.xsd</DependentUpon>
+      <DependentUpon>dtsDatos.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FrmActualizacionDContraseña.cs">
+    <Compile Include="frmConfiguracionGeneral.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmActualizacionDContraseña.Designer.cs">
-      <DependentUpon>FrmActualizacionDContraseña.cs</DependentUpon>
+    <Compile Include="frmConfiguracionGeneral.Designer.cs">
+      <DependentUpon>frmConfiguracionGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmContenedorPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContenedorPerfil.Designer.cs">
+      <DependentUpon>frmContenedorPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmActualizacionDContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmActualizacionDContraseña.Designer.cs">
+      <DependentUpon>frmActualizacionDContraseña.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAgregarOEditarLector.cs">
       <SubType>Form</SubType>
@@ -183,41 +196,17 @@
     <Compile Include="frmPrestamoRegistrar.Designer.cs">
       <DependentUpon>frmPrestamoRegistrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRecuperacionDContrasña.cs">
+    <Compile Include="frmRecuperacionDeContrasña.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRecuperacionDContrasña.Designer.cs">
-      <DependentUpon>FrmRecuperacionDContrasña.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmRepoLeccctorTOP1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRepoLeccctorTOP1.Designer.cs">
-      <DependentUpon>frmRepoLeccctorTOP1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmRepoPorLector.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRepoPorLector.Designer.cs">
-      <DependentUpon>frmRepoPorLector.cs</DependentUpon>
+    <Compile Include="frmRecuperacionDeContrasña.Designer.cs">
+      <DependentUpon>frmRecuperacionDeContrasña.cs</DependentUpon>
     </Compile>
     <Compile Include="frmReportes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmReportes.Designer.cs">
       <DependentUpon>frmReportes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmRepoTOP1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRepoTOP1.Designer.cs">
-      <DependentUpon>frmRepoTOP1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmRepoTOP5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRepoTOP5.Designer.cs">
-      <DependentUpon>frmRepoTOP5.cs</DependentUpon>
     </Compile>
     <Compile Include="frmResumen.cs">
       <SubType>Form</SubType>
@@ -258,8 +247,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="FrmActualizacionDContraseña.resx">
-      <DependentUpon>FrmActualizacionDContraseña.cs</DependentUpon>
+    <EmbeddedResource Include="frmConfiguracionGeneral.resx">
+      <DependentUpon>frmConfiguracionGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmContenedorPerfil.resx">
+      <DependentUpon>frmContenedorPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmActualizacionDContraseña.resx">
+      <DependentUpon>frmActualizacionDContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAgregarOEditarLector.resx">
       <DependentUpon>frmAgregarOEditarLector.cs</DependentUpon>
@@ -306,23 +301,11 @@
     <EmbeddedResource Include="frmPrestamoRegistrar.resx">
       <DependentUpon>frmPrestamoRegistrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRecuperacionDContrasña.resx">
-      <DependentUpon>FrmRecuperacionDContrasña.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRepoLeccctorTOP1.resx">
-      <DependentUpon>frmRepoLeccctorTOP1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRepoPorLector.resx">
-      <DependentUpon>frmRepoPorLector.cs</DependentUpon>
+    <EmbeddedResource Include="frmRecuperacionDeContrasña.resx">
+      <DependentUpon>frmRecuperacionDeContrasña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportes.resx">
       <DependentUpon>frmReportes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRepoTOP1.resx">
-      <DependentUpon>frmRepoTOP1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRepoTOP5.resx">
-      <DependentUpon>frmRepoTOP5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmResumen.resx">
       <DependentUpon>frmResumen.cs</DependentUpon>
@@ -342,7 +325,7 @@
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LibroMasPrestado.rdlc" />
+    <EmbeddedResource Include="informeLectores.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -353,19 +336,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="rpMejorLector.rdlc" />
-    <EmbeddedResource Include="rpPrestamoPorLector.rdlc" />
-    <EmbeddedResource Include="Top5Libros.rdlc" />
-    <None Include="DSbiblioteca.xsc">
-      <DependentUpon>DSbiblioteca.xsd</DependentUpon>
+    <None Include="dtsDatos.xsc">
+      <DependentUpon>dtsDatos.xsd</DependentUpon>
     </None>
-    <None Include="DSbiblioteca.xsd">
+    <None Include="dtsDatos.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DSbiblioteca.Designer.cs</LastGenOutput>
+      <LastGenOutput>dtsDatos.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DSbiblioteca.xss">
-      <DependentUpon>DSbiblioteca.xsd</DependentUpon>
+    <None Include="dtsDatos.xss">
+      <DependentUpon>dtsDatos.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -40,7 +40,7 @@ namespace Nueva_Biblioteca
             frmAgregarOEditarGenero frm = new frmAgregarOEditarGenero();
             this.AddOwnedForm(frm);
 
-            if (e.ColumnIndex == dgvCategorias.Columns[dgvCategorias.ColumnCount - 2].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == dgvCategorias.Columns[dgvCategorias.ColumnCount - 1].Index && e.RowIndex >= 0)
             {
                 validacion2 = true;
                 frm.identificador = dgvCategorias.Rows[e.RowIndex].Cells[0].Value.ToString();

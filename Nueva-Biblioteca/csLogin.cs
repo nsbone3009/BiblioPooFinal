@@ -42,7 +42,7 @@ namespace Nueva_Biblioteca
             Contraseña = contraseña;
         }
 
-        public void VerificacionLogin(string clave)
+        public bool VerificacionLogin(string clave)
         {
             if (Usuario != string.Empty && contraseña != string.Empty)
             {
@@ -53,25 +53,27 @@ namespace Nueva_Biblioteca
                 if (lector.Read())
                 {
                     IdUsuario = lector["IdCredencial"].ToString();
-                    MessageBox.Show("📚 ¡Bienvenido de nuevo a la Biblioteca! Te has conectado exitosamente. ¡Disfruta explorando nuevos conocimientos! 📖", "Inicio de Sesión Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("📚 ¡Bienvenido de nuevo a la Biblioteca! Te has conectado exitosamente. ¡Disfruta explorando nuevos conocimientos! 📖", "Inicio de Sesión Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //frmPantallaPrincipal pantallaPrincipal = new frmPantallaPrincipal();
+                    //pantallaPrincipal.Show();
+                    //Form formularioActual = Application.OpenForms["FrmLogin"];
+                    //formularioActual.Hide();
                     conexion.Close();
-
-                    frmPantallaPrincipal pantallaPrincipal = new frmPantallaPrincipal();
-                    pantallaPrincipal.Show();
-
-                    Form formularioActual = Application.OpenForms["FrmLogin"];
-                    formularioActual.Hide();
-
+                    return true;
                 }
-                else
-                {
-                    MessageBox.Show("❌ Usuario o contraseña incorrectos. Revisa tus credenciales y vuelve a intentarlo. ¡No te quedes sin descubrir tu próxima lectura!", "Error de Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    conexion.Close();
-                }
+                //else
+                //{
+                //    //MessageBox.Show("❌ Usuario o contraseña incorrectos. Revisa tus credenciales y vuelve a intentarlo. ¡No te quedes sin descubrir tu próxima lectura!", "Error de Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //    conexion.Close();
+                //    return false;
+                //}
             }
-            else
-                MessageBox.Show("📖 Para entrar en el mundo de los libros, por favor ingresa tu usuario y contraseña. ¡No dejes los campos vacíos!", "Campos Vacíos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            conexion.Close();
+            return false;
+            //    else
+            //        MessageBox.Show("📖 Para entrar en el mundo de los libros, por favor ingresa tu usuario y contraseña. ¡No dejes los campos vacíos!", "Campos Vacíos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
+
         public string EncriptarYDesencriptar(string clave)
         {
             string frase = "hola";
@@ -84,6 +86,7 @@ namespace Nueva_Biblioteca
             byte[] result = transform.TransformFinalBlock(data, 0, data.Length);
             return Convert.ToBase64String(result);
         }
+
         public bool VerificarCorreoSQL(string correo,string consulta)
         {
 
@@ -95,6 +98,7 @@ namespace Nueva_Biblioteca
             conexion.Close();
             return ExisteCorreo;
         }
+
         public void ActualizarContraseña(string correo, string NuevaClave)
         {
             string consulta = " select IdUsuario from USUARIO where Correo='" + correo + "'";

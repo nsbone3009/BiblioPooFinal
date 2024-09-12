@@ -36,17 +36,13 @@ namespace Nueva_Biblioteca
             try
             {
                 // Validar si algún campo está vacío o nulo
-                if (string.IsNullOrEmpty(txtTitulo.Text) || string.IsNullOrEmpty(txtAutor.Text) ||
-                    cbCategoria.SelectedItem == null || cbEditorial.SelectedItem == null ||
-                    string.IsNullOrEmpty(txtUbicacion.Text) || string.IsNullOrEmpty(txtStock.Text) ||
-                    cbEstado.SelectedItem == null || ImgLibro == null)
+                if (string.IsNullOrEmpty(txtTitulo.Text) || string.IsNullOrEmpty(txtAutor.Text) || cbCategoria.SelectedItem == null || cbEditorial.SelectedItem == null || string.IsNullOrEmpty(txtUbicacion.Text) || string.IsNullOrEmpty(txtStock.Text) || cbEstado.SelectedItem == null || ImgLibro == null)
                 {
                     throw new Exception("Todos los campos son obligatorios y no pueden estar vacíos.");
                 }
-
                 frmLibros frm = frmLibros.Formulario();
                 // Agregar
-                if (frm.bandera)
+                if (frm.bandera & int.Parse(txtStock.Text) > 0)
                 {
                     if (claseLibro.RegistrarLibro(txtTitulo.Text, txtAutor.Text, cbCategoria.SelectedItem.ToString(),
                                                   cbEditorial.SelectedItem.ToString(), txtUbicacion.Text,
@@ -60,9 +56,10 @@ namespace Nueva_Biblioteca
                         MessageBox.Show("OCURRIÓ UN ERROR AL AGREGAR EL LIBRO.");
                     }
                     frm.bandera = false;
+                    this.Close();
                 }
                 // Modificar
-                else
+                else if(!frm.bandera & int.Parse(txtStock.Text) > 0)
                 {
                     if (claseLibro.ActualizarLibro(txtTitulo.Text, txtAutor.Text, cbCategoria.SelectedItem.ToString(),
                                                    cbEditorial.SelectedItem.ToString(), txtUbicacion.Text,
@@ -75,8 +72,12 @@ namespace Nueva_Biblioteca
                     {
                         MessageBox.Show("OCURRIÓ UN ERROR AL ACTUALIZAR EL LIBRO.");
                     }
+                    this.Close();
                 }
-                this.Close();
+                else
+                {
+                    MessageBox.Show("EL STOCK A AGREGAR DEBE SER MAYOR A 0");
+                }
             }
             catch (Exception ex)
             {
@@ -99,6 +100,14 @@ namespace Nueva_Biblioteca
             {
                 ImgLibro.BackgroundImage = null;
                 ImgLibro.Image = Image.FromFile(Imagen.FileName);
+            }
+        }
+
+        private void txtStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

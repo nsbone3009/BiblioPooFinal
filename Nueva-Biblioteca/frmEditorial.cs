@@ -38,7 +38,7 @@ namespace Nueva_Biblioteca
         {
             frmAgregarOEditarEditorial frm = new frmAgregarOEditarEditorial();
             this.AddOwnedForm(frm);
-            if (e.ColumnIndex == dgvEditorial.Columns[dgvEditorial.ColumnCount - 2].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == dgvEditorial.Columns[dgvEditorial.ColumnCount - 1].Index && e.RowIndex >= 0)
             {
                 validacion2 = true;
                 frm.identificador = dgvEditorial.Rows[e.RowIndex].Cells[0].Value.ToString();
