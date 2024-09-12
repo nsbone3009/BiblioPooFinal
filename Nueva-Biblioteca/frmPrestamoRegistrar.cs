@@ -31,21 +31,6 @@ namespace Nueva_Biblioteca
             this.AddOwnedForm(frm);
             frm.ShowDialog();
         }
-        private void Calendario_DateChanged(object sender, DateRangeEventArgs e)
-        {
-            DateTime Fecha = Calendario.SelectionStart;
-            DateTime fecha = DateTime.Parse(Fecha.ToShortDateString());
-            if (fecha>DateTime.Now)
-            {
-                txtFechaDevolucion.Text = fecha.ToString("yyyy-MM-dd");
-                Calendario.Visible = false;
-            }
-            else
-            {
-                MessageBox.Show("Por favor seleccione una fecha valida no se puede realizar prestamos a fechas posteriores a la actual");
-            }
-            
-        }
         private void frmPrestamoRegistrar_Load(object sender, EventArgs e)
         {
             Calendario.Visible = false;
@@ -78,38 +63,46 @@ namespace Nueva_Biblioteca
                     }
                     else
                     {
-                        MessageBox.Show("Porfavor ingrese todos los datos");
+                        MessageBox.Show("Por favor, ingrese todos los datos requeridos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
-                else 
+                else
                 {
-                    if (txtEstadoLibro.Text!=string.Empty)
+                    if (txtEstadoLibro.Text != string.Empty)
                     {
                         try
                         {
                             string idprestamo = csReutilizacion.GenerarId("PRE");
                             string idlector = txtCodigo.Text;
-                            prestamos.RegistrarPrestamo(idprestamo, idlector, idlibro, txtFechaDevolucion.Text, DateTime.Now.ToString("yyyy-MM-dd"),txtEstadoLibro.Text);
-                            MessageBox.Show($"El libro {txtLibro.Text} se ha prestado a {txtNombre.Text} de forma correcta");
-                            prestamos.enviarcorreo(txtNombre.Text, txtLibro.Text, txtFechaDevolucion.Text, correo);
-                            btnRegistrar.Location = new Point(370, 373);
-                            btnCancelar.Location = new Point(521, 373);
-                            lblDeta.Visible = false;
-                            txtEstadoLibro.Visible = false;
-                            btnRegistrar.Text = "Continuar";
-                            clear();
+
+                            // Intentar registrar el préstamo
+                            bool exito = prestamos.RegistrarPrestamo(idprestamo, idlector, idlibro, txtFechaDevolucion.Text, DateTime.Now.ToString("yyyy-MM-dd"), txtEstadoLibro.Text);
+
+                            // Mostrar el mensaje de éxito solo si el préstamo se registró correctamente
+                            if (exito)
+                            {
+                                MessageBox.Show($"El libro \"{txtLibro.Text}\" ha sido prestado correctamente a {txtNombre.Text}.", "Préstamo exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                prestamos.enviarcorreo(txtNombre.Text, txtLibro.Text, txtFechaDevolucion.Text, correo);
+
+                                // Restablecer el formulario
+                                btnRegistrar.Location = new Point(370, 373);
+                                btnCancelar.Location = new Point(521, 373);
+                                lblDeta.Visible = false;
+                                txtEstadoLibro.Visible = false;
+                                btnRegistrar.Text = "Continuar";
+                                clear();
+                            }
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Error al registrar el prestamo : " +ex.Message);
+                            MessageBox.Show($"Error al registrar el préstamo: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Mensaje de error: "+ex);
+                MessageBox.Show($"Mensaje de error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void clear()
@@ -129,6 +122,26 @@ namespace Nueva_Biblioteca
         {
             btnCancelar.Enabled = !string.IsNullOrWhiteSpace(txtLibro.Text);
             btnRegistrar.Enabled = !string.IsNullOrWhiteSpace(txtLibro.Text);
+        }
+
+        private void Calendario_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            DateTime fechaSeleccionada = Calendario.SelectionStart;
+
+            if (fechaSeleccionada < DateTime.Now)
+            {
+                MessageBox.Show("La fecha seleccionada no puede ser anterior a la fecha actual.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Calendario.SetSelectionRange(DateTime.Now, DateTime.Now); // Resaltar la fecha actual
+            }
+            else if (fechaSeleccionada > DateTime.Now.AddDays(7))
+            {
+                MessageBox.Show("La fecha seleccionada no puede ser posterior a 7 días a partir de hoy.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Calendario.SetSelectionRange(DateTime.Now, DateTime.Now); // Resaltar la fecha actual
+            }
+            else
+            {
+                txtFechaDevolucion.Text = fechaSeleccionada.ToString("yyyy-MM-dd");
+            }
         }
     }
 }

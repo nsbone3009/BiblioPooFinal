@@ -283,7 +283,7 @@
             this.Calendario.Name = "Calendario";
             this.Calendario.ShowToday = false;
             this.Calendario.TabIndex = 36;
-            this.Calendario.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.Calendario_DateChanged);
+            this.Calendario.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.Calendario_DateSelected);
             // 
             // btnCalendario
             // 

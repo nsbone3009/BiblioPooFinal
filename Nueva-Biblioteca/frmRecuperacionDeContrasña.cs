@@ -78,7 +78,7 @@ namespace Nueva_Biblioteca
             btnVerificar.Visible = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void lbCerrar_Click(object sender, EventArgs e)
         {
             this.Hide();
         }

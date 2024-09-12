@@ -388,12 +388,7 @@ C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\N
 C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmGenero.resources
 C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmLogin.resources
 C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmPrestamoRegistrar.resources
-C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.FrmRecuperacionDContrasña.resources
-C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmRepoLeccctorTOP1.resources
-C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmRepoPorLector.resources
 C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmReportes.resources
-C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmRepoTOP1.resources
-C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmRepoTOP5.resources
 C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmResumen.resources
 C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmPantallaPrincipal.resources
 C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmSeleccionAutor.resources
@@ -574,3 +569,6 @@ C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\RdlCompile.cach
 C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\RdlCompile.compiled
 C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmRecuperacionDeContrasña.resources
 C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmConfiguracionGeneral.resources
+C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmConfiguracionGeneral.resources
+C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmContenedorPerfil.resources
+C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmRecuperacionDeContrasña.resources

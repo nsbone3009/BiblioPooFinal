@@ -15,7 +15,8 @@ namespace Nueva_Biblioteca
     class csConexionDataBase
     {
         //public string cadenaConexion = @"Password=123;Persist Security Info=True;User ID=Jeremy01;Initial Catalog=BIBLIOTECA;Data Source=DESKTOP-2UJUKM2\JEREMY";
-        public string cadenaConexion = @"Password=1111;Persist Security Info=False;User ID=Administrador;Initial Catalog=BIBLIOTECA;Data Source=DESKTOP-T767FTN\KHRIZ";
+        //public string cadenaConexion = @"Password=1111;Persist Security Info=False;User ID=Administrador;Initial Catalog=BIBLIOTECA;Data Source=DESKTOP-T767FTN\KHRIZ";
+        public string cadenaConexion = @"Password=admin;Persist Security Info=False;User ID=admin;Initial Catalog=BIBLIOTECA;Data Source=NIURLETH";
         //public string cadenaConexion = @"Server= DESKTOP-RJ6RQ3J\SQLEXPRESS; DataBase = BIBLIOTECA; Integrated Security = True;";
         public SqlConnection conexion;
         public csConexionDataBase()

@@ -12,6 +12,7 @@ namespace Nueva_Biblioteca
 {
     public partial class frmSeleccionLectores : Form
     {
+        csConexionDataBase cs = new csConexionDataBase();
         public frmSeleccionLectores()
         {
             InitializeComponent();
@@ -49,6 +50,10 @@ namespace Nueva_Biblioteca
                 }
                 
             }
+        }
+        private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
+        {
+           
         }
     }
 }
