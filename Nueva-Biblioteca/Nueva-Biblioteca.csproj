@@ -73,6 +73,7 @@
     <Compile Include="csGestionPrestamos.cs" />
     <Compile Include="csLectores.cs" />
     <Compile Include="csLLenarDataGridView.cs" />
+    <Compile Include="csMensajesDCorreosYMensajitos.cs" />
     <Compile Include="csPrestamos.cs" />
     <Compile Include="csReporte.cs" />
     <Compile Include="csReutilización.cs" />

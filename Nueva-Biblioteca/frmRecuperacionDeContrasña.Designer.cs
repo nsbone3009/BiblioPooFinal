@@ -85,7 +85,7 @@
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviar.ForeColor = System.Drawing.Color.White;
-            this.btnEnviar.Location = new System.Drawing.Point(265, 323);
+            this.btnEnviar.Location = new System.Drawing.Point(246, 323);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(210, 46);
             this.btnEnviar.TabIndex = 43;
