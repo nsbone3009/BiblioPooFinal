@@ -159,10 +159,6 @@ namespace Nueva_Biblioteca
             user = user + Apellido.ToLower();
             return user;
         }
-        public void MostrarUsuarios(DataGridView tabla)
-        {
-            string consulta = "select IdUsuario,Nombres,Apellidos,Correo,Rol,U.Estado from USUARIO as U inner join ROL_USUARIO as R on U.IdTipoPersona=R.IdTipoPersona";
-            tabla = new csLLenarDataGridView().Mostrar(tabla, consulta);
-        }
+       
     }
 }

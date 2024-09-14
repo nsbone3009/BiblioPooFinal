@@ -17,8 +17,7 @@ namespace Nueva_Biblioteca
         private csLLenarDataGridView buscar = new csLLenarDataGridView();
         static private frmUsuarios instancia = null;
         private csReutilizacion verificar = new csReutilizacion();
-        private csLLenarDataGridView buscar = new csLLenarDataGridView();
-        private csUsuarios usuarios = new csUsuarios();
+
 
         public static frmUsuarios Formulario()
         {
@@ -93,20 +92,6 @@ namespace Nueva_Biblioteca
                 frm.ShowDialog();
             }
         }
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-            if (txtBuscar.Text.Length > 1)
-            {
-                string buscarTexto = txtBuscar.Text;
-                string consulta = "SELECT U.IdUsuario, U.Nombres, U.Apellidos, U.Correo, R.Rol, U.Estado FROM USUARIO AS U INNER JOIN ROL_USUARIO AS R ON U.IdTipoPersona = R.IdTipoPersona WHERE U.IdUsuario LIKE '%" + txtBuscar.Text + "%' OR U.Nombres LIKE '%" + txtBuscar.Text + "%' OR U.Apellidos LIKE '%" + txtBuscar.Text + "%' OR U.Correo LIKE '%" + txtBuscar.Text + "%' OR U.Estado LIKE '%" + txtBuscar.Text + "%'";
-                dgvUsuarios.Rows.Clear();
-                buscar.MostrarSeleccion(dgvUsuarios, consulta);
-            }
-            if (txtBuscar.Text.Length == 0)
-            {
-                dgvUsuarios.Rows.Clear();
-                usuarios.MostrarUsuarios(dgvUsuarios);
-            }
-        }
+        
     }
 }
