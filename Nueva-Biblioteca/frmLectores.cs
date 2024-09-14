@@ -14,6 +14,7 @@ namespace Nueva_Biblioteca
     {
         public bool validacion1 = false, validacion2 = false;
         static csLectores claseLector = new csLectores();
+        static csLLenarDataGridView buscar = new csLLenarDataGridView();
         static private frmLectores instancia = null;
         private csReutilizacion verificar = new csReutilizacion();
           private csLLenarDataGridView buscar = new csLLenarDataGridView();
@@ -38,7 +39,7 @@ namespace Nueva_Biblioteca
                 frm.txtNombre.Text = dgvLectores.Rows[e.RowIndex].Cells[1].Value.ToString();
                 frm.txtApellido.Text = dgvLectores.Rows[e.RowIndex].Cells[2].Value.ToString();
                 frm.txtCorreo.Text = dgvLectores.Rows[e.RowIndex].Cells[3].Value.ToString();
-                if (dgvLectores.Rows[e.RowIndex].Cells[3].Value.ToString() == "Activo") { frm.cbEstado.SelectedItem = frm.cbEstado.Items[0]; }
+                if (dgvLectores.Rows[e.RowIndex].Cells[4].Value.ToString() == "Activo") { frm.cbEstado.SelectedItem = frm.cbEstado.Items[0]; }
                 else { frm.cbEstado.SelectedItem = frm.cbEstado.Items[1]; }
                 frm.txtNombre.Enabled = false;
                 frm.txtApellido.Enabled = false;
@@ -56,12 +57,11 @@ namespace Nueva_Biblioteca
         {
             if (txtBuscar.Text.Length > 1)
             {
-                string estadoTraducido = verificar.VerificarEstado(txtBuscar.Text);
                 string consulta = "Select IdLector, Nombres, Apellidos, Correo, Estado " +
                     " from LECTOR where IdLector like '%" + txtBuscar.Text + "%' or Nombres like '%" + txtBuscar.Text + "%' or Apellidos like '%" + txtBuscar.Text + "%' " +
-                    "or Correo like '%" + txtBuscar.Text + "%' or Estado like '%" + estadoTraducido + "%'";
+                    "or Correo like '%" + txtBuscar.Text + "%' or Estado like '%"+txtBuscar.Text+"%'";
                 dgvLectores.Rows.Clear();
-                buscar.Mostrar(dgvLectores, consulta);
+                buscar.MostrarSeleccion(dgvLectores, consulta);
             }
             if (txtBuscar.Text.Length == 0)
             {

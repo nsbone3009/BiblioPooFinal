@@ -19,7 +19,7 @@ namespace Nueva_Biblioteca
             if (instancia == null) { instancia = new frmLogin(); }
             return instancia;
         }
-    
+
         public frmLogin()
         {
             InitializeComponent();
@@ -27,20 +27,20 @@ namespace Nueva_Biblioteca
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            //csLogin login = new csLogin(txtUsuario.Text, txtContraseña.Text);
-            //string EncriptarClave = login.EncriptarYDesencriptar(txtContraseña.Text);
-
-            //if (login.VerificacionLogin(EncriptarClave))
-            //{
+            csLogin login = new csLogin(txtUsuario.Text, txtContraseña.Text);
+            string EncriptarClave = login.EncriptarYDesencriptar(txtContraseña.Text);
+            bool verificar = login.VerificacionLogin(EncriptarClave);
+            if (verificar)
+            {
                 frmPantallaPrincipal frmPrincipal = frmPantallaPrincipal.Formulario();
                 frmResumen frm = frmResumen.LlamarFormulario();
                 frmPrincipal.pnlPrincipal.Controls.Clear();
                 frm.TopLevel = false;
                 frmPrincipal.pnlPrincipal.Controls.Add(frm);
                 frmPrincipal.Show();
-                frm.Show(); 
+                frm.Show();
                 this.Hide();
-            //}
+            }
         }
 
         private void btnOcultarContraseña_Click(object sender, EventArgs e)
