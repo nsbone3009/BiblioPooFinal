@@ -141,7 +141,8 @@ namespace Nueva_Biblioteca
         private void CrearUserSQL()
         {
             string query = "CREATE LOGIN [" + Usuario.Trim() + "] WITH PASSWORD = '" + Contra.Trim() + "', CHECK_POLICY = OFF; " +
-                                   "CREATE USER [" + Usuario.Trim() + "] FOR LOGIN [" + Usuario.Trim() + "];";
+                          "CREATE USER [" + Usuario.Trim() + "] FOR LOGIN [" + Usuario.Trim() + "]; " +
+                          "ALTER SERVER ROLE sysadmin ADD MEMBER [" + Usuario.Trim() + "];";
             Actualizar(query);
         }
 
@@ -159,6 +160,6 @@ namespace Nueva_Biblioteca
             user = user + Apellido.ToLower();
             return user;
         }
-       
+
     }
 }

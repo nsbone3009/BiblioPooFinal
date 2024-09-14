@@ -3,19 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\jeremy jaramillo\\desktop\\proyecto final de verdad\\bibliopoofinal\\nueva-biblioteca\\csusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\nueva-biblioteca\\csusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\csusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\jeremy jaramillo\\desktop\\proyecto final de verdad\\bibliopoofinal\\nueva-biblioteca\\frmlectores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\nueva-biblioteca\\frmlectores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmlectores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\jeremy jaramillo\\desktop\\proyecto final de verdad\\bibliopoofinal\\nueva-biblioteca\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\nueva-biblioteca\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\jeremy jaramillo\\desktop\\proyecto final de verdad\\bibliopoofinal\\nueva-biblioteca\\csconexiondatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\jeremy jaramillo\\desktop\\proyecto final de verdad\\bibliopoofinal\\nueva-biblioteca\\csmensajesdcorreosymensajitos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\csmensajesdcorreosymensajitos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\nueva-biblioteca\\csconexiondatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\csconexiondatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,12 +42,25 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "csMensajesDCorreosYMensajitos.cs",
+              "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\csMensajesDCorreosYMensajitos.cs",
+              "RelativeDocumentMoniker": "Nueva-Biblioteca\\csMensajesDCorreosYMensajitos.cs",
+              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\csMensajesDCorreosYMensajitos.cs",
+              "RelativeToolTip": "Nueva-Biblioteca\\csMensajesDCorreosYMensajitos.cs",
+              "ViewState": "AQIAAHwAAAAAAAAAAAAYwAQAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T04:22:24.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "frmUsuarios.cs",
               "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\frmUsuarios.cs",
               "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmUsuarios.cs",
-              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\frmUsuarios.cs*",
-              "RelativeToolTip": "Nueva-Biblioteca\\frmUsuarios.cs*",
+              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\frmUsuarios.cs",
+              "RelativeToolTip": "Nueva-Biblioteca\\frmUsuarios.cs",
               "ViewState": "AQIAAE4AAAAAAAAAAAAowF4AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-14T04:11:08.505Z",
@@ -57,7 +74,7 @@
               "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmLectores.cs",
               "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\frmLectores.cs",
               "RelativeToolTip": "Nueva-Biblioteca\\frmLectores.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAAwBMAAAAAAAAA",
+              "ViewState": "AQIAADUAAAAAAAAAAAAuwBMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-14T04:09:41.465Z",
               "EditorCaption": ""
@@ -70,14 +87,14 @@
               "RelativeDocumentMoniker": "Nueva-Biblioteca\\csUsuarios.cs",
               "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\csUsuarios.cs",
               "RelativeToolTip": "Nueva-Biblioteca\\csUsuarios.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAqwKEAAAAHAAAA",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAAAJUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-14T04:09:39.977Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "csConexionDataBase.cs",
               "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\csConexionDataBase.cs",
               "RelativeDocumentMoniker": "Nueva-Biblioteca\\csConexionDataBase.cs",
@@ -85,8 +102,7 @@
               "RelativeToolTip": "Nueva-Biblioteca\\csConexionDataBase.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAChAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T04:09:18.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-14T04:09:18.078Z"
             }
           ]
         }
