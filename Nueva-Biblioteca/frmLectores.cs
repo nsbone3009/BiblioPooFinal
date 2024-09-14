@@ -15,6 +15,8 @@ namespace Nueva_Biblioteca
         public bool validacion1 = false, validacion2 = false;
         static csLectores claseLector = new csLectores();
         static private frmLectores instancia = null;
+        private csReutilizacion verificar = new csReutilizacion();
+          private csLLenarDataGridView buscar = new csLLenarDataGridView();
 
         public static frmLectores Formulario()
         {
@@ -49,6 +51,25 @@ namespace Nueva_Biblioteca
         {
             claseLector.MostrarLectores(dgvLectores);
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text.Length > 1)
+            {
+                string estadoTraducido = verificar.VerificarEstado(txtBuscar.Text);
+                string consulta = "Select IdLector, Nombres, Apellidos, Correo, Estado " +
+                    " from LECTOR where IdLector like '%" + txtBuscar.Text + "%' or Nombres like '%" + txtBuscar.Text + "%' or Apellidos like '%" + txtBuscar.Text + "%' " +
+                    "or Correo like '%" + txtBuscar.Text + "%' or Estado like '%" + estadoTraducido + "%'";
+                dgvLectores.Rows.Clear();
+                buscar.Mostrar(dgvLectores, consulta);
+            }
+            if (txtBuscar.Text.Length == 0)
+            {
+                dgvLectores.Rows.Clear();
+                claseLector.MostrarLectores(dgvLectores);
+            }
+        }
+
         private void btnCrear_Click(object sender, EventArgs e)
         {
             validacion1 = true;
