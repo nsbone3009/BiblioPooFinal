@@ -12,12 +12,12 @@ namespace Nueva_Biblioteca
     {
         public DataGridView Mostrar(DataGridView Tabla, string consulta)
         {
-            int f = 0; 
+            int f = 0;
             csConexionDataBase dataBase = new csConexionDataBase();
-            DataTable Contenedor = new DataTable(); 
-            Contenedor = dataBase.Registros(consulta); 
+            DataTable Contenedor = new DataTable();
+            Contenedor = dataBase.Registros(consulta);
 
-            foreach(DataRow row in Contenedor.Rows) 
+            foreach(DataRow row in Contenedor.Rows)
             {
                 Tabla.Rows.Add(row.ItemArray);
                 Tabla.Rows[f].Cells["Estado"].Value = Tabla.Rows[f].Cells["Estado"].Value.ToString() == "True" ? Tabla.Rows[f].Cells["Estado"].Value = "Activo" : Tabla.Rows[f].Cells["Estado"].Value = "Inactivo"; //Si estado es True sera igual a Activo y viceversa.
@@ -34,13 +34,14 @@ namespace Nueva_Biblioteca
         public DataGridView MostrarSeleccion(DataGridView Tabla, string consulta)
         {
             int f = 0; //Contador.
-            csConexionDataBase dataBase = new csConexionDataBase(); 
-            DataTable Contenedor = new DataTable(); 
-            Contenedor = dataBase.Registros(consulta); 
-            foreach (DataRow row in Contenedor.Rows) 
+            csConexionDataBase dataBase = new csConexionDataBase();
+            DataTable Contenedor = new DataTable();
+            Contenedor = dataBase.Registros(consulta);
+            foreach (DataRow row in Contenedor.Rows)
             {
-                Tabla.Rows.Add(row.ItemArray); 
-                Tabla.Rows[f++].Height = 50; 
+                Tabla.Rows.Add(row.ItemArray);
+                Tabla.Rows[f].Cells["Estado"].Value = Tabla.Rows[f].Cells["Estado"].Value.ToString() == "True" ? Tabla.Rows[f].Cells["Estado"].Value = "Activo" : Tabla.Rows[f].Cells["Estado"].Value = "Inactivo"; //Si estado es True sera igual a Activo y viceversa.
+                Tabla.Rows[f++].Height = 50;
                 Tabla.Columns[Tabla.ColumnCount - 1].Width = 50;
             }
             for (int i = 0; i < Tabla.ColumnCount - 1; i++)

@@ -43,6 +43,8 @@
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.lblBuscar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
             this.SuspendLayout();
             // 
@@ -185,11 +187,33 @@
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(640, 129);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(316, 26);
+            this.txtBuscar.TabIndex = 28;
+            // 
+            // lblBuscar
+            // 
+            this.lblBuscar.AutoSize = true;
+            this.lblBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(174)))));
+            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.ForeColor = System.Drawing.Color.White;
+            this.lblBuscar.Location = new System.Drawing.Point(561, 130);
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(74, 24);
+            this.lblBuscar.TabIndex = 27;
+            this.lblBuscar.Text = "Buscar";
+            // 
             // frmLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1020, 628);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvLibros);
             this.Controls.Add(this.btnCrear);
@@ -219,5 +243,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewButtonColumn Column8;
+        public System.Windows.Forms.TextBox txtBuscar;
+        public System.Windows.Forms.Label lblBuscar;
     }
 }

@@ -13,9 +13,12 @@ namespace Nueva_Biblioteca
     public partial class frmAgregarOEditarUsuario : Form
     {
         public string identificador = "";
+        private static csMensajesDCorreosYMensajitos mensajes = new csMensajesDCorreosYMensajitos();
         public frmAgregarOEditarUsuario()
         {
             InitializeComponent();
+            cbEstado.SelectedIndex = 0;
+            btnEditar.Visible= false;
         }
 
         private void lbCerrar_Click(object sender, EventArgs e)
@@ -38,29 +41,53 @@ namespace Nueva_Biblioteca
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
-        {           
+        {
             frmUsuarios frm = Owner as frmUsuarios;
             csUsuarios agregar = new csUsuarios(identificador, txtNombre.Text, txtApellido.Text, cbEstado.Text, cbTipo.Text, txtCorreo.Text, txtContraseña.Text);
             if (frm.validacion1)
             {
-                agregar.AgregarUsuario();
-                frm.validacion1 = false;
+                bool verificar = agregar.AgregarUsuario();
+                if (verificar)
+                {
+                    frm.validacion1 = false;
+                    this.Close();
+                }
+
             }
             else if (frm.validacion2)
             {
-                agregar.EditarUsuario();
-                frm.validacion2 = false;
-            }           
+                bool verificar = agregar.EditarUsuario();
+                if (verificar)
+                {
+                    frm.validacion2 = false;
+                    this.Close();
+                }
+
+            }
             frm.dgvUsuarios.Rows.Clear();
-            frm.Mostrar();
-            this.Close();
+            agregar.MostrarUsuarios(frm.dgvUsuarios);
         }
 
         private void frmAgregarOEditarUsuario_Load(object sender, EventArgs e)
         {
             frmUsuarios frm = Owner as frmUsuarios;
-            if (frm.validacion2) { btnGuardar.Enabled = false ;  }
-            
+            if (frm.validacion2) { btnGuardar.Enabled = false ;btnEditar.Visible = true;  }
+
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            mensajes.NoNumero(sender, e);
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            mensajes.NoNumero(sender, e);
+        }
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            mensajes.NoEspacio(sender, e);
         }
     }
 }

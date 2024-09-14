@@ -14,9 +14,10 @@ namespace Nueva_Biblioteca
 {
     class csConexionDataBase
     {
-        //public string cadenaConexion = @"Password=123;Persist Security Info=True;User ID=Jeremy01;Initial Catalog=BIBLIOTECA;Data Source=DESKTOP-2UJUKM2\JEREMY";
+        public string cadenaConexion = @"Password=123;Persist Security Info=True;User ID=Jeremy01;Initial Catalog=BIBLIOTECA;Data Source=DESKTOP-2UJUKM2\JEREMY";
         //public string cadenaConexion = @"Password=1111;Persist Security Info=False;User ID=Administrador;Initial Catalog=BIBLIOTECA;Data Source=DESKTOP-T767FTN\KHRIZ";
-        public string cadenaConexion = @"Server= DESKTOP-RJ6RQ3J\SQLEXPRESS; DataBase = BIBLIOTECA; Integrated Security = True;";
+        //public string cadenaConexion = @"Password=admin;Persist Security Info=False;User ID=admin;Initial Catalog=BIBLIOTECA;Data Source=NIURLETH";
+        //public string cadenaConexion = @"Server= DESKTOP-RJ6RQ3J\SQLEXPRESS; DataBase = BIBLIOTECA; Integrated Security = True;";
         public SqlConnection conexion;
         public csConexionDataBase()
         {
@@ -24,11 +25,11 @@ namespace Nueva_Biblioteca
         }
         public DataTable Registros(string consulta)
         {
-            SqlCommand comando = new SqlCommand(consulta, conexion); 
-            SqlDataAdapter datos = new SqlDataAdapter(comando); 
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            SqlDataAdapter datos = new SqlDataAdapter(comando);
             DataTable tabla = new DataTable();
-            datos.Fill(tabla); 
-            return tabla; 
+            datos.Fill(tabla);
+            return tabla;
         }
         public void Actualizar(string consulta)
         {
@@ -111,13 +112,13 @@ namespace Nueva_Biblioteca
         }
         public void GuardarImagen(PictureBox Imagen, string consulta)
         {
-            MemoryStream espacio = new MemoryStream(); 
-            Imagen.Image.Save(espacio, ImageFormat.Png); 
-            byte[] Convertir = espacio.ToArray(); 
+            MemoryStream espacio = new MemoryStream();
+            Imagen.Image.Save(espacio, ImageFormat.Png);
+            byte[] Convertir = espacio.ToArray();
             conexion.Open();
             SqlCommand Comando = new SqlCommand(consulta, conexion);
-            Comando.Parameters.AddWithValue("imagen", Convertir); 
-            Comando.ExecuteNonQuery(); 
+            Comando.Parameters.AddWithValue("imagen", Convertir);
+            Comando.ExecuteNonQuery();
             conexion.Close();
         }
         //Metodo para obtener una columna con la consulta select, se debe tener definida la columna a recibir con la consulta select
@@ -162,6 +163,16 @@ namespace Nueva_Biblioteca
                 MessageBox.Show("Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return datosLibro;
+        public bool VerificarCorreoSQL(string correo, string consulta)
+        {
+
+            bool ExisteCorreo = false;
+            conexion.Open();
+            SqlCommand comands = new SqlCommand(consulta, conexion);
+            int contador = (int)comands.ExecuteScalar();
+            ExisteCorreo = contador > 0;
+            conexion.Close();
+            return ExisteCorreo;
         }
 
     }

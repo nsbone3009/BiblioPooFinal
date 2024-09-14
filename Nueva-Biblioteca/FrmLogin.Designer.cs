@@ -47,7 +47,7 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.txtContraseña.Location = new System.Drawing.Point(474, 262);
             this.txtContraseña.MaxLength = 16;
             this.txtContraseña.Name = "txtContraseña";
@@ -58,7 +58,7 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(474, 177);
             this.txtUsuario.MaxLength = 16;
             this.txtUsuario.Name = "txtUsuario";
@@ -71,10 +71,10 @@
             this.lbOlvidoContraseña.AutoSize = true;
             this.lbOlvidoContraseña.BackColor = System.Drawing.Color.Transparent;
             this.lbOlvidoContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbOlvidoContraseña.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbOlvidoContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOlvidoContraseña.Location = new System.Drawing.Point(471, 310);
             this.lbOlvidoContraseña.Name = "lbOlvidoContraseña";
-            this.lbOlvidoContraseña.Size = new System.Drawing.Size(195, 18);
+            this.lbOlvidoContraseña.Size = new System.Drawing.Size(204, 18);
             this.lbOlvidoContraseña.TabIndex = 13;
             this.lbOlvidoContraseña.Text = "¿Olvidaste tu contraseña?";
             this.lbOlvidoContraseña.Click += new System.EventHandler(this.lbOlvidoContraseña_Click);
@@ -165,7 +165,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(174)))));
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -184,7 +184,7 @@
             // 
             // btnMinimizar
             // 
-            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(174)))));
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

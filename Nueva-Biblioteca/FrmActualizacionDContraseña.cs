@@ -37,7 +37,33 @@ namespace Nueva_Biblioteca
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void lbCerrar_Click(object sender, EventArgs e)
+        {
             this.Hide();
         }
+
+        private void bntnuevacontra_Click(object sender, EventArgs e)
+        {
+            txtNuevaClave.UseSystemPasswordChar = true; BtnNuevaContra.Visible = false; BtnOcultaNueva.Visible = true;
+        }
+
+        private void bntocultaNueva_Click(object sender, EventArgs e)
+        {
+            txtNuevaClave.UseSystemPasswordChar = false; BtnNuevaContra.Visible = true; BtnOcultaNueva.Visible = false;
+        }
+
+        private void btnMostrarContraseña_Click(object sender, EventArgs e)
+        {
+            txtConfirmarCLave.UseSystemPasswordChar = true; btnMostrarContraseña.Visible = false; btnOcultarContraseña.Visible = true;
+        }
+
+        private void btnOcultarContraseña_Click(object sender, EventArgs e)
+        {
+            txtConfirmarCLave.UseSystemPasswordChar = false; btnMostrarContraseña.Visible = true; btnOcultarContraseña.Visible = false;
+        }
     }
+
 }
