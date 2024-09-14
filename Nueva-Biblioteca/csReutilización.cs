@@ -21,6 +21,15 @@ namespace Nueva_Biblioteca
 
              return id;
          }
+        public string VerificarEstado(string Estado)
+        {
+            Estado = Estado.ToLower();
+            if (Estado == "activo")
+                return "1";
+            else if (Estado == "inactivo")
+                return "0";
+            return Estado;
+        }
 
     }
 }

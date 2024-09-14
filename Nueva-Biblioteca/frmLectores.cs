@@ -16,6 +16,8 @@ namespace Nueva_Biblioteca
         static csLectores claseLector = new csLectores();
         static csLLenarDataGridView buscar = new csLLenarDataGridView();
         static private frmLectores instancia = null;
+        private csReutilizacion verificar = new csReutilizacion();
+          private csLLenarDataGridView buscar = new csLLenarDataGridView();
 
         public static frmLectores Formulario()
         {

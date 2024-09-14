@@ -13,7 +13,8 @@ namespace Nueva_Biblioteca
     public partial class frmGenero : Form
     {
         public bool validacion1 = false, validacion2 = false;
-
+        private csLLenarDataGridView buscar = new csLLenarDataGridView();
+        private csReutilizacion verificar = new csReutilizacion();
         static private frmGenero instancia = null;
         static csGenero clase = new csGenero();
 
@@ -50,6 +51,27 @@ namespace Nueva_Biblioteca
                 frm.txtDescripcion.Enabled = false;
                 frm.cbEstado.Enabled = false;
                 frm.ShowDialog();
+            }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text.Length > 0)
+            {
+                string estadoTraducido = verificar.VerificarEstado(txtBuscar.Text);
+                string consulta = "SELECT IdGenero, Genero, Estado " +
+                                  "FROM GENERO " +
+                                  "WHERE IdGenero LIKE '%" + txtBuscar.Text + "%' " +
+                                  "OR Genero LIKE '%" + txtBuscar.Text + "%' " +
+                                  "OR Estado LIKE '%" + estadoTraducido + "%'";
+
+                dgvCategorias.Rows.Clear();
+                buscar.Mostrar(dgvCategorias, consulta);
+            }
+            else if (txtBuscar.Text.Length == 0)
+            {
+                dgvCategorias.Rows.Clear();
+                clase.Mostrar(dgvCategorias);
             }
         }
 
