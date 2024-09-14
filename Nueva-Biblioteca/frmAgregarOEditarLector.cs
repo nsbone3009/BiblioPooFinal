@@ -14,6 +14,7 @@ namespace Nueva_Biblioteca
     {
         private static csLectores claseLector = new csLectores();
         public string identificador = "";
+        public string CorreoIgual = "";
         private static csMensajesDCorreosYMensajitos mensajes = new csMensajesDCorreosYMensajitos();
 
         public frmAgregarOEditarLector()
@@ -33,6 +34,7 @@ namespace Nueva_Biblioteca
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+             CorreoIgual= txtCorreo.Text;
             txtNombre.Enabled = true;
             txtApellido.Enabled = true;
             txtCorreo.Enabled = true;
@@ -43,9 +45,7 @@ namespace Nueva_Biblioteca
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             frmLectores frm = Owner as frmLectores;
-
-            csLectores AgregaryEditar = new csLectores(identificador, txtNombre.Text, txtApellido.Text, txtCorreo.Text, cbEstado.Text);
-
+            csLectores AgregaryEditar = new csLectores(identificador, txtNombre.Text, txtApellido.Text, txtCorreo.Text, cbEstado.Text,CorreoIgual);
             if (frm.validacion1)
             {
                 bool verificar = AgregaryEditar.AgregarLector();
@@ -66,10 +66,6 @@ namespace Nueva_Biblioteca
                 }
 
             }
-            txtNombre.Clear();
-            txtApellido.Clear();
-            txtCorreo.Clear();
-            cbEstado.SelectedIndex = -1;
             frm.dgvLectores.Rows.Clear();
             claseLector.MostrarLectores(frm.dgvLectores);
         }

@@ -14,7 +14,7 @@ namespace Nueva_Biblioteca
         private Random rnd = new Random(DateTime.Now.Millisecond);
 
         private csMensajesDCorreosYMensajitos mensajes = new csMensajesDCorreosYMensajitos();
-        private string codigo, nombre, apellido, fecha, correo, estado;
+        private string codigo, nombre, apellido, fecha, correo, estado, correoIgual;
 
         //Propiedades
         public string Codigo
@@ -35,18 +35,22 @@ namespace Nueva_Biblioteca
         public string Estado
         { get { return estado; } set { estado = value; } }
 
+        public string CorreoIgual { get => correoIgual; set => correoIgual = value; }
+
         //Constructor
         public csLectores()
         { }
 
         //Metodos
-        public csLectores(string codigo, string nombre, string apellido, string correo, string estado)
+        public csLectores(string codigo, string nombre, string apellido, string correo, string estado,string igual)
         {
             Codigo = codigo.Trim();
             Nombre = nombre.Trim();
             Apellido = apellido.Trim();
             Correo = correo.Trim();
             Estado = estado.Trim();
+            CorreoIgual=igual.Trim();
+
         }
 
         public void MostrarLectores(DataGridView tabla)
@@ -91,11 +95,42 @@ namespace Nueva_Biblioteca
             csLogin verifcarC = new csLogin();
             if (Nombre != string.Empty && Apellido != string.Empty && Correo != string.Empty && Estado != string.Empty)
             {
+                string consulta = $"Select COUNT(*) from LECTOR where Correo = '{Correo}'";
+                bool verificar01 = EsCorreoValido(correo);
                 Estado = VerificarEstado();
-                string query = $"Update LECTOR set Nombres = '{Nombre}', Apellidos = '{Apellido}', Correo = '{Correo}', Estado = '{Estado}' where IdLector = '{Codigo}'";
-                Actualizar(query);
-                mensajes.EnvioCorreoLectorEditar(nombre, apellido, correo);
-                return true;
+                if (verificar01)
+                {
+                    if (Correo == CorreoIgual)
+                    {
+                        string query = $"Update LECTOR set Nombres = '{Nombre}', Apellidos = '{Apellido}', Correo = '{Correo}', Estado = '{Estado}' where IdLector = '{Codigo}'";
+                        Actualizar(query);
+                        mensajes.EnvioCorreoLectorEditar(nombre, apellido, correo);
+                        return true;
+                    }
+                    else
+                    {
+                        bool verificar = VerificarCorreoSQL(Correo, consulta);
+                        if (!verificar)
+                        {
+                            string query = $"Update LECTOR set Nombres = '{Nombre}', Apellidos = '{Apellido}', Correo = '{Correo}', Estado = '{Estado}' where IdLector = '{Codigo}'";
+                            Actualizar(query);
+                            mensajes.EnvioCorreoLectorEditar(nombre, apellido, correo);
+                            return true;
+                        }
+                        else
+                        {
+                            mensajes.CorreoNoValidoORegistrado();
+                            return false;
+                        }
+                    }
+
+                }
+                else
+                {
+                    mensajes.CorreoNoValidoORegistrado();
+                    return false;
+                }
+
             }
             else
             {

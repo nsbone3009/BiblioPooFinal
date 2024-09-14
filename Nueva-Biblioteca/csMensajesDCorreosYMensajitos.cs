@@ -38,17 +38,14 @@ namespace Nueva_Biblioteca
 
         public void NoEspacio(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != ' ' && !char.IsControl(e.KeyChar))
+            if (e.KeyChar != ' ' || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-
-
-
             }
             else
             {
                 e.Handled = true;
-                MessageBox.Show("⚠️ El ingreso de espacios no está permitido. Por favor, usa caracteres válidos.", " Entrada No Permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("⚠️ El ingreso de espacios no está permitido. Por favor, usa caracteres válidos.", "Entrada No Permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         public void EnvioDeCorreoRecuperacionDCuenta(string Correo, long codigo)

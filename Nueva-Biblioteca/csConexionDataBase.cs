@@ -163,6 +163,10 @@ namespace Nueva_Biblioteca
                 MessageBox.Show("Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return datosLibro;
+           
+
+   
+        }
         public bool VerificarCorreoSQL(string correo, string consulta)
         {
 
@@ -174,6 +178,6 @@ namespace Nueva_Biblioteca
             conexion.Close();
             return ExisteCorreo;
         }
-
     }
+
 }

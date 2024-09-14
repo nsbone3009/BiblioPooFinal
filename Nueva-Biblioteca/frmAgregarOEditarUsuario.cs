@@ -12,6 +12,7 @@ namespace Nueva_Biblioteca
 {
     public partial class frmAgregarOEditarUsuario : Form
     {
+        public string CorreoIgual = "";
         public string identificador = "";
         private static csMensajesDCorreosYMensajitos mensajes = new csMensajesDCorreosYMensajitos();
         public frmAgregarOEditarUsuario()
@@ -31,6 +32,7 @@ namespace Nueva_Biblioteca
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            CorreoIgual= txtCorreo.Text;
             txtContraseña.Enabled = false;
             txtNombre.Enabled = true;
             txtApellido.Enabled = true;
@@ -43,7 +45,7 @@ namespace Nueva_Biblioteca
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             frmUsuarios frm = Owner as frmUsuarios;
-            csUsuarios agregar = new csUsuarios(identificador, txtNombre.Text, txtApellido.Text, cbEstado.Text, cbTipo.Text, txtCorreo.Text, txtContraseña.Text);
+            csUsuarios agregar = new csUsuarios(identificador, txtNombre.Text, txtApellido.Text, cbEstado.Text, cbTipo.Text, txtCorreo.Text, txtContraseña.Text,CorreoIgual);
             if (frm.validacion1)
             {
                 bool verificar = agregar.AgregarUsuario();
