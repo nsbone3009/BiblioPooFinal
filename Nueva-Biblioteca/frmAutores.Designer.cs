@@ -32,12 +32,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvAutores = new System.Windows.Forms.DataGridView();
-            this.btnCrear = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnCrear = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,34 +96,6 @@
             this.dgvAutores.TabIndex = 11;
             this.dgvAutores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAutores_CellContentClick);
             // 
-            // btnCrear
-            // 
-            this.btnCrear.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnCrear.FlatAppearance.BorderSize = 0;
-            this.btnCrear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCrear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrear.ForeColor = System.Drawing.Color.White;
-            this.btnCrear.Location = new System.Drawing.Point(65, 123);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(106, 32);
-            this.btnCrear.TabIndex = 10;
-            this.btnCrear.Text = "Crear Nuevo";
-            this.btnCrear.UseVisualStyleBackColor = false;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(42, 101);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(826, 50, 110, 400);
-            this.label1.Size = new System.Drawing.Size(936, 463);
-            this.label1.TabIndex = 9;
-            // 
             // Codigo
             // 
             this.Codigo.HeaderText = "Codigo";
@@ -153,6 +125,34 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Width = 125;
+            // 
+            // btnCrear
+            // 
+            this.btnCrear.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnCrear.FlatAppearance.BorderSize = 0;
+            this.btnCrear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCrear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.ForeColor = System.Drawing.Color.White;
+            this.btnCrear.Location = new System.Drawing.Point(65, 123);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(106, 32);
+            this.btnCrear.TabIndex = 10;
+            this.btnCrear.Text = "Crear Nuevo";
+            this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(42, 101);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(826, 50, 110, 400);
+            this.label1.Size = new System.Drawing.Size(936, 463);
+            this.label1.TabIndex = 9;
             // 
             // frmAutores
             // 

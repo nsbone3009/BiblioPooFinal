@@ -15,8 +15,8 @@ namespace Nueva_Biblioteca
     class csConexionDataBase
     {
         //public string cadenaConexion = @"Password=123;Persist Security Info=True;User ID=Jeremy01;Initial Catalog=BIBLIOTECA;Data Source=DESKTOP-2UJUKM2\JEREMY";
-        public string cadenaConexion = @"Password=1111;Persist Security Info=False;User ID=Administrador;Initial Catalog=BIBLIOTECA;Data Source=DESKTOP-T767FTN\KHRIZ";
-        //public string cadenaConexion = @"Server= DESKTOP-RJ6RQ3J\SQLEXPRESS; DataBase = BIBLIOTECA; Integrated Security = True;";
+        //public string cadenaConexion = @"Password=1111;Persist Security Info=False;User ID=Administrador;Initial Catalog=BIBLIOTECA;Data Source=DESKTOP-T767FTN\KHRIZ";
+        public string cadenaConexion = @"Server= DESKTOP-RJ6RQ3J\SQLEXPRESS; DataBase = BIBLIOTECA; Integrated Security = True;";
         public SqlConnection conexion;
         public csConexionDataBase()
         {
@@ -119,6 +119,49 @@ namespace Nueva_Biblioteca
             Comando.Parameters.AddWithValue("imagen", Convertir); 
             Comando.ExecuteNonQuery(); 
             conexion.Close();
+        }
+        //Metodo para obtener una columna con la consulta select, se debe tener definida la columna a recibir con la consulta select
+        //Ejemplo: "select Titulo from LIBRO"
+        //Parametros a ingresar: la consulta y una lista
+        public List<string> Lista(string consulta, List<string> lectores)
+        {
+            conexion.Open();
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            try
+            {
+                SqlDataReader read = comando.ExecuteReader();
+                while (read.Read())
+                    lectores.Add(read[0].ToString().Trim());
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return lectores;
+        }
+        //Metodo donde se debe definir los dos parametros que vas a recibir en la consulta select,
+        //Ademas de ingresar como parametros una lista y la consulta select
+        //Ejemplo: "select IdLibro, Titulo from LIBRO"
+        public List<string> Extraer2Parametros(List<string> datosLibro, string consulta)
+        {
+            conexion.Open();
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            try
+            {
+                SqlDataReader read = comando.ExecuteReader();
+                while (read.Read())
+                {
+                    datosLibro.Add(read[0].ToString().Trim());
+                    datosLibro.Add(read[1].ToString().Trim());
+                }
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return datosLibro;
         }
 
     }
