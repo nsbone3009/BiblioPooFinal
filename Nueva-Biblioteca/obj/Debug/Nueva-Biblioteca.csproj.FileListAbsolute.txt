@@ -563,11 +563,105 @@ C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Bibliotec
 C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmConfiguracionGeneral.resources
 C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmContenedorPerfil.resources
 C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmRecuperacionDeContrasña.resources
-C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
-C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
-C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
-C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
-C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
-C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\RdlCompile.cache
-C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\RdlCompile.compiled
-C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva-Biblioteca.csproj.CopyComplete
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Nueva-Biblioteca.exe.config
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Nueva-Biblioteca.exe
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Nueva-Biblioteca.pdb
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\EnvDTE.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\stdole.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.MSXML.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\zh-HANS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\zh-HANT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\zh-HANS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\zh-HANT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\zh-HANS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\zh-HANT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva-Biblioteca.csproj.AssemblyReference.cache
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmConfiguracionGeneral.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmContenedorPerfil.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmActualizacionDContraseña.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmAgregarOEditarLector.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmAgregarOEditarLibro.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmAgregarOEditarUsuario.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmConsultarPrestamos.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmDevolverLibro.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmLectores.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmLibros.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmAgregarOEditarAutor.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmAutores.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmAgregarOEditarEditorial.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmEditorial.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmAgregarOEditarGenero.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmGenero.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmLogin.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmPrestamoRegistrar.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmRecuperacionDeContrasña.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmReportes.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmResumen.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmPantallaPrincipal.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmSeleccionAutor.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmSeleccionLectores.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmSeleccionLibros.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmUsuarios.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.Properties.Resources.resources
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva-Biblioteca.csproj.GenerateResource.cache
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva-Biblioteca.csproj.CoreCompileInputs.cache
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva-Bi.3A14167A.Up2Date
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva-Biblioteca.exe
+C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva-Biblioteca.pdb

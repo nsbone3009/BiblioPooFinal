@@ -14,10 +14,14 @@ namespace Nueva_Biblioteca
     {
         private static csLectores claseLector = new csLectores();
         public string identificador = "";
+        public string CorreoIgual = "";
+        private static csMensajesDCorreosYMensajitos mensajes = new csMensajesDCorreosYMensajitos();
 
         public frmAgregarOEditarLector()
         {
             InitializeComponent();
+            cbEstado.SelectedIndex = 0;
+            btnEditar.Visible = false;
         }
 
         private void lbCerrar_Click(object sender, EventArgs e)
@@ -30,6 +34,7 @@ namespace Nueva_Biblioteca
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+             CorreoIgual= txtCorreo.Text;
             txtNombre.Enabled = true;
             txtApellido.Enabled = true;
             txtCorreo.Enabled = true;
@@ -40,33 +45,50 @@ namespace Nueva_Biblioteca
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             frmLectores frm = Owner as frmLectores;
-
-            csLectores AgregaryEditar = new csLectores(identificador, txtNombre.Text, txtApellido.Text, txtCorreo.Text, cbEstado.Text);
-
+            csLectores AgregaryEditar = new csLectores(identificador, txtNombre.Text, txtApellido.Text, txtCorreo.Text, cbEstado.Text,CorreoIgual);
             if (frm.validacion1)
             {
-                AgregaryEditar.AgregarLector();
-                frm.validacion1 = false;
+                bool verificar = AgregaryEditar.AgregarLector();
+                if (verificar)
+                {
+                    frm.validacion1 = false;
+                    this.Close();
+                }
 
             }
             else if (frm.validacion2)
             {
-                AgregaryEditar.EditarLector();
-                frm.validacion2 = false;
+                bool verificar = AgregaryEditar.EditarLector();
+                if (verificar)
+                {
+                    frm.validacion2 = false;
+                    this.Close();
+                }
+
             }
-            txtNombre.Clear();
-            txtApellido.Clear();
-            txtCorreo.Clear();
-            cbEstado.SelectedIndex = -1;
             frm.dgvLectores.Rows.Clear();
             claseLector.MostrarLectores(frm.dgvLectores);
-            this.Close();
         }
 
         private void frmAgregarOEditarLector_Load(object sender, EventArgs e)
         {
             frmLectores frm = Owner as frmLectores;
-            if (frm.validacion2) { btnGuardar.Enabled = false; }
+            if (frm.validacion2) { btnGuardar.Enabled = false; btnEditar.Visible = true; }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            mensajes.NoNumero(sender, e);
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            mensajes.NoNumero(sender, e);
+        }
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            mensajes.NoEspacio(sender, e);
         }
     }
 }

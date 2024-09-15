@@ -20,7 +20,7 @@ namespace Nueva_Biblioteca
             if (instancia == null) { instancia = new frmLogin(); }
             return instancia;
         }
-    
+
         public frmLogin()
         {
             InitializeComponent();

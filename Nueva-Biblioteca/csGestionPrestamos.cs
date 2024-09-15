@@ -10,32 +10,12 @@ namespace Nueva_Biblioteca
 {
     class csGestionPrestamos
     {
-        private string id;
-        private string filtroP;
-        private string consulta="";
-        public string ID
-        {
-            get { return id; }
-            set { id = value; }
-        }
-        public string FiltroP
-        {
-            get { return filtroP; }
-            set { filtroP = value; }
-        }
-        public string Consulta
-        {
-            get { return consulta; }
-            set { consulta = value; }
-        }
-        public csGestionPrestamos() { }
+        private csConexionDataBase dataBase = new csConexionDataBase();
         public DataGridView Mostrar(DataGridView Tabla, string consulta)
         {
             DateTime fechaActual = DateTime.Now;
             int f = 0;
-            csConexionDataBase dataBase = new csConexionDataBase();
-            DataTable Contenedor = new DataTable();
-            Contenedor = dataBase.Registros(consulta);
+            DataTable Contenedor = dataBase.Registros(consulta);
             Tabla.Rows.Clear();
             foreach (DataRow row in Contenedor.Rows)
             {
@@ -70,6 +50,31 @@ namespace Nueva_Biblioteca
             Tabla.Columns[Tabla.ColumnCount - 1].Width = anchoBoton;
             Tabla.Columns[Tabla.ColumnCount - 1].Resizable = DataGridViewTriState.False;
         }
+        public DataGridView BusquedaPorCaracter(DataGridView dgvPrestamos, string busqueda)
+        {
+            try
+            {
+                string consulta = @"select P.IdPrestamo,P.IdLector, L.Nombres, LI.Titulo, P.FechaDevolucion, P.FechaConfirmacionDevolucion, P.Estado 
+                                    from PRESTAMO P 
+                                    join LECTOR L on P.IdLector = L.IdLector 
+                                    join LIBRO LI on P.IdLibro = LI.IdLibro 
+                                    where P.IdPrestamo like @busqueda or 
+                                    L.IdLector like @busqueda or 
+                                    L.Nombres like @busqueda or 
+                                    LI.Titulo like @busqueda";
+                consulta = consulta.Replace("@busqueda", "'%" + busqueda + "%'");
+                return Mostrar(dgvPrestamos, consulta);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return dgvPrestamos;
+            }
+        }
+        public string ExtraerEstado(string idPrestamo, string columna)
+        {
+            return dataBase.Extraer($"select {columna} from PRESTAMO where IdPrestamo = '{idPrestamo}'", columna).Trim();
+        }
         public string GenerarConsultaFiltro(int estado, string idLector)
         {
             string consultaBase = @"SELECT P.IdPrestamo, P.IdLector, L.Nombres, LI.Titulo, P.FechaDevolucion, P.FechaConfirmacionDevolucion, P.Estado 
@@ -78,77 +83,14 @@ namespace Nueva_Biblioteca
                                 JOIN LIBRO LI ON P.IdLibro = LI.IdLibro";
             List<string> condiciones = new List<string>();
             if (!string.IsNullOrEmpty(idLector) && idLector != "--Seleccionar Todos--")
-                condiciones.Add("P.IdLector = '" + idLector + "'");
+                condiciones.Add("L.Nombres = '" + idLector + "'");
             if (estado == 1)
                 condiciones.Add("P.Estado = 1");
             else if (estado == 2)
                 condiciones.Add("P.Estado = 0");
             if (condiciones.Count > 0)
-            {
-                consultaBase += " WHERE ";
-                bool isFirst = true;
-                foreach (string condicion in condiciones)
-                {
-                    if (!isFirst)
-                        consultaBase += " AND ";
-                    consultaBase += condicion;
-                    isFirst = false;
-                }
-            }
-            consulta = consultaBase;
-            return consulta;
+                consultaBase += " WHERE " + string.Join(" AND ", condiciones);
+            return consultaBase;
         }
-        public List<string> comboBoxLector()
-        {
-            csConexionDataBase database = new csConexionDataBase();
-            List<string> lectores = new List<string>();
-            using (SqlConnection conexion1 = new SqlConnection(database.cadenaConexion))
-            {
-                SqlCommand comando = new SqlCommand("select distinct IdLector from PRESTAMO", conexion1);
-                try
-                {
-                    conexion1.Open();
-                    SqlDataReader read = comando.ExecuteReader();
-                    lectores.Add("--Seleccionar Todos--");
-                    while (read.Read())
-                        lectores.Add(read.GetString(0).Trim());
-                    read.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            return lectores;
-        }
-
-
-        public List<string> IdYLibro(string IdPrestamo)
-        {
-            csConexionDataBase database = new csConexionDataBase();
-            List<string> datosLibro = new List<string>();
-            using (SqlConnection conexion1 = new SqlConnection(database.cadenaConexion))
-            {
-                SqlCommand comando = new SqlCommand("select L.IdLibro, L.Cantidad from PRESTAMO P join LIBRO L on P.IdLibro = L.IdLibro where P.IdPrestamo = '"+IdPrestamo+"'", conexion1);
-                try
-                {
-                    conexion1.Open();
-                    SqlDataReader read = comando.ExecuteReader();
-                    while (read.Read())
-                    {
-                        datosLibro.Add(read.GetString(0).Trim());
-                        datosLibro.Add(read.GetInt32(1).ToString().Trim());
-                    }
-                    read.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            return datosLibro;
-        }
-
-
     }
 }

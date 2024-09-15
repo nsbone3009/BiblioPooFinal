@@ -15,6 +15,8 @@ namespace Nueva_Biblioteca
         public bool validacion1 = false, validacion2 = false;
         static private frmEditorial instancia = null;
         static csEditorial clase = new csEditorial();
+        private csLLenarDataGridView buscar = new csLLenarDataGridView();
+        private csReutilizacion verificar = new csReutilizacion();
 
         public static frmEditorial Formulario()
         {
@@ -48,6 +50,27 @@ namespace Nueva_Biblioteca
                 frm.txtDescripcion.Enabled = false;
                 frm.cbEstado.Enabled = false;
                 frm.ShowDialog();
+            }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text.Length > 1)
+            {
+                string estadoTraducido = verificar.VerificarEstado(txtBuscar.Text);
+                string consulta = "SELECT IdEditorial, Editorial, Estado " +
+                                  "FROM EDITORIAL " +
+                                  "WHERE IdEditorial LIKE '%" + txtBuscar.Text + "%' " +
+                                  "OR Editorial LIKE '%" + txtBuscar.Text + "%' " +
+                                  "OR Estado LIKE '%" + estadoTraducido + "%'";
+
+                dgvEditorial.Rows.Clear();
+                buscar.Mostrar(dgvEditorial, consulta);
+            }
+            else if (txtBuscar.Text.Length == 0)
+            {
+                dgvEditorial.Rows.Clear();
+                clase.Mostrar(dgvEditorial);
             }
         }
 

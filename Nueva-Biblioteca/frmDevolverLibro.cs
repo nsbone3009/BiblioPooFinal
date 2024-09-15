@@ -15,6 +15,7 @@ namespace Nueva_Biblioteca
 
         csConexionDataBase database = new csConexionDataBase();
         csGestionPrestamos gestionPrestamos = new csGestionPrestamos();
+        List<string> datos = new List<string>();
         public string ID = "";
         private int cantidad = 0;
         public frmDevolverLibro()
@@ -25,7 +26,7 @@ namespace Nueva_Biblioteca
         {
             if (rtxEstadoDevuelto.Text != "")
             {
-                List<string> datos = gestionPrestamos.IdYLibro(ID);
+                database.Extraer2Parametros(datos, "select L.IdLibro, L.Cantidad from PRESTAMO P join LIBRO L on P.IdLibro = L.IdLibro where P.IdPrestamo = '" + ID + "'");
                 frmConsultarPrestamos frm = Owner as frmConsultarPrestamos; cantidad = int.Parse(datos[1].Trim()) + 1;
                 database.Actualizar("update PRESTAMO set Estado = '" + 0 + "', EstadoRecibido = '" + rtxEstadoDevuelto.Text.TrimEnd().TrimStart() + "',FechaConfirmacionDevolucion = '"+ DateTime.Now.ToString("yyyy-MM-dd") + "' where IdPrestamo = '" + ID + "'");
                 database.Actualizar("update LIBRO set cantidad = '"+cantidad+"' where IdLibro = '"+datos[0].Trim()+"'");

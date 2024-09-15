@@ -13,8 +13,11 @@ namespace Nueva_Biblioteca
     public partial class frmUsuarios : Form
     {
         public bool validacion1 = false, validacion2 = false;
-
+        private csUsuarios usuarios = new csUsuarios();
+        private csLLenarDataGridView buscar = new csLLenarDataGridView();
         static private frmUsuarios instancia = null;
+        private csReutilizacion verificar = new csReutilizacion();
+
 
         public static frmUsuarios Formulario()
         {
@@ -31,10 +34,9 @@ namespace Nueva_Biblioteca
             string consulta = "select IdUsuario,Nombres,Apellidos,Correo,Rol,U.Estado from USUARIO as U inner join ROL_USUARIO as R on U.IdTipoPersona=R.IdTipoPersona";
             new csLLenarDataGridView().Mostrar(dgvUsuarios, consulta, 1);
         }
-
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
-            Mostrar();
+            usuarios.MostrarUsuarios(dgvUsuarios);
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
@@ -42,9 +44,32 @@ namespace Nueva_Biblioteca
             validacion1 = true;
             frmAgregarOEditarUsuario frm = new frmAgregarOEditarUsuario();
             this.AddOwnedForm(frm);
-            
+
             frm.ShowDialog();
         }
+
+        private void lblBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+           
+            if (txtBuscar.Text.Length > 1)
+            {
+                string estadoTraducido = verificar.VerificarEstado(txtBuscar.Text);
+                string consulta = "SELECT U.IdUsuario, U.Nombres, U.Apellidos, U.Correo, R.Rol, U.Estado FROM USUARIO AS U INNER JOIN ROL_USUARIO AS R ON U.IdTipoPersona = R.IdTipoPersona WHERE U.IdUsuario LIKE '%" + txtBuscar.Text + "%' OR U.Nombres LIKE '%" + txtBuscar.Text + "%' OR U.Apellidos LIKE '%" + txtBuscar.Text + "%' OR U.Correo LIKE '%" + txtBuscar.Text + "%' OR U.Estado LIKE '%" + estadoTraducido + "%'";
+                dgvUsuarios.Rows.Clear();
+                buscar.Mostrar(dgvUsuarios, consulta);
+            }
+            if (txtBuscar.Text.Length == 0)
+            {
+                dgvUsuarios.Rows.Clear();
+                usuarios.MostrarUsuarios(dgvUsuarios);
+            }
+        }
+
 
         private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -68,7 +93,8 @@ namespace Nueva_Biblioteca
                 frm.cbTipo.Enabled = false;
                 frm.cbEstado.Enabled = false;
                 frm.ShowDialog();
-            }          
+            }
         }
+        
     }
 }

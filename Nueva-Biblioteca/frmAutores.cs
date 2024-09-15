@@ -16,6 +16,8 @@ namespace Nueva_Biblioteca
 
         static private frmAutores instancia = null;
         static csAutores clase = new csAutores();
+        private csLLenarDataGridView buscar = new csLLenarDataGridView();
+        private csReutilizacion verificar = new csReutilizacion();
         public static frmAutores Formulario()
         {
             if (instancia == null) { instancia = new frmAutores(); }
@@ -50,6 +52,28 @@ namespace Nueva_Biblioteca
                 frm.ShowDialog();
             }
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text.Length > 1)
+            {
+                string estadoTraducido = verificar.VerificarEstado(txtBuscar.Text);
+                string consulta = "SELECT IdAutor, Autor, Estado " +
+                                  "FROM AUTOR " +
+                                  "WHERE IdAutor LIKE '%" + txtBuscar.Text + "%' " +
+                                  "OR Autor LIKE '%" + txtBuscar.Text + "%' " +
+                                  "OR Estado LIKE '%" + estadoTraducido + "%'";
+
+                dgvAutores.Rows.Clear();
+                buscar.Mostrar(dgvAutores, consulta);
+            }
+            else if (txtBuscar.Text.Length == 0)
+            {
+                dgvAutores.Rows.Clear();
+                clase.Mostrar(dgvAutores);
+            }
+        }
+
         private void btnCrear_Click(object sender, EventArgs e)
         {
             validacion1 = true;

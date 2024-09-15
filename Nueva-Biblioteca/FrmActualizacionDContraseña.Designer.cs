@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActualizacionDContraseña));
-            this.bntocultaNueva = new System.Windows.Forms.Button();
-            this.bntnuevacontra = new System.Windows.Forms.Button();
+            this.BtnOcultaNueva = new System.Windows.Forms.Button();
+            this.BtnNuevaContra = new System.Windows.Forms.Button();
             this.btnOcultarContraseña = new System.Windows.Forms.Button();
             this.btnMostrarContraseña = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
@@ -44,37 +44,39 @@
             this.lbCerrar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // bntocultaNueva
+            // BtnOcultaNueva
             // 
-            this.bntocultaNueva.BackColor = System.Drawing.Color.Transparent;
-            this.bntocultaNueva.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bntocultaNueva.BackgroundImage")));
-            this.bntocultaNueva.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bntocultaNueva.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bntocultaNueva.FlatAppearance.BorderSize = 0;
-            this.bntocultaNueva.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.bntocultaNueva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.bntocultaNueva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntocultaNueva.Location = new System.Drawing.Point(470, 191);
-            this.bntocultaNueva.Name = "bntocultaNueva";
-            this.bntocultaNueva.Size = new System.Drawing.Size(35, 35);
-            this.bntocultaNueva.TabIndex = 55;
-            this.bntocultaNueva.UseVisualStyleBackColor = false;
+            this.BtnOcultaNueva.BackColor = System.Drawing.Color.Transparent;
+            this.BtnOcultaNueva.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnOcultaNueva.BackgroundImage")));
+            this.BtnOcultaNueva.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnOcultaNueva.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnOcultaNueva.FlatAppearance.BorderSize = 0;
+            this.BtnOcultaNueva.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnOcultaNueva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnOcultaNueva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnOcultaNueva.Location = new System.Drawing.Point(470, 191);
+            this.BtnOcultaNueva.Name = "BtnOcultaNueva";
+            this.BtnOcultaNueva.Size = new System.Drawing.Size(35, 35);
+            this.BtnOcultaNueva.TabIndex = 55;
+            this.BtnOcultaNueva.UseVisualStyleBackColor = false;
+            this.BtnOcultaNueva.Click += new System.EventHandler(this.bntocultaNueva_Click);
             // 
-            // bntnuevacontra
+            // BtnNuevaContra
             // 
-            this.bntnuevacontra.BackColor = System.Drawing.Color.Transparent;
-            this.bntnuevacontra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bntnuevacontra.BackgroundImage")));
-            this.bntnuevacontra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bntnuevacontra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bntnuevacontra.FlatAppearance.BorderSize = 0;
-            this.bntnuevacontra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.bntnuevacontra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.bntnuevacontra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntnuevacontra.Location = new System.Drawing.Point(470, 191);
-            this.bntnuevacontra.Name = "bntnuevacontra";
-            this.bntnuevacontra.Size = new System.Drawing.Size(35, 35);
-            this.bntnuevacontra.TabIndex = 54;
-            this.bntnuevacontra.UseVisualStyleBackColor = false;
+            this.BtnNuevaContra.BackColor = System.Drawing.Color.Transparent;
+            this.BtnNuevaContra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnNuevaContra.BackgroundImage")));
+            this.BtnNuevaContra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnNuevaContra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnNuevaContra.FlatAppearance.BorderSize = 0;
+            this.BtnNuevaContra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnNuevaContra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnNuevaContra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnNuevaContra.Location = new System.Drawing.Point(470, 191);
+            this.BtnNuevaContra.Name = "BtnNuevaContra";
+            this.BtnNuevaContra.Size = new System.Drawing.Size(35, 35);
+            this.BtnNuevaContra.TabIndex = 54;
+            this.BtnNuevaContra.UseVisualStyleBackColor = false;
+            this.BtnNuevaContra.Click += new System.EventHandler(this.bntnuevacontra_Click);
             // 
             // btnOcultarContraseña
             // 
@@ -91,6 +93,7 @@
             this.btnOcultarContraseña.Size = new System.Drawing.Size(35, 35);
             this.btnOcultarContraseña.TabIndex = 53;
             this.btnOcultarContraseña.UseVisualStyleBackColor = false;
+            this.btnOcultarContraseña.Click += new System.EventHandler(this.btnOcultarContraseña_Click);
             // 
             // btnMostrarContraseña
             // 
@@ -107,6 +110,7 @@
             this.btnMostrarContraseña.Size = new System.Drawing.Size(35, 35);
             this.btnMostrarContraseña.TabIndex = 52;
             this.btnMostrarContraseña.UseVisualStyleBackColor = false;
+            this.btnMostrarContraseña.Click += new System.EventHandler(this.btnMostrarContraseña_Click);
             // 
             // btnEnviar
             // 
@@ -229,8 +233,8 @@
             this.ClientSize = new System.Drawing.Size(650, 450);
             this.Controls.Add(this.lbCerrar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.bntocultaNueva);
-            this.Controls.Add(this.bntnuevacontra);
+            this.Controls.Add(this.BtnOcultaNueva);
+            this.Controls.Add(this.BtnNuevaContra);
             this.Controls.Add(this.btnOcultarContraseña);
             this.Controls.Add(this.btnMostrarContraseña);
             this.Controls.Add(this.btnEnviar);
@@ -250,8 +254,8 @@
         }
 
         //#endregion
-        private System.Windows.Forms.Button bntocultaNueva;
-        private System.Windows.Forms.Button bntnuevacontra;
+        private System.Windows.Forms.Button BtnOcultaNueva;
+        private System.Windows.Forms.Button BtnNuevaContra;
         private System.Windows.Forms.Button btnOcultarContraseña;
         private System.Windows.Forms.Button btnMostrarContraseña;
         private System.Windows.Forms.Button btnEnviar;

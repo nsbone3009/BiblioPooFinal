@@ -11,10 +11,11 @@ namespace Nueva_Biblioteca
 {
     internal class csLogin : csConexionDataBase
     {
+        private csMensajesDCorreosYMensajitos mensajes = new csMensajesDCorreosYMensajitos();
         private string usuario;
         private string contraseña;
         private string idUsuario;
-
+        private Timer TresSegundos;
         public string IdUsuario
         {
             get { return idUsuario; }
@@ -35,10 +36,14 @@ namespace Nueva_Biblioteca
         {
             Usuario = usuario;
             Contraseña = contraseña;
+            TresSegundos = new Timer();
+            TresSegundos.Interval = 3000;
+            TresSegundos.Tick += TresSegundos_Tick;
         }
 
         public bool VerificacionLogin(string clave)
         {
+
             if (Usuario != string.Empty && contraseña != string.Empty)
             {
                 conexion.Open();
@@ -56,6 +61,21 @@ namespace Nueva_Biblioteca
             return false;
         }
 
+            else
+            {
+                mensajes.MensajeCamposIncompletos();
+                return false;
+            }
+        }
+        public void ActualizarContraseña(string correo, string NuevaClave)
+        {
+            string consulta = " select IdUsuario from USUARIO where Correo='" + correo + "'";
+            idUsuario = Extraer(consulta, "IdUsuario");
+            string consulta01 = "update CREDENCIAL set Contraseña='" + NuevaClave + "' where IdUsuario='" + idUsuario + "'";
+            Actualizar(consulta01);
+            MessageBox.Show("🔒 Tu contraseña ha sido actualizada exitosamente. Puedes ahora acceder con tu nueva contraseña.", "Contraseña Actualizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
         public string EncriptarYDesencriptar(string clave)
         {
             string frase = "hola";
@@ -67,34 +87,12 @@ namespace Nueva_Biblioteca
             ICryptoTransform transform = tripldes.CreateEncryptor();
             byte[] result = transform.TransformFinalBlock(data, 0, data.Length);
             return Convert.ToBase64String(result);
+
         }
-
-        public bool VerificarCorreoSQL(string correo,string consulta)
+        private void TresSegundos_Tick(object sender, EventArgs e)
         {
-
-            bool ExisteCorreo = false;
-            conexion.Open();
-            SqlCommand comands = new SqlCommand(consulta, conexion);
-            int contador = (int)comands.ExecuteScalar();
-            ExisteCorreo = contador > 0;
-            conexion.Close();
-            return ExisteCorreo;
-        }
-
-        public void ActualizarContraseña(string correo, string NuevaClave)
-        {
-            string consulta = " select IdUsuario from USUARIO where Correo='" + correo + "'";
-            conexion.Open();
-            SqlCommand comandos = new SqlCommand(consulta, conexion);
-            SqlDataReader lector = comandos.ExecuteReader();
-            if (lector.Read())
-                idUsuario = lector["IdUsuario"].ToString().Trim();
-            lector.Close();
-            string consulta01 = "update CREDENCIAL set Contraseña='" + NuevaClave + "' where IdUsuario='" + idUsuario + "'";
-            SqlCommand comandos01 = new SqlCommand(consulta01, conexion);
-            comandos01.ExecuteReader();
-            MessageBox.Show("🔒 Tu contraseña ha sido actualizada exitosamente. Puedes ahora acceder con tu nueva contraseña.", "Contraseña Actualizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            conexion.Close();
+            SendKeys.Send("{ENTER}");
+            TresSegundos.Stop();
         }
     }
 }

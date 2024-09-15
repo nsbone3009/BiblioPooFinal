@@ -14,7 +14,10 @@ namespace Nueva_Biblioteca
     {
         private static csLibro claseLibro = new csLibro();
         public bool bandera = false;
+        static csEditorial clase = new csEditorial();
         static private frmLibros instancia = null;
+        static csLLenarDataGridView buscar = new csLLenarDataGridView();
+        private csReutilizacion verificar = new csReutilizacion();
 
         public static frmLibros Formulario()
         {
@@ -58,6 +61,28 @@ namespace Nueva_Biblioteca
                 frm.btnEditar.Visible = true;
                 frm.ShowDialog();
                 claseLibro.LimpiarCampos(frm);
+            }
+        }
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text.Length >= 3)
+            {
+                string aux = txtBuscar.Text;
+                aux = verificar.VerificarEstado(aux);
+                string consulta = "select L.IdLibro, L.Titulo, A.Autor, G.Genero, E.Editorial, L.Ubicacion, L.Cantidad, L.Estado from LIBRO L join AUTOR_LIBRO AL on L.IdLibro = AL.IdLibro join AUTOR A on A.IdAutor = AL.IdAutor join GENERO G on L.IdGenero = G.IdGenero join EDITORIAL E on L.IdEditorial = E.IdEditorial where L.IdLibro like '%" + txtBuscar.Text + "%'"+ 
+                    "or L.Titulo like '%" + aux + "%' " +
+                    "or A.Autor like '%" + aux + "%'" + 
+                    "or G.Genero like '%" + aux + "%'" +  
+                    "or E.Editorial like '%"+ aux + "%'" +
+                    "or L.Estado like '%" + aux + "%'" +
+                    "or L.Ubicacion like '%" + aux + "%'";
+                dgvLibros.Rows.Clear();
+                buscar.Mostrar(dgvLibros, consulta);
+            }
+            else
+            {
+                dgvLibros.Rows.Clear();
+                claseLibro.MostrarLibros(dgvLibros);
             }
         }
     }
