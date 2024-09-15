@@ -77,7 +77,7 @@ namespace Nueva_Biblioteca
                     "or L.Estado like '%" + aux + "%'" +
                     "or L.Ubicacion like '%" + aux + "%'";
                 dgvLibros.Rows.Clear();
-                buscar.Mostrar(dgvLibros, consulta);
+                buscar.Mostrar(dgvLibros, consulta, 1);
             }
             else
             {

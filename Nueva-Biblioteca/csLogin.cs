@@ -57,15 +57,9 @@ namespace Nueva_Biblioteca
                     return true;
                 }
             }
+            else { mensajes.MensajeCamposIncompletos(); }
             conexion.Close();
             return false;
-        }
-
-            else
-            {
-                mensajes.MensajeCamposIncompletos();
-                return false;
-            }
         }
         public void ActualizarContraseña(string correo, string NuevaClave)
         {

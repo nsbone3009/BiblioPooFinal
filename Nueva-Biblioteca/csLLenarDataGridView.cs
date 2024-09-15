@@ -14,6 +14,8 @@ namespace Nueva_Biblioteca
         public void Mostrar(DataGridView Tabla, string consulta, int opcion)
         {
             int f = 0, x = 0;
+            if(Tabla.RowCount >= 0) { Tabla.Rows.Clear(); }
+            DateTime fechaActual = DateTime.Now;
             Tabla.Columns[Tabla.ColumnCount - 1].Width = 50;
             csConexionDataBase dataBase = new csConexionDataBase();
             DataTable Contenedor = new DataTable(); 
@@ -24,12 +26,24 @@ namespace Nueva_Biblioteca
                 Tabla.Rows.Add(row.ItemArray);
                 if(opcion == 1)
                 {
-                    Tabla.Rows[f].Cells["Estado"].Value = Tabla.Rows[f].Cells["Estado"].Value.ToString() == "True" ? Tabla.Rows[f].Cells["Estado"].Value = "Activo" : Tabla.Rows[f].Cells["Estado"].Value = "Inactivo"; 
+                    Tabla.Rows[f].Cells["Estado"].Value = Tabla.Rows[f].Cells["Estado"].Value.ToString() == "True" ? "Activo" : "Inactivo"; 
                     Tabla.Rows[f].Cells[Tabla.ColumnCount - 1].Value = Image.FromFile(@"C:\Users\Khriz\Downloads\editar.ico");
+                }
+                else if(opcion == 2)
+                {
+                    Tabla.Rows[f].Cells[Tabla.ColumnCount - 1].Value = Image.FromFile(@"C:\Users\Khriz\Downloads\seleccionar.ico");
                 }
                 else
                 {
-                    Tabla.Rows[f].Cells[Tabla.ColumnCount - 1].Value = Image.FromFile(@"C:\Users\Khriz\Downloads\seleccionar.ico");
+                    Tabla.Rows[f].Cells["Estado"].Value = Tabla.Rows[f].Cells["Estado"].Value.ToString() == "True" ? "Pendiente" : "Devuelto";
+                    string estadoPr = Tabla.Rows[f].Cells["Estado"].Value.ToString().Trim();
+                    DateTime fechaDevolucion = DateTime.Parse(Tabla.Rows[f].Cells["FechaDev"].Value.ToString().Trim());
+                    if ((fechaDevolucion < fechaActual) && estadoPr == "Pendiente")
+                    {
+                        Tabla.Rows[f].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
+                        Tabla.Rows[f].DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+                    }
+                    Tabla.Rows[f].Cells[Tabla.ColumnCount - 1].Value = Image.FromFile(@"C:\Users\Khriz\Downloads\devolver.ico");
                 }
                 Tabla.Rows[f++].Height = 50;
             }

@@ -41,7 +41,7 @@ namespace Nueva_Biblioteca
         public void MostrarUsuarios(DataGridView tabla)
         {
             string consulta = "select IdUsuario,Nombres,Apellidos,Correo,Rol,U.Estado from USUARIO as U inner join ROL_USUARIO as R on U.IdTipoPersona=R.IdTipoPersona";
-            tabla = new csLLenarDataGridView().Mostrar(tabla, consulta);
+            new csLLenarDataGridView().Mostrar(tabla, consulta, 1);
         }
 
         public bool AgregarUsuario()

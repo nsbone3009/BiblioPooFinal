@@ -60,7 +60,7 @@ namespace Nueva_Biblioteca
                     " from LECTOR where IdLector like '%" + txtBuscar.Text + "%' or Nombres like '%" + txtBuscar.Text + "%' or Apellidos like '%" + txtBuscar.Text + "%' " +
                     "or Correo like '%" + txtBuscar.Text + "%' or Estado like '%"+txtBuscar.Text+"%'";
                 dgvLectores.Rows.Clear();
-                buscar.MostrarSeleccion(dgvLectores, consulta);
+                buscar.Mostrar(dgvLectores, consulta, 1);
             }
             if (txtBuscar.Text.Length == 0)
             {

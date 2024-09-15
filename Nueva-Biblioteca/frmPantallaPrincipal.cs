@@ -14,6 +14,7 @@ namespace Nueva_Biblioteca
     {
         static csConexionDataBase conexion = new csConexionDataBase();
         static bool biblioteca = false, persona = false, prestamo = false, perfil = false, reporte = false, configuracion = false;
+        public string IdEmpleado = "";
         private Timer timer;
 
         static private frmPantallaPrincipal instancia = null;
@@ -214,10 +215,12 @@ namespace Nueva_Biblioteca
             switch(contenedorPerfil.SelectedIndex)
             {
                 case 0:
+                    frmCambioDeContraseña frmCambio = new frmCambioDeContraseña();
+                    frmCambio.ShowDialog();
                     break;
                 case 1:
-                    frmLogin frm = frmLogin.Formulario();
-                    frm.Show();
+                    frmLogin frmlog = frmLogin.Formulario();
+                    frmlog.Show();
                     this.Hide();
                     contenedorPerfil.Visible = false;
                     perfil = false;

@@ -35,9 +35,9 @@ namespace Nueva_Biblioteca
         }
         private void dgvPrestamos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvPrestamos.Columns[e.ColumnIndex].Name == "btnEntregarLibro")
+            if (e.ColumnIndex == dgvPrestamos.Columns[dgvPrestamos.ColumnCount - 1].Index && e.RowIndex >= 0)
             {
-                frmDevolverLibro frm = new frmDevolverLibro(); frm.rtxEstadoEntrega.Enabled = false; this.AddOwnedForm(frm);Limpiar();
+                frmDevolverLibro frm = new frmDevolverLibro(); frm.rtxEstadoEntrega.Enabled = false; this.AddOwnedForm(frm); Limpiar();
                 frm.rtxEstadoEntrega.Text = gestionPrestamos.ExtraerEstado(dgvPrestamos.Rows[e.RowIndex].Cells[0].Value.ToString().Trim(), "EstadoEntregado");
                 if (dgvPrestamos.Rows[e.RowIndex].Cells[6].Value.ToString().Trim() == "Pendiente")
                 {
@@ -46,17 +46,17 @@ namespace Nueva_Biblioteca
                 else
                 {
                     frm.rtxEstadoDevuelto.Text = gestionPrestamos.ExtraerEstado(dgvPrestamos.Rows[e.RowIndex].Cells[0].Value.ToString().Trim(), "EstadoRecibido");
-                    frm.rtxEstadoDevuelto.Enabled = false;frm.btnGuardar.Enabled = false;frm.btnGuardar.Visible = false;frm.ShowDialog();
+                    frm.rtxEstadoDevuelto.Enabled = false; frm.btnGuardar.Enabled = false; frm.btnGuardar.Visible = false; frm.ShowDialog();
                 }
             }
         }
         public void Mostrar()
         {
-            string consulta0 = @"SELECT P.IdPrestamo, P.IdLector, L.Nombres, LI.Titulo, P.FechaDevolucion, P.FechaConfirmacionDevolucion, P.Estado 
+            string consulta = @"SELECT P.IdPrestamo, P.IdLector, L.Nombres, LI.Titulo, P.FechaDevolucion, P.FechaConfirmacionDevolucion, P.Estado 
                                 FROM PRESTAMO P 
                                 JOIN LECTOR L ON P.IdLector = L.IdLector 
                                 JOIN LIBRO LI ON P.IdLibro = LI.IdLibro";
-            dgvPrestamos = gestionPrestamos.Mostrar(dgvPrestamos, consulta0);
+            new csLLenarDataGridView().Mostrar(dgvPrestamos,consulta, 3);
         }
         private void BusquedaCb()
         {
@@ -67,7 +67,7 @@ namespace Nueva_Biblioteca
             else
             {
                 string consulta = gestionPrestamos.GenerarConsultaFiltro(estado, idLector);
-                dgvPrestamos = gestionPrestamos.Mostrar(dgvPrestamos, consulta);
+                new csLLenarDataGridView().Mostrar(dgvPrestamos, consulta, 3);
             }
         }
         private void cbLectores_SelectedIndexChanged(object sender, EventArgs e)
@@ -82,7 +82,7 @@ namespace Nueva_Biblioteca
         {
             cbEstado.SelectedIndex = 0; cbLectores.SelectedIndex = 0;
             if (txtBusqueda.Text.Length >= 3)
-                dgvPrestamos = gestionPrestamos.BusquedaPorCaracter(dgvPrestamos, txtBusqueda.Text);
+                gestionPrestamos.BusquedaPorCaracter(dgvPrestamos, txtBusqueda.Text);
             else
                 Mostrar();
         }

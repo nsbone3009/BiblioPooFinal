@@ -94,7 +94,7 @@
             // 
             this.lbEmpleado.AutoSize = true;
             this.lbEmpleado.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmpleado.Location = new System.Drawing.Point(852, 21);
+            this.lbEmpleado.Location = new System.Drawing.Point(823, 21);
             this.lbEmpleado.Name = "lbEmpleado";
             this.lbEmpleado.Size = new System.Drawing.Size(81, 19);
             this.lbEmpleado.TabIndex = 0;
@@ -140,7 +140,7 @@
             this.btnResumen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnResumen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnResumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResumen.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResumen.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResumen.ForeColor = System.Drawing.Color.White;
             this.btnResumen.Location = new System.Drawing.Point(0, 90);
             this.btnResumen.Margin = new System.Windows.Forms.Padding(0);
@@ -159,7 +159,7 @@
             this.btnBiblioteca.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnBiblioteca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBiblioteca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBiblioteca.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBiblioteca.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBiblioteca.ForeColor = System.Drawing.Color.White;
             this.btnBiblioteca.Location = new System.Drawing.Point(0, 170);
             this.btnBiblioteca.Margin = new System.Windows.Forms.Padding(0);
@@ -174,7 +174,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 140);
             this.label1.Name = "label1";
@@ -202,7 +202,7 @@
             this.btnPersona.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPersona.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPersona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPersona.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersona.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPersona.ForeColor = System.Drawing.Color.White;
             this.btnPersona.Location = new System.Drawing.Point(0, 222);
             this.btnPersona.Margin = new System.Windows.Forms.Padding(0);
@@ -251,7 +251,7 @@
             this.btnPrestamo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPrestamo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrestamo.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrestamo.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrestamo.ForeColor = System.Drawing.Color.White;
             this.btnPrestamo.Location = new System.Drawing.Point(0, 274);
             this.btnPrestamo.Margin = new System.Windows.Forms.Padding(0);
@@ -300,7 +300,7 @@
             this.btnReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportes.ForeColor = System.Drawing.Color.White;
             this.btnReportes.Location = new System.Drawing.Point(0, 331);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(0);
@@ -347,7 +347,7 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(0, 384);
             this.button1.Margin = new System.Windows.Forms.Padding(0);

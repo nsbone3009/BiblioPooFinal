@@ -65,7 +65,7 @@ namespace Nueva_Biblioteca
                                   "OR Estado LIKE '%" + estadoTraducido + "%'";
 
                 dgvEditorial.Rows.Clear();
-                buscar.Mostrar(dgvEditorial, consulta);
+                buscar.Mostrar(dgvEditorial, consulta, 1);
             }
             else if (txtBuscar.Text.Length == 0)
             {

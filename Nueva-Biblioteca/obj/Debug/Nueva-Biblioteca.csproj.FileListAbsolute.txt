@@ -665,3 +665,12 @@ C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-
 C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva-Bi.3A14167A.Up2Date
 C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva-Biblioteca.exe
 C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva-Biblioteca.pdb
+C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\RdlCompile.cache
+C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\RdlCompile.compiled
+C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva-Biblioteca.csproj.CopyComplete
+C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmCambioDeContraseña.resources

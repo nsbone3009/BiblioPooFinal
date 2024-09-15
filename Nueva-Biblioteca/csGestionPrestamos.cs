@@ -11,46 +11,7 @@ namespace Nueva_Biblioteca
     class csGestionPrestamos
     {
         private csConexionDataBase dataBase = new csConexionDataBase();
-        public DataGridView Mostrar(DataGridView Tabla, string consulta)
-        {
-            DateTime fechaActual = DateTime.Now;
-            int f = 0;
-            DataTable Contenedor = dataBase.Registros(consulta);
-            Tabla.Rows.Clear();
-            foreach (DataRow row in Contenedor.Rows)
-            {
-                Tabla.Rows.Add(row.ItemArray);
-                Tabla.Rows[f].Cells["Estado"].Value = Tabla.Rows[f].Cells["Estado"].Value.ToString() == "True"
-                    ? "Pendiente"
-                    : "Devuelto";
-                Tabla.Rows[f].Height = 50;
-                string estadoPr = Tabla.Rows[f].Cells["Estado"].Value.ToString().Trim();
-                DateTime fechaDevolucion = DateTime.Parse(Tabla.Rows[f].Cells["FechaDev"].Value.ToString().Trim());
-                if ((fechaDevolucion < fechaActual) && estadoPr == "Pendiente")
-                {
-                    Tabla.Rows[f].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
-                    Tabla.Rows[f].DefaultCellStyle.ForeColor = System.Drawing.Color.White;
-                }
-                f++;
-            }
-            AjustarColumnas(Tabla);
-            return Tabla;
-        }
-        private void AjustarColumnas(DataGridView Tabla)
-        {
-            int totalAncho = Tabla.Width;
-            int anchoBoton = 50;
-            int columnasDeTexto = Tabla.ColumnCount - 1;
-            int anchoColumnaTexto = (totalAncho - anchoBoton) / columnasDeTexto;
-            for (int i = 0; i < columnasDeTexto; i++)
-            {
-                Tabla.Columns[i].Width = anchoColumnaTexto;
-                Tabla.Columns[i].Resizable = DataGridViewTriState.False;
-            }
-            Tabla.Columns[Tabla.ColumnCount - 1].Width = anchoBoton;
-            Tabla.Columns[Tabla.ColumnCount - 1].Resizable = DataGridViewTriState.False;
-        }
-        public DataGridView BusquedaPorCaracter(DataGridView dgvPrestamos, string busqueda)
+        public void BusquedaPorCaracter(DataGridView dgvPrestamos, string busqueda)
         {
             try
             {
@@ -63,12 +24,11 @@ namespace Nueva_Biblioteca
                                     L.Nombres like @busqueda or 
                                     LI.Titulo like @busqueda";
                 consulta = consulta.Replace("@busqueda", "'%" + busqueda + "%'");
-                return Mostrar(dgvPrestamos, consulta);
+                new csLLenarDataGridView().Mostrar(dgvPrestamos, consulta, 3);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return dgvPrestamos;
             }
         }
         public string ExtraerEstado(string idPrestamo, string columna)

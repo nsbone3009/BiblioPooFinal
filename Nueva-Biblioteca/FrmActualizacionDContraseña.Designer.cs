@@ -207,8 +207,8 @@
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(8, 8, 544, 8);
-            this.label2.Size = new System.Drawing.Size(739, 36);
+            this.label2.Padding = new System.Windows.Forms.Padding(8, 8, 456, 8);
+            this.label2.Size = new System.Drawing.Size(651, 36);
             this.label2.TabIndex = 58;
             this.label2.Text = "Actualizar Contraseña";
             // 

@@ -37,13 +37,17 @@ namespace Nueva_Biblioteca
                 NombreEmpleado = aux.Substring(0, aux.IndexOf(' '));
                 aux = conexion.Extraer($"Select * from USUARIO where IdUsuario = '{login.IdUsuario}'", "Apellidos");
                 NombreEmpleado += " " + aux.Substring(0, aux.IndexOf(' '));
+
                 frmPantallaPrincipal frmPrincipal = frmPantallaPrincipal.Formulario();
                 frmResumen frm = frmResumen.Formulario();
                 frmPrincipal.pnlPrincipal.Controls.Clear();
                 frm.TopLevel = false;
                 frmPrincipal.pnlPrincipal.Controls.Add(frm);
                 frmPrincipal.Show();
+
                 frmPrincipal.lbEmpleado.Text = NombreEmpleado;
+                frmPrincipal.IdEmpleado = login.IdUsuario;
+
                 frm.Show();
                 this.Hide();
             }

@@ -61,7 +61,7 @@ namespace Nueva_Biblioteca
                 string estadoTraducido = verificar.VerificarEstado(txtBuscar.Text);
                 string consulta = "SELECT U.IdUsuario, U.Nombres, U.Apellidos, U.Correo, R.Rol, U.Estado FROM USUARIO AS U INNER JOIN ROL_USUARIO AS R ON U.IdTipoPersona = R.IdTipoPersona WHERE U.IdUsuario LIKE '%" + txtBuscar.Text + "%' OR U.Nombres LIKE '%" + txtBuscar.Text + "%' OR U.Apellidos LIKE '%" + txtBuscar.Text + "%' OR U.Correo LIKE '%" + txtBuscar.Text + "%' OR U.Estado LIKE '%" + estadoTraducido + "%'";
                 dgvUsuarios.Rows.Clear();
-                buscar.Mostrar(dgvUsuarios, consulta);
+                buscar.Mostrar(dgvUsuarios, consulta, 1);
             }
             if (txtBuscar.Text.Length == 0)
             {
