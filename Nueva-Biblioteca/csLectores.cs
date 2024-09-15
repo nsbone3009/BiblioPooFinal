@@ -51,7 +51,7 @@ namespace Nueva_Biblioteca
         public void MostrarLectores(DataGridView tabla)
         {
             string consulta = "SELECT IdLector, Nombres, Apellidos, Correo, Estado FROM LECTOR";
-            tabla = new csLLenarDataGridView().Mostrar(tabla, consulta);
+            new csLLenarDataGridView().Mostrar(tabla, consulta, 1);
         }
 
         public void AgregarLector()

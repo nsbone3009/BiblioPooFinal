@@ -13,7 +13,6 @@ namespace Nueva_Biblioteca
     public partial class frmPantallaPrincipal : Form
     {
         static csConexionDataBase conexion = new csConexionDataBase();
-        static frmContenedorPerfil frmMenuPerfil = new frmContenedorPerfil();
         static bool biblioteca = false, persona = false, prestamo = false, perfil = false, reporte = false, configuracion = false;
         private Timer timer;
 
@@ -46,7 +45,7 @@ namespace Nueva_Biblioteca
         private void btnResumen_Click(object sender, EventArgs e)
         {
             pnlPrincipal.Controls.Clear();
-            frmResumen frm = frmResumen.LlamarFormulario();
+            frmResumen frm = frmResumen.Formulario();
             frm.TopLevel = false;
             pnlPrincipal.Controls.Add(frm);
             frm.Mostrar();
@@ -60,6 +59,7 @@ namespace Nueva_Biblioteca
             contenedorPrestamos.Visible = false;
             contenedorReportes.Visible = false;
             contenedorConfiguracion.Visible = false;
+            contenedorPerfil.Visible = false;
             ptbxBiblioteca.BackgroundImage = ListaFlecha.Images[0];
             ptbxPersona.BackgroundImage = ListaFlecha.Images[0];
             ptbxPrestamo.BackgroundImage = ListaFlecha.Images[0];
@@ -179,23 +179,8 @@ namespace Nueva_Biblioteca
 
         private void ptbxPerfil_Click(object sender, EventArgs e)
         {
-            this.AddOwnedForm(frmMenuPerfil);
-            if (!perfil)
-            {
-                frmMenuPerfil.Location = new Point(1140, 78);
-                frmMenuPerfil.Show();
-                perfil = true;
-            }
-            else
-            {
-                frmMenuPerfil.Hide();
-                perfil = false;
-            }
-        }
-
-        public void CerrarSesion()
-        {
-            Application.Exit();
+            if(!perfil) { contenedorPerfil.Visible = true;  perfil = true; }
+            else { contenedorPerfil.Visible = false; perfil = false; contenedorPerfil.SelectedIndex = -1; }
         }
 
         private void ptbxPersona_Click(object sender, EventArgs e)
@@ -220,6 +205,22 @@ namespace Nueva_Biblioteca
                 case 0:
                     frmConfiguracionGeneral frm = frmConfiguracionGeneral.Formulario();
                     LlamarFormulario(frm);
+                    break;
+            }
+        }
+
+        private void contenedorPerfil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch(contenedorPerfil.SelectedIndex)
+            {
+                case 0:
+                    break;
+                case 1:
+                    frmLogin frm = frmLogin.Formulario();
+                    frm.Show();
+                    this.Hide();
+                    contenedorPerfil.Visible = false;
+                    perfil = false;
                     break;
             }
         }

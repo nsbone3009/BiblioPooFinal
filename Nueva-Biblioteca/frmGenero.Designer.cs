@@ -33,13 +33,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCrear = new System.Windows.Forms.Button();
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,7 +90,7 @@
             this.Codigo,
             this.Descripcion,
             this.Estado,
-            this.Column3});
+            this.Column1});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,30 +109,6 @@
             this.dgvCategorias.Size = new System.Drawing.Size(891, 295);
             this.dgvCategorias.TabIndex = 3;
             this.dgvCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellClick);
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Genero";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
             // 
             // label2
             // 
@@ -169,6 +145,30 @@
             this.lblBuscar.TabIndex = 27;
             this.lblBuscar.Text = "Buscar";
             // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Genero";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
             // frmGenero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,11 +197,11 @@
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.DataGridView dgvCategorias;
+        public System.Windows.Forms.TextBox txtBuscar;
+        public System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DataGridViewButtonColumn Column3;
-        public System.Windows.Forms.TextBox txtBuscar;
-        public System.Windows.Forms.Label lblBuscar;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
     }
 }

@@ -29,19 +29,23 @@ namespace Nueva_Biblioteca
         //Constructor
         public csLibro() { }
         //Metodos Libros
-        public void MostrarLibros(DataGridView Tabla)
+        public DataGridView MostrarLibros(DataGridView Tabla)
         {
             if (Tabla.RowCount >= 0) { Tabla.Rows.Clear(); }
-            int f = 0;
+            int f = 0, z = 0;
+            Tabla.Columns[Tabla.ColumnCount - 1].Width = 50;
+            Tabla.Columns[Tabla.ColumnCount - 1].CellTemplate.Style.Padding = new Padding(1);
             string consulta = "Select L.IdLibro, L.Titulo, G.Genero, E.Editorial, L.Ubicacion, L.Cantidad, L.Estado from LIBRO L " +
             "Join GENERO G on G.IdGenero = L.IdGenero Join EDITORIAL E on E.IdEditorial = L.IdEditorial";
             DataTable TablaTemporal = dataBase.Registros(consulta);
+            if (TablaTemporal.Rows.Count >= 5) { z = 12; }
             foreach (DataRow row in TablaTemporal.Rows)
             {
                 int x = 0;
-                Tabla.Rows.Add();
-                object[] vector = row.ItemArray;
+                Tabla.Rows.Add(); 
                 Tabla.Rows[f].Height = 50;
+                Tabla.Columns[Tabla.ColumnCount - 1].Width = 50;
+                object[] vector = row.ItemArray;
                 for (int c = 0; c < Tabla.ColumnCount - 1; c++)
                 {
                     if (c != 2)
@@ -60,14 +64,15 @@ namespace Nueva_Biblioteca
                     }
                 }
                 Tabla.Rows[f].Cells["Estado"].Value = Tabla.Rows[f].Cells["Estado"].Value.ToString() == "True" ? Tabla.Rows[f].Cells["Estado"].Value = "Activo" : Tabla.Rows[f].Cells["Estado"].Value = "Inactivo";
-                Tabla.Columns[Tabla.ColumnCount - 1].Width = 50;
+                Tabla.Rows[f].Cells[Tabla.ColumnCount - 1].Value = Image.FromFile(@"C:\Users\Khriz\Downloads\editar.ico");
                 f++;
             }
             for (int i = 0; i < Tabla.ColumnCount - 1; i++)
             {
-                Tabla.Columns[i].Width = ((Tabla.Width - 50) / (Tabla.ColumnCount - 1));
+                Tabla.Columns[i].Width = ((Tabla.Width - 50 - z) / (Tabla.ColumnCount - 1))-1;
                 Tabla.Columns[i].Resizable = DataGridViewTriState.False;
             }
+            return Tabla;
         }
         public void MostrarPortadaLibro(frmAgregarOEditarLibro formulario)
         {

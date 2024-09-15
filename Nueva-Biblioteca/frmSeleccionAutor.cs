@@ -24,7 +24,7 @@ namespace Nueva_Biblioteca
 
         private void frmSeleccionAutor_Load(object sender, EventArgs e)
         {
-            dgvAutores = new csLLenarDataGridView().MostrarSeleccion(dgvAutores, "Select IdAutor, Autor from AUTOR where Estado = 1");
+            new csLLenarDataGridView().Mostrar(dgvAutores, "Select IdAutor, Autor from AUTOR where Estado = 1", 2);
         }
 
         private void dgvAutores_CellContentClick(object sender, DataGridViewCellEventArgs e)

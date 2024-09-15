@@ -48,7 +48,7 @@ namespace Nueva_Biblioteca
                                                   cbEditorial.SelectedItem.ToString(), txtUbicacion.Text,
                                                   txtStock.Text, cbEstado.SelectedItem.ToString(), ImgLibro))
                     {
-                        claseLibro.MostrarLibros(frm.dgvLibros);
+                        frm.dgvLibros = claseLibro.MostrarLibros(frm.dgvLibros);
                         MessageBox.Show("LIBRO AGREGADO CORRECTAMENTE.");
                     }
                     else
@@ -65,7 +65,7 @@ namespace Nueva_Biblioteca
                                                    cbEditorial.SelectedItem.ToString(), txtUbicacion.Text,
                                                    txtStock.Text, cbEstado.SelectedItem.ToString(), ImgLibro))
                     {
-                        claseLibro.MostrarLibros(frm.dgvLibros);
+                        frm.dgvLibros = claseLibro.MostrarLibros(frm.dgvLibros);
                         MessageBox.Show("LIBRO ACTUALIZADO CORRECTAMENTE.");
                     }
                     else
@@ -83,6 +83,7 @@ namespace Nueva_Biblioteca
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void btnAutor_Click(object sender, EventArgs e)

@@ -25,7 +25,7 @@ namespace Nueva_Biblioteca
 
         private void frmSeleccionLectores_Load(object sender, EventArgs e)
         {
-            dgvLectores = new csLLenarDataGridView().MostrarSeleccion(dgvLectores, "Select IdLector, Nombres, Apellidos, Correo From LECTOR");
+            new csLLenarDataGridView().Mostrar(dgvLectores, "Select IdLector, Nombres, Apellidos, Correo From LECTOR", 2);
         }
         public bool repo = false;
         private void dgvLectores_CellContentClick(object sender, DataGridViewCellEventArgs e)

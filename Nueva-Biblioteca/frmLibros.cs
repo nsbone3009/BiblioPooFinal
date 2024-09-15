@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace Nueva_Biblioteca
 {
@@ -40,7 +41,7 @@ namespace Nueva_Biblioteca
 
         private void frmLibros_Load(object sender, EventArgs e)
         {
-            claseLibro.MostrarLibros(dgvLibros);
+            dgvLibros = claseLibro.MostrarLibros(dgvLibros);
         }
 
         private void dgvLibros_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -59,6 +60,5 @@ namespace Nueva_Biblioteca
                 claseLibro.LimpiarCampos(frm);
             }
         }
-
     }
 }

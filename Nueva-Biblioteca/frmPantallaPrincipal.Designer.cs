@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPantallaPrincipal));
             this.panel2 = new System.Windows.Forms.Panel();
             this.ptbxPerfil = new System.Windows.Forms.PictureBox();
-            this.lbUsuario = new System.Windows.Forms.Label();
+            this.lbEmpleado = new System.Windows.Forms.Label();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.ListaFlecha = new System.Windows.Forms.ImageList(this.components);
             this.contenedorBiblioteca = new System.Windows.Forms.ListBox();
@@ -54,6 +54,7 @@
             this.contenedorConfiguracion = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ptbxLogoMenu = new System.Windows.Forms.PictureBox();
+            this.contenedorPerfil = new System.Windows.Forms.ListBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbxPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbxBiblioteca)).BeginInit();
@@ -69,7 +70,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.ptbxPerfil);
-            this.panel2.Controls.Add(this.lbUsuario);
+            this.panel2.Controls.Add(this.lbEmpleado);
             this.panel2.Location = new System.Drawing.Point(180, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1020, 60);
@@ -89,21 +90,21 @@
             this.ptbxPerfil.TabStop = false;
             this.ptbxPerfil.Click += new System.EventHandler(this.ptbxPerfil_Click);
             // 
-            // lbUsuario
+            // lbEmpleado
             // 
-            this.lbUsuario.AutoSize = true;
-            this.lbUsuario.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUsuario.Location = new System.Drawing.Point(852, 21);
-            this.lbUsuario.Name = "lbUsuario";
-            this.lbUsuario.Size = new System.Drawing.Size(109, 19);
-            this.lbUsuario.TabIndex = 0;
-            this.lbUsuario.Text = "Khriz Coronel";
+            this.lbEmpleado.AutoSize = true;
+            this.lbEmpleado.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmpleado.Location = new System.Drawing.Point(852, 21);
+            this.lbEmpleado.Name = "lbEmpleado";
+            this.lbEmpleado.Size = new System.Drawing.Size(81, 19);
+            this.lbEmpleado.TabIndex = 0;
+            this.lbEmpleado.Text = "XXXXXXXX";
             // 
             // pnlPrincipal
             // 
-            this.pnlPrincipal.Location = new System.Drawing.Point(180, 60);
+            this.pnlPrincipal.Location = new System.Drawing.Point(180, 100);
             this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(1020, 640);
+            this.pnlPrincipal.Size = new System.Drawing.Size(1020, 600);
             this.pnlPrincipal.TabIndex = 5;
             // 
             // ListaFlecha
@@ -422,12 +423,30 @@
             this.ptbxLogoMenu.TabIndex = 0;
             this.ptbxLogoMenu.TabStop = false;
             // 
+            // contenedorPerfil
+            // 
+            this.contenedorPerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.contenedorPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.contenedorPerfil.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contenedorPerfil.FormattingEnabled = true;
+            this.contenedorPerfil.ItemHeight = 19;
+            this.contenedorPerfil.Items.AddRange(new object[] {
+            "Cambiar Clave",
+            "Cerrar Sesion"});
+            this.contenedorPerfil.Location = new System.Drawing.Point(1076, 56);
+            this.contenedorPerfil.Name = "contenedorPerfil";
+            this.contenedorPerfil.Size = new System.Drawing.Size(118, 40);
+            this.contenedorPerfil.Sorted = true;
+            this.contenedorPerfil.TabIndex = 19;
+            this.contenedorPerfil.SelectedIndexChanged += new System.EventHandler(this.contenedorPerfil_SelectedIndexChanged);
+            // 
             // frmPantallaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.Controls.Add(this.contenedorPerfil);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlPrincipal);
@@ -456,7 +475,6 @@
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox ptbxPerfil;
-        private System.Windows.Forms.Label lbUsuario;
         private System.Windows.Forms.ImageList ListaFlecha;
         private System.Windows.Forms.ListBox contenedorBiblioteca;
         private System.Windows.Forms.Button btnResumen;
@@ -478,6 +496,8 @@
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel pnlPrincipal;
         public System.Windows.Forms.PictureBox ptbxLogoMenu;
+        public System.Windows.Forms.ListBox contenedorPerfil;
+        public System.Windows.Forms.Label lbEmpleado;
     }
 }
 

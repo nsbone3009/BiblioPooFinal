@@ -14,7 +14,7 @@ namespace Nueva_Biblioteca
     {
         static private frmResumen instancia = null;
 
-        public static frmResumen LlamarFormulario()
+        public static frmResumen Formulario()
         {
             if (instancia == null) { instancia = new frmResumen(); }
             return instancia;

@@ -16,7 +16,7 @@ namespace Nueva_Biblioteca
         public string Estado { set { estado = value; } get { return estado; } }
         public void Mostrar(DataGridView data)
         {
-            data = new csLLenarDataGridView().Mostrar(data, "Select IdGenero, Genero, Estado from GENERO");
+            new csLLenarDataGridView().Mostrar(data, "Select IdGenero, Genero, Estado from GENERO", 1);
         }
         public void GuardarGnero(string codigo, string genero, string estado, string fecha)
         {

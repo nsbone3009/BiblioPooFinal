@@ -29,7 +29,7 @@ namespace Nueva_Biblioteca
 
         private void frmEditorial_Load(object sender, EventArgs e)
         {
-           clase.Mostrar(dgvEditorial);
+            clase.Mostrar(dgvEditorial);
         }
 
         

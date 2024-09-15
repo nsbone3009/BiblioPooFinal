@@ -31,16 +31,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvLibros = new System.Windows.Forms.DataGridView();
+            this.lbCerrar = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.lblBuscar = new System.Windows.Forms.Label();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.lbCerrar = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.lblBuscar = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +64,7 @@
             this.Autor,
             this.Categoria,
             this.Editorial,
-            this.Column8});
+            this.Column1});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -83,42 +83,6 @@
             this.dgvLibros.Size = new System.Drawing.Size(726, 283);
             this.dgvLibros.TabIndex = 20;
             this.dgvLibros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibros_CellContentClick);
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // Titulo
-            // 
-            this.Titulo.HeaderText = "Titulo";
-            this.Titulo.Name = "Titulo";
-            this.Titulo.ReadOnly = true;
-            // 
-            // Autor
-            // 
-            this.Autor.HeaderText = "Autor";
-            this.Autor.Name = "Autor";
-            this.Autor.ReadOnly = true;
-            // 
-            // Categoria
-            // 
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            // 
-            // Editorial
-            // 
-            this.Editorial.HeaderText = "Editorial";
-            this.Editorial.Name = "Editorial";
-            this.Editorial.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
             // 
             // lbCerrar
             // 
@@ -169,6 +133,42 @@
             this.lblBuscar.TabIndex = 31;
             this.lblBuscar.Text = "Buscar";
             // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Titulo
+            // 
+            this.Titulo.HeaderText = "Titulo";
+            this.Titulo.Name = "Titulo";
+            this.Titulo.ReadOnly = true;
+            // 
+            // Autor
+            // 
+            this.Autor.HeaderText = "Autor";
+            this.Autor.Name = "Autor";
+            this.Autor.ReadOnly = true;
+            // 
+            // Categoria
+            // 
+            this.Categoria.HeaderText = "Categoria";
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
+            // 
+            // Editorial
+            // 
+            this.Editorial.HeaderText = "Editorial";
+            this.Editorial.Name = "Editorial";
+            this.Editorial.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
             // frmSeleccionLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,13 +195,13 @@
         public System.Windows.Forms.DataGridView dgvLibros;
         private System.Windows.Forms.Label lbCerrar;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox txtBuscar;
+        public System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn Editorial;
-        private System.Windows.Forms.DataGridViewButtonColumn Column8;
-        public System.Windows.Forms.TextBox txtBuscar;
-        public System.Windows.Forms.Label lblBuscar;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
     }
 }

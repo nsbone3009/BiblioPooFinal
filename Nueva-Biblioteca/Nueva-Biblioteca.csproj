@@ -94,12 +94,6 @@
     <Compile Include="frmConfiguracionGeneral.Designer.cs">
       <DependentUpon>frmConfiguracionGeneral.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmContenedorPerfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmContenedorPerfil.Designer.cs">
-      <DependentUpon>frmContenedorPerfil.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmActualizacionDContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,9 +243,6 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="frmConfiguracionGeneral.resx">
       <DependentUpon>frmConfiguracionGeneral.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmContenedorPerfil.resx">
-      <DependentUpon>frmContenedorPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmActualizacionDContraseña.resx">
       <DependentUpon>frmActualizacionDContraseña.cs</DependentUpon>

@@ -29,7 +29,7 @@ namespace Nueva_Biblioteca
         public void Mostrar()
         {
             string consulta = "select IdUsuario,Nombres,Apellidos,Correo,Rol,U.Estado from USUARIO as U inner join ROL_USUARIO as R on U.IdTipoPersona=R.IdTipoPersona";
-            dgvUsuarios = new csLLenarDataGridView().Mostrar(dgvUsuarios, consulta);
+            new csLLenarDataGridView().Mostrar(dgvUsuarios, consulta, 1);
         }
 
         private void frmUsuarios_Load(object sender, EventArgs e)

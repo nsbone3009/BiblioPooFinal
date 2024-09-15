@@ -28,49 +28,49 @@ namespace Nueva_Biblioteca
         {
             string consulta = "Select L.IdLibro, L.Titulo, G.Genero, E.Editorial from LIBRO L " +
             "Join GENERO G on G.IdGenero = L.IdGenero Join EDITORIAL E on E.IdEditorial = L.IdEditorial";
-            Contenedor = dataBase.Registros(consulta);
-            int f = 0, x = 0;
-            foreach (DataRow row in Contenedor.Rows)
+            int f = 0, z = 0;
+            dgvLibros.Columns[dgvLibros.ColumnCount - 1].Width = 50;
+            dgvLibros.Columns[dgvLibros.ColumnCount - 1].CellTemplate.Style.Padding = new Padding(1);
+            DataTable TablaTemporal = dataBase.Registros(consulta);
+            if (TablaTemporal.Rows.Count >= 5) { z = 18; }
+            foreach (DataRow row in TablaTemporal.Rows)
             {
+                int x = 0;
                 dgvLibros.Rows.Add();
-                object[] vector = row.ItemArray;
                 dgvLibros.Rows[f].Height = 50;
+                dgvLibros.Columns[dgvLibros.ColumnCount - 1].Width = 50;
+                object[] vector = row.ItemArray;
                 for (int c = 0; c < dgvLibros.ColumnCount - 1; c++)
                 {
                     if (c != 2)
-                    {
                         dgvLibros.Rows[f].Cells[c].Value = vector[x++].ToString();
-                    }
                     else
                     {
                         string nombre = "";
                         string codigo = dgvLibros.Rows[f].Cells["Codigo"].Value.ToString();
-                        string[] autores = dataBase.ExtraerAutores($"Select * from AUTOR_LIBRO where IdLibro = '{codigo} '", "IdAutor").Split(',');
+                        string[] autores = dataBase.ExtraerAutores("Select * from AUTOR_LIBRO where IdLibro = '" + codigo + "'", "IdAutor").Split(',');
                         foreach (string autor in autores)
                         {
-                            if (nombre != "") { nombre += ", " + dataBase.Extraer($"Select * from AUTOR where IdAutor = '{autor}'", "Autor"); }
-                            else { nombre += dataBase.Extraer($"Select * from AUTOR where IdAutor = '{autor} '", "Autor"); }
+                            if (nombre != "") { nombre += ", " + dataBase.Extraer("Select * from AUTOR where IdAutor = '" + autor + "'", "Autor"); }
+                            else { nombre += dataBase.Extraer("Select * from AUTOR where IdAutor = '" + autor + "'", "Autor"); }
                         }
                         dgvLibros.Rows[f].Cells[2].Value = nombre;
                     }
                 }
-                dgvLibros.Columns[dgvLibros.ColumnCount - 1].Width = 50;
+                dgvLibros.Rows[f].Cells[dgvLibros.ColumnCount - 1].Value = Image.FromFile(@"C:\Users\Khriz\Downloads\seleccionar.ico");
                 f++;
-                x = 0;
             }
             for (int i = 0; i < dgvLibros.ColumnCount - 1; i++)
             {
-                dgvLibros.Columns[i].Width = ((dgvLibros.Width - 50) / (dgvLibros.ColumnCount - 1)) - 1;
+                dgvLibros.Columns[i].Width = ((dgvLibros.Width - 50 - z) / (dgvLibros.ColumnCount - 1)) - 1;
                 dgvLibros.Columns[i].Resizable = DataGridViewTriState.False;
             }
         }
 
         private void dgvLibros_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Boton Seleccionar
             if (e.ColumnIndex == dgvLibros.Columns[dgvLibros.ColumnCount - 1].Index && e.RowIndex >= 0)
             {
-
                 frmPrestamoRegistrar frm = Owner as frmPrestamoRegistrar;
                 frm.idlibro = dgvLibros.Rows[e.RowIndex].Cells[0].Value.ToString();
                 frm.txtLibro.Text = dgvLibros.Rows[e.RowIndex].Cells[1].Value.ToString();

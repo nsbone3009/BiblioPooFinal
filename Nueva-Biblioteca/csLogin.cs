@@ -20,22 +20,17 @@ namespace Nueva_Biblioteca
             get { return idUsuario; }
             set { idUsuario = value; }
         }
-
         public string Usuario
         {
             get { return usuario; }
             set { usuario = value; }
         }
-
         public string Contraseña
         {
             get { return contraseña; }
             set { contraseña = value; }
         }
-
-        public csLogin()
-        { }
-
+        public csLogin() { }
         public csLogin(string usuario, string contraseña)
         {
             Usuario = usuario;
@@ -47,31 +42,18 @@ namespace Nueva_Biblioteca
             if (Usuario != string.Empty && contraseña != string.Empty)
             {
                 conexion.Open();
-                string query = "select IdCredencial,Usuario,Contraseña from CREDENCIAL where Usuario='" + Usuario + "' and Contraseña='" + clave + "'";
+                string query = "select * from CREDENCIAL where Usuario='" + Usuario + "' and Contraseña='" + clave + "'";
                 SqlCommand comandos = new SqlCommand(query, conexion);
                 SqlDataReader lector = comandos.ExecuteReader();
                 if (lector.Read())
                 {
-                    IdUsuario = lector["IdCredencial"].ToString();
-                    //MessageBox.Show("📚 ¡Bienvenido de nuevo a la Biblioteca! Te has conectado exitosamente. ¡Disfruta explorando nuevos conocimientos! 📖", "Inicio de Sesión Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //frmPantallaPrincipal pantallaPrincipal = new frmPantallaPrincipal();
-                    //pantallaPrincipal.Show();
-                    //Form formularioActual = Application.OpenForms["FrmLogin"];
-                    //formularioActual.Hide();
+                    IdUsuario = lector["IdUsuario"].ToString();
                     conexion.Close();
                     return true;
                 }
-                //else
-                //{
-                //    //MessageBox.Show("❌ Usuario o contraseña incorrectos. Revisa tus credenciales y vuelve a intentarlo. ¡No te quedes sin descubrir tu próxima lectura!", "Error de Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //    conexion.Close();
-                //    return false;
-                //}
             }
             conexion.Close();
             return false;
-            //    else
-            //        MessageBox.Show("📖 Para entrar en el mundo de los libros, por favor ingresa tu usuario y contraseña. ¡No dejes los campos vacíos!", "Campos Vacíos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         public string EncriptarYDesencriptar(string clave)
