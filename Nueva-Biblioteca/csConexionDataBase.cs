@@ -33,13 +33,13 @@ namespace Nueva_Biblioteca
         }
         public void Actualizar(string consulta)
         {
-            try
-            {
+            //try
+            //{
                 conexion.Open();
                 SqlCommand comando = new SqlCommand(consulta, conexion);
                 comando.ExecuteNonQuery();
                 conexion.Close();
-            } catch { conexion.Close(); }
+            //} catch { conexion.Close(); }
         }
         public string Extraer(string consulta, string columna)
         {
@@ -67,22 +67,6 @@ namespace Nueva_Biblioteca
             } catch { conexion.Close(); }
             conexion.Close();
             return portada;
-        }
-        public string ExtraerAutores(string consulta, string columna)
-        {
-            string resultado = "";
-            conexion.Open();
-            SqlCommand comando = new SqlCommand(consulta, conexion);
-            SqlDataReader leer = comando.ExecuteReader();
-            while (leer.Read())
-            {
-                if (resultado != "")
-                    resultado += "," + leer[columna].ToString();
-                else
-                    resultado += leer[columna].ToString();
-            }
-            conexion.Close();
-            return resultado;
         }
         public ComboBox LLenarLista(ComboBox lista, string consulta, string columna)
         {
@@ -163,9 +147,6 @@ namespace Nueva_Biblioteca
                 MessageBox.Show("Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return datosLibro;
-           
-
-   
         }
         public bool VerificarCorreoSQL(string correo, string consulta)
         {

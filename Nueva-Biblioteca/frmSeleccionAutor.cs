@@ -12,6 +12,7 @@ namespace Nueva_Biblioteca
 {
     public partial class frmSeleccionAutor : Form
     {
+        static csLibro cslibro = new csLibro();
         public frmSeleccionAutor()
         {
             InitializeComponent();
@@ -33,9 +34,15 @@ namespace Nueva_Biblioteca
             {
                 frmAgregarOEditarLibro frm = Owner as frmAgregarOEditarLibro;
                 if (frm.txtAutor.Text != "")
+                {
                     frm.txtAutor.Text += ", " + dgvAutores.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    cslibro.Autor += "," + dgvAutores.Rows[e.RowIndex].Cells[0].Value.ToString();
+                }    
                 else
-                    frm.txtAutor.Text += dgvAutores.Rows[e.RowIndex].Cells[1].Value.ToString();
+                {
+                    frm.txtAutor.Text = dgvAutores.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    cslibro.Autor = dgvAutores.Rows[e.RowIndex].Cells[0].Value.ToString();
+                } 
                 this.Close();
             }
         }

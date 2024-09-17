@@ -33,57 +33,47 @@ namespace Nueva_Biblioteca
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            try
+
+            if (string.IsNullOrEmpty(txtTitulo.Text) || string.IsNullOrEmpty(txtAutor.Text) || cbCategoria.SelectedItem == null || cbEditorial.SelectedItem == null || string.IsNullOrEmpty(txtUbicacion.Text) || string.IsNullOrEmpty(txtStock.Text) || cbEstado.SelectedItem == null || ImgLibro == null)
             {
-                // Validar si algún campo está vacío o nulo
-                if (string.IsNullOrEmpty(txtTitulo.Text) || string.IsNullOrEmpty(txtAutor.Text) || cbCategoria.SelectedItem == null || cbEditorial.SelectedItem == null || string.IsNullOrEmpty(txtUbicacion.Text) || string.IsNullOrEmpty(txtStock.Text) || cbEstado.SelectedItem == null || ImgLibro == null)
+                throw new Exception("Todos los campos son obligatorios y no pueden estar vacíos.");
+            }
+            frmLibros frm = frmLibros.Formulario();
+            if (frm.bandera & int.Parse(txtStock.Text) > 0)
+            {
+                if (claseLibro.RegistrarLibro(txtTitulo.Text, cbCategoria.SelectedItem.ToString(),
+                                              cbEditorial.SelectedItem.ToString(), txtUbicacion.Text,
+                                              txtStock.Text, cbEstado.SelectedItem.ToString(), ImgLibro))
                 {
-                    throw new Exception("Todos los campos son obligatorios y no pueden estar vacíos.");
-                }
-                frmLibros frm = frmLibros.Formulario();
-                // Agregar
-                if (frm.bandera & int.Parse(txtStock.Text) > 0)
-                {
-                    if (claseLibro.RegistrarLibro(txtTitulo.Text, txtAutor.Text, cbCategoria.SelectedItem.ToString(),
-                                                  cbEditorial.SelectedItem.ToString(), txtUbicacion.Text,
-                                                  txtStock.Text, cbEstado.SelectedItem.ToString(), ImgLibro))
-                    {
-                        frm.dgvLibros = claseLibro.MostrarLibros(frm.dgvLibros);
-                        MessageBox.Show("LIBRO AGREGADO CORRECTAMENTE.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("OCURRIÓ UN ERROR AL AGREGAR EL LIBRO.");
-                    }
-                    frm.bandera = false;
-                    this.Close();
-                }
-                // Modificar
-                else if(!frm.bandera & int.Parse(txtStock.Text) > 0)
-                {
-                    if (claseLibro.ActualizarLibro(txtTitulo.Text, txtAutor.Text, cbCategoria.SelectedItem.ToString(),
-                                                   cbEditorial.SelectedItem.ToString(), txtUbicacion.Text,
-                                                   txtStock.Text, cbEstado.SelectedItem.ToString(), ImgLibro))
-                    {
-                        frm.dgvLibros = claseLibro.MostrarLibros(frm.dgvLibros);
-                        MessageBox.Show("LIBRO ACTUALIZADO CORRECTAMENTE.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("OCURRIÓ UN ERROR AL ACTUALIZAR EL LIBRO.");
-                    }
-                    this.Close();
+                    claseLibro.MostrarLibros(frm.dgvLibros);
+                    MessageBox.Show("LIBRO AGREGADO CORRECTAMENTE.");
                 }
                 else
                 {
-                    MessageBox.Show("EL STOCK A AGREGAR DEBE SER MAYOR A 0");
+                    MessageBox.Show("OCURRIÓ UN ERROR AL AGREGAR EL LIBRO.");
                 }
+                frm.bandera = false;
+                this.Close();
             }
-            catch (Exception ex)
+            else if (!frm.bandera & int.Parse(txtStock.Text) > 0)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (claseLibro.ActualizarLibro(txtTitulo.Text, txtAutor.Text, cbCategoria.SelectedItem.ToString(),
+                                               cbEditorial.SelectedItem.ToString(), txtUbicacion.Text,
+                                               txtStock.Text, cbEstado.SelectedItem.ToString(), ImgLibro))
+                {
+                    claseLibro.MostrarLibros(frm.dgvLibros);
+                    MessageBox.Show("LIBRO ACTUALIZADO CORRECTAMENTE.");
+                }
+                else
+                {
+                    MessageBox.Show("OCURRIÓ UN ERROR AL ACTUALIZAR EL LIBRO.");
+                }
+                this.Close();
             }
-
+            else
+            {
+                MessageBox.Show("EL STOCK A AGREGAR DEBE SER MAYOR A 0");
+            }
         }
 
         private void btnAutor_Click(object sender, EventArgs e)

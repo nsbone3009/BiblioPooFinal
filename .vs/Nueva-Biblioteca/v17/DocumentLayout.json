@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\",
+  "WorkspaceRootPath": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\nueva-biblioteca\\csusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\csusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\khriz\\desktop\\bibliopoofinal\\nueva-biblioteca\\frmagregaroeditarlibro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmagregaroeditarlibro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\nueva-biblioteca\\frmlectores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmlectores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\khriz\\desktop\\bibliopoofinal\\nueva-biblioteca\\frmagregaroeditarlibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmagregaroeditarlibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\nueva-biblioteca\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\khriz\\desktop\\bibliopoofinal\\nueva-biblioteca\\frmagregaroeditarlibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmagregaroeditarlibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\jeremy jaramillo\\desktop\\proyecto final de verdad\\bibliopoofinal\\nueva-biblioteca\\csmensajesdcorreosymensajitos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\csmensajesdcorreosymensajitos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\nueva-biblioteca\\cslibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\cslibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\nueva-biblioteca\\csconexiondatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\csconexiondatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\khriz\\desktop\\bibliopoofinal\\nueva-biblioteca\\csreutilizaci\u00F3n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\csreutilizaci\u00F3n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +30,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -42,67 +46,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "csMensajesDCorreosYMensajitos.cs",
-              "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\csMensajesDCorreosYMensajitos.cs",
-              "RelativeDocumentMoniker": "Nueva-Biblioteca\\csMensajesDCorreosYMensajitos.cs",
-              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\csMensajesDCorreosYMensajitos.cs",
-              "RelativeToolTip": "Nueva-Biblioteca\\csMensajesDCorreosYMensajitos.cs",
-              "ViewState": "AQIAAHwAAAAAAAAAAAAYwAQAAAAdAAAA",
+              "DocumentIndex": 0,
+              "Title": "frmAgregarOEditarLibro.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\frmAgregarOEditarLibro.Designer.cs",
+              "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmAgregarOEditarLibro.Designer.cs",
+              "ToolTip": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\frmAgregarOEditarLibro.Designer.cs",
+              "RelativeToolTip": "Nueva-Biblioteca\\frmAgregarOEditarLibro.Designer.cs",
+              "ViewState": "AgIAAF8BAAAAAAAAAAAqwHEBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T04:22:24.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmUsuarios.cs",
-              "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\frmUsuarios.cs",
-              "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmUsuarios.cs",
-              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\frmUsuarios.cs",
-              "RelativeToolTip": "Nueva-Biblioteca\\frmUsuarios.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAowF4AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T04:11:08.505Z",
+              "WhenOpened": "2024-09-17T07:59:22.343Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmLectores.cs",
-              "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\frmLectores.cs",
-              "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmLectores.cs",
-              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\frmLectores.cs",
-              "RelativeToolTip": "Nueva-Biblioteca\\frmLectores.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAuwBMAAAAAAAAA",
+              "Title": "frmAgregarOEditarLibro.cs",
+              "DocumentMoniker": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\frmAgregarOEditarLibro.cs",
+              "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmAgregarOEditarLibro.cs",
+              "ToolTip": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\frmAgregarOEditarLibro.cs",
+              "RelativeToolTip": "Nueva-Biblioteca\\frmAgregarOEditarLibro.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAwGcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T04:09:41.465Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "csUsuarios.cs",
-              "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\csUsuarios.cs",
-              "RelativeDocumentMoniker": "Nueva-Biblioteca\\csUsuarios.cs",
-              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\csUsuarios.cs",
-              "RelativeToolTip": "Nueva-Biblioteca\\csUsuarios.cs",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAAAJUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T04:09:39.977Z",
+              "WhenOpened": "2024-09-17T07:53:05.276Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "csConexionDataBase.cs",
-              "DocumentMoniker": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\csConexionDataBase.cs",
-              "RelativeDocumentMoniker": "Nueva-Biblioteca\\csConexionDataBase.cs",
-              "ToolTip": "C:\\Users\\Jeremy Jaramillo\\Desktop\\PROYECTO FINAL DE VERDAD\\BiblioPooFinal\\Nueva-Biblioteca\\csConexionDataBase.cs",
-              "RelativeToolTip": "Nueva-Biblioteca\\csConexionDataBase.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAChAAAA",
+              "Title": "csReutilizaci\u00F3n.cs",
+              "DocumentMoniker": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\csReutilizaci\u00F3n.cs",
+              "RelativeDocumentMoniker": "Nueva-Biblioteca\\csReutilizaci\u00F3n.cs",
+              "ToolTip": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\csReutilizaci\u00F3n.cs",
+              "RelativeToolTip": "Nueva-Biblioteca\\csReutilizaci\u00F3n.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAuwCsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T04:09:18.078Z"
+              "WhenOpened": "2024-09-18T07:25:32.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "csLibro.cs",
+              "DocumentMoniker": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\csLibro.cs",
+              "RelativeDocumentMoniker": "Nueva-Biblioteca\\csLibro.cs",
+              "ToolTip": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\csLibro.cs",
+              "RelativeToolTip": "Nueva-Biblioteca\\csLibro.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAqwGcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T01:35:23.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmAgregarOEditarLibro.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\frmAgregarOEditarLibro.cs",
+              "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmAgregarOEditarLibro.cs",
+              "ToolTip": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\frmAgregarOEditarLibro.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Nueva-Biblioteca\\frmAgregarOEditarLibro.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T01:35:11.464Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

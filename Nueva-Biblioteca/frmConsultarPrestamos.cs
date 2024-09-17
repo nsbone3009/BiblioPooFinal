@@ -52,7 +52,8 @@ namespace Nueva_Biblioteca
         }
         public void Mostrar()
         {
-            string consulta = @"SELECT P.IdPrestamo, P.IdLector, L.Nombres, LI.Titulo, P.FechaDevolucion, P.FechaConfirmacionDevolucion, P.Estado 
+            string consulta = @"SELECT P.IdPrestamo, P.IdLector, L.Nombres, LI.Titulo, P.FechaDevolucion, P.FechaConfirmacionDevolucion, 
+                                CASE WHEN  P.Estado = 1  THEN 'Pendiente' ELSE 'Devuelto' END AS Estado
                                 FROM PRESTAMO P 
                                 JOIN LECTOR L ON P.IdLector = L.IdLector 
                                 JOIN LIBRO LI ON P.IdLibro = LI.IdLibro";

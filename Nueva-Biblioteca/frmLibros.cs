@@ -44,7 +44,7 @@ namespace Nueva_Biblioteca
 
         private void frmLibros_Load(object sender, EventArgs e)
         {
-            dgvLibros = claseLibro.MostrarLibros(dgvLibros);
+            claseLibro.MostrarLibros(dgvLibros);
         }
 
         private void dgvLibros_CellContentClick(object sender, DataGridViewCellEventArgs e)
