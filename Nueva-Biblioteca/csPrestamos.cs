@@ -23,7 +23,8 @@ namespace Nueva_Biblioteca
             try
             {
                 conexionSQL.AbrirConexion();
-                // --Aclaracion: Se hace una verificacion de si el libro ya lo tiene este usuario.
+
+                // -- Verificar si el libro ya lo tiene este usuario
                 string consultaVerificacion = "SELECT COUNT(*) FROM PRESTAMO WHERE IdLibro = @IdLibro AND IdLector = @IdLector AND Estado = 1";
                 using (SqlCommand comandoVerificacion = new SqlCommand(consultaVerificacion, conexionSQL.conexion))
                 {
@@ -38,14 +39,26 @@ namespace Nueva_Biblioteca
                         return false;
                     }
                 }
-                // --Aclaracion: Se inicia la transacción
-                SqlTransaction transaccion = conexionSQL.conexion.BeginTransaction();
-                try
+
+                // -- Verificar la cantidad de libros disponibles
+                string consultaCantidad = "SELECT Cantidad FROM LIBRO WHERE IdLibro = @IdLibro";
+                using (SqlCommand comandoCantidad = new SqlCommand(consultaCantidad, conexionSQL.conexion))
                 {
-                    // --Aclaracion: Consulta para agregar el prestamo
-                    string consulta = "INSERT INTO PRESTAMO (IdPrestamo, IdLector, IdLibro, FechaDevolucion, FechaCreacion, estadoentregado, Estado, Aviso, AvisoPrestamo) " +
-                                      "VALUES (@IdPrestamo, @IdLector, @IdLibro, @FechaDevolucion, @FechaCreacion, @estadoentregado, " + 1 + ", " + 0 + ", " + 0 + ")";
-                    SqlCommand comando = new SqlCommand(consulta, conexionSQL.conexion, transaccion);
+                    comandoCantidad.Parameters.AddWithValue("@IdLibro", idLibro);
+                    int cantidad = (int)comandoCantidad.ExecuteScalar();
+
+                    if (cantidad <= 0)
+                    {
+                        MessageBox.Show("No hay ejemplares disponibles de este libro.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+                }
+
+                // -- Registrar el préstamo
+                string consulta = "INSERT INTO PRESTAMO (IdPrestamo, IdLector, IdLibro, FechaDevolucion, FechaCreacion, estadoentregado, Estado, Aviso, AvisoPrestamo) " +
+                                  "VALUES (@IdPrestamo, @IdLector, @IdLibro, @FechaDevolucion, @FechaCreacion, @estadoentregado, 1, 0, 0)";
+                using (SqlCommand comando = new SqlCommand(consulta, conexionSQL.conexion))
+                {
                     comando.Parameters.AddWithValue("@IdPrestamo", idPrestamo);
                     comando.Parameters.AddWithValue("@IdLector", idLector);
                     comando.Parameters.AddWithValue("@IdLibro", idLibro);
@@ -54,26 +67,21 @@ namespace Nueva_Biblioteca
                     comando.Parameters.AddWithValue("@estadoentregado", estadoentregado);
 
                     comando.ExecuteNonQuery();
+                }
 
-                    // --Aclaracion: Actualizar el stock del libro
-                    string consultaStock = "UPDATE LIBRO SET Cantidad = Cantidad - 1 WHERE IdLibro = @IdLibro";
-                    SqlCommand comandoStock = new SqlCommand(consultaStock, conexionSQL.conexion, transaccion);
+                // -- Actualizar el stock del libro
+                string consultaStock = "UPDATE LIBRO SET Cantidad = Cantidad - 1 WHERE IdLibro = @IdLibro";
+                using (SqlCommand comandoStock = new SqlCommand(consultaStock, conexionSQL.conexion))
+                {
                     comandoStock.Parameters.AddWithValue("@IdLibro", idLibro);
                     comandoStock.ExecuteNonQuery();
-                    transaccion.Commit();
-                    return true;
                 }
-                catch (Exception ex)
-                {
-                    // Encontre esto chevere que se llama Rollback para revertir la transacción si hay algún error
-                    transaccion.Rollback();
-                    MessageBox.Show("Error al registrar el préstamo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
+
+                return true;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al conectar a la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al registrar el préstamo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -81,7 +89,6 @@ namespace Nueva_Biblioteca
                 conexionSQL.CerrarConexion();
             }
         }
-
         public bool enviarcorreo(string autor, string libro, string fechadevol, string email)
         {
             string cuerpoC = $"Estimado(a) {autor}:\n\n" +

@@ -560,7 +560,6 @@ C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva-Bibliotec
 C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmRecuperacionDeContrasña.resources
 C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmConfiguracionGeneral.resources
 C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmConfiguracionGeneral.resources
-C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmContenedorPerfil.resources
 C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmRecuperacionDeContrasña.resources
 C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\Jeremy Jaramillo\Desktop\PROYECTO FINAL DE VERDAD\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
@@ -674,3 +673,4 @@ C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.Visua
 C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
 C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\bin\Debug\Microsoft.MSXML.dll
 C:\Users\Khriz\Desktop\BiblioPooFinal\Nueva-Biblioteca\obj\Debug\Nueva-Biblioteca.csproj.CopyComplete
+C:\Users\scarl\OneDrive\Escritorio\NUEVA-BILBIOTECA\Nueva-Biblioteca\obj\Debug\Nueva_Biblioteca.frmCambioDeContraseña.resources
