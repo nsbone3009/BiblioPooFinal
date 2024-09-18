@@ -13,40 +13,32 @@ namespace Nueva_Biblioteca
 {
     public partial class frmAgregarOEditarGenero : Form
     {
-        public string identificador = "";
-
+        static csReutilizacion claseCodigo = new csReutilizacion();
+        static csGenero claseGenero = new csGenero();
         public frmAgregarOEditarGenero()
         {
             InitializeComponent();
         }
-
         private void frmAgregarOEditarCategoria_Load(object sender, EventArgs e)
         {
-            frmGenero frm = Owner as frmGenero;
-            if (frm.validacion2) { btnGuardar.Enabled = false; }
-            identificador = new csConexionDataBase().Extraer("Select * From GENERO where Genero = '" + txtDescripcion.Text.Trim() + "'", "IdGenero");
+            
         }
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             txtDescripcion.Enabled = true;
             cbEstado.Enabled = true;
             btnGuardar.Enabled = true;
         }
-
         private void lbCerrar_Click(object sender, EventArgs e)
         {
             frmGenero frm = Owner as frmGenero;
-            frm.validacion1 = false;
-            frm.validacion2 = false;
+            frm.bandera = false;
             this.Close();
         }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string bit = "";
             frmGenero frm = Owner as frmGenero;
-            csGenero genero = new csGenero();
             csConexionDataBase dataBase = new csConexionDataBase();
             if (string.IsNullOrEmpty(txtDescripcion.Text) || cbEstado.SelectedIndex == -1)
             {
@@ -54,33 +46,37 @@ namespace Nueva_Biblioteca
                 return;
             }
             if (cbEstado.SelectedItem == cbEstado.Items[0]) { bit = "1"; } else { bit = "0"; }
-            if (frm.validacion1)
+            if (frm.bandera)
             {
                 try
                 {
-                    string idGenero = csReutilizacion.GenerarId(txtDescripcion.Text);
-                    string fecha = DateTime.Now.ToString("yyyy-MM-dd");
-                    genero.GuardarGnero(idGenero, txtDescripcion.Text, bit, fecha);
-                    frm.validacion1 = false;
+                    string x = claseCodigo.GenerarCodigo("SELECT MAX(IdGenero) AS codigo FROM GENERO", "codigo");
+                    claseGenero.GuardarGnero(x, txtDescripcion.Text, bit, DateTime.Now.ToString("dd-MM-yyyy"));
+                    frm.bandera = false;
                 }
                 catch (ArgumentException ex)
                 {
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            // Editar género existente
-            else if (frm.validacion2)
+            else 
             {
-                genero.EditarGenero(txtDescripcion.Text, bit, identificador);
-                frm.validacion2 = false;
+                claseGenero.EditarGenero(txtDescripcion.Text, bit);
             }
 
-            // Limpiar campos y actualizar DataGridView
             txtDescripcion.Clear();
             cbEstado.SelectedIndex = -1;
             frm.dgvCategorias.Rows.Clear();
-            genero.Mostrar(frm.dgvCategorias);
+            claseGenero.Mostrar(frm.dgvCategorias);
             this.Close();
+        }
+
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar)) 
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Data;
 using System.IO;
 using System.Drawing;
+using System.Web;
 
 namespace Nueva_Biblioteca
 {
@@ -72,6 +73,8 @@ namespace Nueva_Biblioteca
             formulario.txtAutor.Enabled = valor;
             formulario.btnSeleccionar.Enabled = valor;
             formulario.btnGuardar.Enabled = valor;
+            formulario.btnAgregarAutor.Enabled = valor;
+            formulario.btnLimpiarAutores.Enabled = valor;
             formulario.cbCategoria.Enabled = valor;
             formulario.cbEditorial.Enabled = valor;
             formulario.cbEstado.Enabled = valor;
@@ -81,34 +84,37 @@ namespace Nueva_Biblioteca
             formulario.cbCategoria = dataBase.LLenarLista(formulario.cbCategoria, "Select Genero from GENERO where Estado = 1", "Genero");
             formulario.cbEditorial = dataBase.LLenarLista(formulario.cbEditorial, "Select Editorial from EDITORIAL where Estado = 1", "Editorial");
         }
-        public bool RegistrarLibro(string titulo, string genero, string editorial, string ubicacion, string cantidad, string estado, PictureBox portada)
+        public bool RegistrarLibro(string titulo, string autor, string genero, string editorial, string ubicacion, string cantidad, string estado, PictureBox portada)
         {
             try
             {
                 codigo = claseCodigo.GenerarCodigo("SELECT MAX(IdLibro) AS codigo FROM LIBRO", "codigo");
-                if (estado == "Activo") { estado = "1"; } else { estado = "0"; }
                 genero = dataBase.Extraer("Select IdGenero From GENERO Where Genero = '" + genero + "'", "IdGenero");
                 editorial = dataBase.Extraer("Select IdEditorial From EDITORIAL Where Editorial = '" + editorial + "'", "IdEditorial");
+                
                 string consulta = "Insert into LIBRO(IdLibro, Titulo, IdGenero, IdEditorial, Ubicacion, Cantidad, Estado, FechaCreacion)" +
-                $"Values('{codigo}', '{titulo}', '{genero}', '{editorial}', '{ubicacion}', '{cantidad}', '{estado}', '{DateTime.Now.ToString("dd-MM-yyyy")}')";
+                $"Values('{codigo}', '{titulo}', '{genero}', '{editorial}', '{ubicacion}', '{cantidad}', '{(estado == "Activo" ? 1 : 0)}', '{DateTime.Now.ToString("dd-MM-yyyy")}')";
                 dataBase.Actualizar(consulta);
 
                 if (autor.Contains(','))
                 {
                     string[] autores = autor.Split(',');
-                    for (int i = 0; i < autores.Length; i++)
+                    foreach (string nombre in autores)
                     {
+                        string ID = dataBase.Extraer($"Select * From AUTOR Where Autor = '{nombre.Trim()}'", "IdAutor");
                         string x = claseCodigo.GenerarCodigo("SELECT MAX(IdAutor_libro) AS codigo FROM AUTOR_LIBRO", "codigo");
-                        string sentencia = $"Insert into AUTOR_LIBRO(IdAutor_Libro, IdLibro, IdAutor) Values('{x}', '{codigo}', '{autores[i]}')";
+                        string sentencia = $"Insert into AUTOR_LIBRO(IdAutor_Libro, IdLibro, IdAutor) Values('{x}', '{codigo}', '{ID}')";
                         dataBase.Actualizar(sentencia);
                     }
                 }
                 else
                 {
+                    string ID = dataBase.Extraer($"Select * From AUTOR Where Autor = '{autor.Trim()}'", "IdAutor");
                     string x = claseCodigo.GenerarCodigo("SELECT MAX(IdAutor_libro) AS codigo FROM AUTOR_LIBRO", "codigo");
-                    string sentencia = $"Insert into AUTOR_LIBRO(IdAutor_Libro, IdLibro, IdAutor) Values('{x}', '{codigo}', '{autor}')";
+                    string sentencia = $"Insert into AUTOR_LIBRO(IdAutor_Libro, IdLibro, IdAutor) Values('{x}', '{codigo}', '{ID}')";
                     dataBase.Actualizar(sentencia);
                 }
+
                 if (portada.Image != null)
                 {
                     string sentencia = $"Update LIBRO set Foto = @imagen where IdLibro = '{codigo}'";
@@ -122,19 +128,42 @@ namespace Nueva_Biblioteca
         {
             try
             {
-                if (estado == "Activo") { estado = "1"; } else { estado = "0"; }
                 genero = dataBase.Extraer("Select IdGenero From GENERO Where Genero = '" + genero + "'", "IdGenero");
                 editorial = dataBase.Extraer("Select IdEditorial From EDITORIAL Where Editorial = '" + editorial + "'", "IdEditorial");
-                string consulta = "Update LIBRO set Titulo = '" + titulo + "', IdGenero = '" + genero + "', IdEditorial = '" + editorial + "', Ubicacion = '" + ubicacion + "', " +
-                "Cantidad = '" + cantidad + "', Estado = '" + estado + "' Where IdLibro = '" + codigo + "'";
+
+                string consulta = $"Update LIBRO set Titulo = '{titulo}', IdGenero = '{genero}', IdEditorial = '{editorial}', Ubicacion = '{ubicacion}', " +
+                $"Cantidad = '{cantidad}', Estado = '{(estado == "Activo" ? 1 : 0)}' Where IdLibro = '{codigo}'";
                 dataBase.Actualizar(consulta);
+
+                string consulta1 = $"Delete AUTOR_LIBRO where IdLibro = '{codigo}'";
+                dataBase.Actualizar(consulta1);
+
+                if (autor.Contains(','))
+                {
+                    string[] autores = autor.Split(',');
+                    foreach (string nombre in autores)
+                    {
+                        string ID = dataBase.Extraer($"Select * From AUTOR Where Autor = '{nombre.Trim()}'", "IdAutor");
+                        string x = claseCodigo.GenerarCodigo("SELECT MAX(IdAutor_libro) AS codigo FROM AUTOR_LIBRO", "codigo");
+                        string sentencia = $"Insert into AUTOR_LIBRO(IdAutor_Libro, IdLibro, IdAutor) Values('{x}', '{codigo}', '{ID}')";
+                        dataBase.Actualizar(sentencia);
+                    }
+                }
+                else
+                {
+                    string ID = dataBase.Extraer($"Select * From AUTOR Where Autor = '{autor.Trim()}'", "IdAutor");
+                    string x = claseCodigo.GenerarCodigo("SELECT MAX(IdAutor_libro) AS codigo FROM AUTOR_LIBRO", "codigo");
+                    string sentencia = $"Insert into AUTOR_LIBRO(IdAutor_Libro, IdLibro, IdAutor) Values('{x}', '{codigo}', '{ID}')";
+                    dataBase.Actualizar(sentencia);
+                }
+
                 if (portada.Image != null)
                 {
                     string sentencia = $"Update LIBRO set Foto = @imagen where IdLibro = '{codigo}'";
                     dataBase.GuardarImagen(portada, sentencia);
                 }
             }
-            catch (Exception) { return false; }
+            catch { return false; }
             return true;
         }
         public void LimpiarCampos(frmAgregarOEditarLibro formulario)

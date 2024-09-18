@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -264,9 +264,9 @@
             this.label13.Location = new System.Drawing.Point(785, 47);
             this.label13.Margin = new System.Windows.Forms.Padding(0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(117, 18);
+            this.label13.Size = new System.Drawing.Size(103, 18);
             this.label13.TabIndex = 17;
-            this.label13.Text = "Total Categorias";
+            this.label13.Text = "Total Generos";
             // 
             // label14
             // 
@@ -357,18 +357,18 @@
             // 
             // charGraficoDatos
             // 
-            chartArea1.Name = "ChartArea1";
-            this.charGraficoDatos.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.charGraficoDatos.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.charGraficoDatos.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.charGraficoDatos.Legends.Add(legend2);
             this.charGraficoDatos.Location = new System.Drawing.Point(52, 258);
             this.charGraficoDatos.Margin = new System.Windows.Forms.Padding(0);
             this.charGraficoDatos.Name = "charGraficoDatos";
             this.charGraficoDatos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Datos";
-            this.charGraficoDatos.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Datos";
+            this.charGraficoDatos.Series.Add(series2);
             this.charGraficoDatos.Size = new System.Drawing.Size(922, 288);
             this.charGraficoDatos.TabIndex = 24;
             this.charGraficoDatos.Text = "chart1";

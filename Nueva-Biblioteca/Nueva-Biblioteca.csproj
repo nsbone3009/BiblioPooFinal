@@ -327,6 +327,7 @@
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="infLibrosRegistrados.rdlc" />
     <EmbeddedResource Include="informeLectores.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

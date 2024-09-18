@@ -32,6 +32,7 @@ namespace Nueva_Biblioteca
         public void Mostrar()
         {
             charGraficoDatos.Series[0].Points.Clear();
+
             lbTotalEditoriales.Text = new csConexionDataBase().Contar("Select count(IdEditorial) from EDITORIAL ");
             lbTotalAutores.Text = new csConexionDataBase().Contar("Select count(IdAutor) from AUTOR ");
             lbTotalCategorias.Text = new csConexionDataBase().Contar("Select count(IdGenero) from GENERO");
@@ -40,6 +41,7 @@ namespace Nueva_Biblioteca
             lbTotalUsuarios.Text = new csConexionDataBase().Contar("select count(IdUsuario)from USUARIO");
             lbPrestamosRegistrados.Text = new csConexionDataBase().Contar("select count(IdPrestamo) from PRESTAMO");
             lbPrestamosPendientes.Text = new csConexionDataBase().Contar("select count(IdPrestamo) FROM PRESTAMO WHERE EstadoRecibido  is NULL");
+            
             charGraficoDatos.Series[0].Points.AddXY("Libros", lbTotalLibros.Text);
             charGraficoDatos.Series[0].Points.AddXY("Autores", lbTotalAutores.Text);
             charGraficoDatos.Series[0].Points.AddXY("Editoriales", lbTotalEditoriales.Text);

@@ -43,6 +43,10 @@ namespace Nueva_Biblioteca
                     btnGenerar.Enabled = true;
                     btnLimpiarRepo.Enabled = true;
                     break;
+                case "Libros Registrados":
+                    btnGenerar.Enabled = true;
+                    btnLimpiarRepo.Enabled = true;
+                    break;
             }
         }
         private void btnGenerar_Click(object sender, EventArgs e)
@@ -58,6 +62,18 @@ namespace Nueva_Biblioteca
                          "GENERO AS G ON G.IdGenero = LB.IdGenero " +
                          $"WHERE(L.Nombres = '{txtBuscarLector.Text}')";
                     claseReporte.GenerarReporte(rptReporte, sentencia1, "informeLectores.rdlc", "dtsLectores");
+                    this.rptReporte.RefreshReport();
+                    break;
+                case 1:
+                    string sentencia2 = @"SELECT L.IdLibro, L.Titulo, STRING_AGG(A.Autor, ', ') AS Autores, G.Genero, E.Editorial, L.Ubicacion, L.Cantidad, 
+                            CASE WHEN  L.Estado = 1  THEN 'Activo' ELSE 'Inactivo' END AS Estado, L.FechaCreacion
+                            FROM LIBRO L
+                            JOIN GENERO G ON G.IdGenero = L.IdGenero
+                            JOIN EDITORIAL E ON E.IdEditorial = L.IdEditorial
+                            JOIN AUTOR_LIBRO AL ON AL.IdLibro = L.IdLibro
+                            JOIN AUTOR A ON  A.IdAutor = AL.IdAutor
+                            GROUP BY L.IdLibro, L.Titulo, G.Genero, E.Editorial, L.Ubicacion, L.Cantidad, L.Estado, L.FechaCreacion ";
+                    claseReporte.GenerarReporte(rptReporte, sentencia2, "infLibrosRegistrados.rdlc", "dtsLibros");
                     this.rptReporte.RefreshReport();
                     break;
             }

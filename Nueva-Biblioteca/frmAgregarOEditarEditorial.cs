@@ -12,6 +12,7 @@ namespace Nueva_Biblioteca
 {
     public partial class frmAgregarOEditarEditorial : Form
     {
+        static csReutilizacion clasecodigo = new csReutilizacion(); 
         public string identificador = "";
 
         public frmAgregarOEditarEditorial()
@@ -22,8 +23,7 @@ namespace Nueva_Biblioteca
         private void lbCerrar_Click(object sender, EventArgs e)
         {
             frmEditorial frm = Owner as frmEditorial;
-            frm.validacion1 = false;
-            frm.validacion2 = false;
+            frm.bandera = false;
             this.Close();
         }
 
@@ -43,27 +43,24 @@ namespace Nueva_Biblioteca
 
             if (cbEstado.SelectedItem == cbEstado.Items[0]) { bit = "1"; } else { bit = "0"; }
 
-            if (frm.validacion1)
+            if (frm.bandera)
             {
                 try
                 {
-                    string idEditorial = csReutilizacion.GenerarId(txtDescripcion.Text);
-                    string fecha = DateTime.Now.ToString("yyyy-MM-dd");
-                    editorial.GuardarEditorial(idEditorial, txtDescripcion.Text, bit, fecha);
-                    frm.validacion1 = false;
+                    string x = clasecodigo.GenerarCodigo("SELECT MAX(IdEditorial) AS codigo FROM EDITORIAL", "codigo");
+                    editorial.GuardarEditorial(x, txtDescripcion.Text, bit, DateTime.Now.ToString("dd-MM-yyyy"));
+                    frm.bandera = false;
                 }
                 catch (ArgumentException ex)
                 {
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else if (frm.validacion2)
+            else 
             {
                 editorial.EditarEditorial(txtDescripcion.Text, bit, identificador);
-                frm.validacion2 = false;
             }
 
-            // Limpiar campos y actualizar DataGridView
             txtDescripcion.Clear();
             cbEstado.SelectedIndex = -1;
             frm.dgvEditorial.Rows.Clear();
@@ -80,9 +77,15 @@ namespace Nueva_Biblioteca
 
         private void frmAgregarOEditarEditorial_Load(object sender, EventArgs e)
         {
-            frmEditorial frm = Owner as frmEditorial;
-            if (frm.validacion2) { btnGuardar.Enabled = false; }
-            identificador = new csConexionDataBase().Extraer("Select * From EDITORIAL where Editorial = '" + txtDescripcion.Text.Trim() + "'", "IdEditorial");
+            
+        }
+
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

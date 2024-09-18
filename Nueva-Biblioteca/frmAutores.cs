@@ -12,10 +12,9 @@ namespace Nueva_Biblioteca
 {
     public partial class frmAutores : Form
     {
-        public bool validacion1 = false, validacion2 = false;
-
+        public bool bandera = false;
         static private frmAutores instancia = null;
-        static csAutores clase = new csAutores();
+        static csAutores claseAutor = new csAutores();
         private csLLenarDataGridView buscar = new csLLenarDataGridView();
         private csReutilizacion verificar = new csReutilizacion();
         public static frmAutores Formulario()
@@ -23,27 +22,21 @@ namespace Nueva_Biblioteca
             if (instancia == null) { instancia = new frmAutores(); }
             return instancia;
         }
-
         public frmAutores()
         {
             InitializeComponent();
         }
-
         private void frmAutores_Load(object sender, EventArgs e)
         {
-            clase.Mostrar(dgvAutores);
+            claseAutor.Mostrar(dgvAutores);
         }
-
-        
-
         private void dgvAutores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             frmAgregarOEditarAutor frm = new frmAgregarOEditarAutor();
             this.AddOwnedForm(frm);
             if (e.ColumnIndex == dgvAutores.Columns[dgvAutores.ColumnCount - 1].Index && e.RowIndex >= 0)
             {
-                validacion2 = true;
-                frm.identificador = dgvAutores.Rows[e.RowIndex].Cells[0].Value.ToString();
+                claseAutor.Codigo = dgvAutores.Rows[e.RowIndex].Cells[0].Value.ToString();
                 frm.txtDescripcion.Text = dgvAutores.Rows[e.RowIndex].Cells[1].Value.ToString();
                 if (dgvAutores.Rows[e.RowIndex].Cells[2].Value.ToString() == "Activo") { frm.cbEstado.SelectedItem = frm.cbEstado.Items[0]; }
                 else { frm.cbEstado.SelectedItem = frm.cbEstado.Items[1]; }
@@ -52,31 +45,26 @@ namespace Nueva_Biblioteca
                 frm.ShowDialog();
             }
         }
-
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            if (txtBuscar.Text.Length > 1)
+            if (txtBuscar.Text.Length >= 3)
             {
-                string estadoTraducido = verificar.VerificarEstado(txtBuscar.Text);
                 string consulta = "SELECT IdAutor, Autor, Estado " +
                                   "FROM AUTOR " +
                                   "WHERE IdAutor LIKE '%" + txtBuscar.Text + "%' " +
-                                  "OR Autor LIKE '%" + txtBuscar.Text + "%' " +
-                                  "OR Estado LIKE '%" + estadoTraducido + "%'";
-
+                                  "OR Autor LIKE '%" + txtBuscar.Text + "%' ";
                 dgvAutores.Rows.Clear();
                 buscar.Mostrar(dgvAutores, consulta, 1);
             }
-            else if (txtBuscar.Text.Length == 0)
+            else
             {
                 dgvAutores.Rows.Clear();
-                clase.Mostrar(dgvAutores);
+                claseAutor.Mostrar(dgvAutores);
             }
         }
-
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            validacion1 = true;
+            bandera = true;
             frmAgregarOEditarAutor frm = new frmAgregarOEditarAutor();
             this.AddOwnedForm(frm);
             frm.btnEditar.Visible = false;

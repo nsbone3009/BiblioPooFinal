@@ -19,7 +19,9 @@ namespace Nueva_Biblioteca
             if(Tabla.RowCount >= 0) { Tabla.Rows.Clear(); }
             Tabla.Columns[Tabla.ColumnCount - 1].Width = 50;
             registros = conexion.Registros(consulta);
+
             if (registros.Rows.Count >= 5) { x = 18; }
+
             foreach (DataRow row in registros.Rows) 
             {
                 Tabla.Rows.Add(row.ItemArray);

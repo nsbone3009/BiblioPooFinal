@@ -15,11 +15,11 @@ namespace Nueva_Biblioteca
             reporte.LocalReport.DataSources.Clear();
             csConexionDataBase conexion = new csConexionDataBase();
             ReportDataSource DatosReporte = new ReportDataSource();
-            DataTable tabla = conexion.Registros(consulta);
+            DataTable tabla = conexion.Registros(consulta); 
             reporte.LocalReport.ReportEmbeddedResource = "Nueva_Biblioteca." + informe;
             try { DatosReporte = new ReportDataSource(nombreTabla); }
             catch { }
-            reporte.LocalReport.DataSources.Add(DatosReporte);
+            reporte.LocalReport.DataSources.Add(DatosReporte); 
             DatosReporte.Value = tabla;
             reporte.LocalReport.Refresh();
         }

@@ -4,6 +4,8 @@
 
     partial class dtsDatos
     {
-
+        partial class dtLibrosDataTable
+        {
+        }
     }
 }

@@ -22,8 +22,10 @@ namespace Nueva_Biblioteca
         private void btnCambiar_Click(object sender, EventArgs e)
         {
             frmPantallaPrincipal frm = frmPantallaPrincipal.Formulario();
+
             string ContraVieja = conexion.Extraer($"Select * from CREDENCIAL where IdUsuario = '{frm.IdEmpleado}' ", "Contraseña").Trim();
             string ContraViejaIngresada = login.EncriptarYDesencriptar(txtContraseñaActual.Text.Trim());
+            
             if (ContraViejaIngresada == ContraVieja)
             {
                 if(txtNuevaContraseña.Text == txtConfNuevaContraseña.Text)

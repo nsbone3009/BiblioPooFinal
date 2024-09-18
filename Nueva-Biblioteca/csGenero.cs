@@ -14,15 +14,15 @@ namespace Nueva_Biblioteca
         public string Codigo { set { codigo = value; } get { return codigo; } }
         public string Genero { set { genero = value; } get { return genero; } }
         public string Estado { set { estado = value; } get { return estado; } }
-        public void Mostrar(DataGridView data)
+        public void Mostrar(DataGridView tabla)
         {
-            new csLLenarDataGridView().Mostrar(data, "Select IdGenero, Genero, Estado from GENERO", 1);
+            string consulta = "Select G.IdGenero, G.Genero, CASE WHEN  G.Estado = 1  THEN 'Activo' ELSE 'Inactivo' END AS Estado from GENERO G";
+            new csLLenarDataGridView().Mostrar(tabla, consulta, 1);
         }
         public void GuardarGnero(string codigo, string genero, string estado, string fecha)
         {
             try
             {
-              
                 string consulta = $"INSERT INTO GENERO(IdGenero, Genero, Estado, FechaCreacion) VALUES('{codigo}', '{genero}', '{estado}', '{fecha}')";
                 dataBase.Actualizar(consulta);
              
@@ -33,9 +33,9 @@ namespace Nueva_Biblioteca
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void EditarGenero(string genero, string estado, string id)
+        public void EditarGenero(string genero, string estado)
         {
-            dataBase.Actualizar("Update GENERO set Genero = '" + genero + "', Estado = '" + estado + "' where IdGenero = '" + id + "'");
+            dataBase.Actualizar("Update GENERO set Genero = '" + genero + "', Estado = '" + estado + "' where IdGenero = '" + codigo + "'");
         }
     }
 }

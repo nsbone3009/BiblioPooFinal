@@ -15,9 +15,10 @@ namespace Nueva_Biblioteca
         public string Codigo { set { codigo = value; } get { return codigo; } }
         public string Editorial { set { editorial = value; } get { return editorial; } }
         public string Estado { set { estado = value; } get { return estado; } }
-        public void Mostrar(DataGridView data)
+        public void Mostrar(DataGridView tabla)
         {
-            new csLLenarDataGridView().Mostrar(data, "Select IdEditorial, Editorial, Estado from EDITORIAL", 1);
+            string consulta = "Select E.IdEditorial, E.Editorial, CASE WHEN  E.Estado = 1  THEN 'Activo' ELSE 'Inactivo' END AS Estado from EDITORIAL E";
+            new csLLenarDataGridView().Mostrar(tabla, consulta, 1);
         }
         public void GuardarEditorial(string codigo, string editorial, string estado, string fecha)
         {

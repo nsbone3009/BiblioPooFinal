@@ -10,30 +10,29 @@ namespace Nueva_Biblioteca
     class csAutores
     {
         private static string codigo, autor, estado;
-        private static csConexionDataBase dataBase = new csConexionDataBase();
+        private static csConexionDataBase conexion = new csConexionDataBase();
         public string Codigo { set { codigo = value; } get { return codigo; } }
         public string Autor { set { autor = value; } get { return autor; } }
         public string Estado { set { estado = value; } get { return estado; } }
-        public void Mostrar(DataGridView data)
+        public void Mostrar(DataGridView tabla)
         {
-            new csLLenarDataGridView().Mostrar(data, "Select IdAutor, Autor, Estado from AUTOR", 1);
+            string consulta = "SELECT A.IdAutor, A.Autor, CASE WHEN  A.Estado = 1  THEN 'Activo' ELSE 'Inactivo' END AS Estado FROM AUTOR A";
+            new csLLenarDataGridView().Mostrar(tabla, consulta, 1);
         }
-        public void GuardarAutor(string codigo, string autor, string estado, string fecha)
+        public void RegistrarAutor(string codigo, string autor, string estado, string fecha)
         {
-            try
-            {
-                string consulta = $"INSERT INTO AUTOR(IdAutor, Autor, Estado, FechaCreacion) VALUES('{codigo}', '{autor}', '{estado}', '{fecha}')";
-                dataBase.Actualizar(consulta);
-                MessageBox.Show("Autor agregado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (ArgumentException ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            string consulta = $"INSERT INTO AUTOR(IdAutor, Autor, Estado, FechaCreacion) VALUES('{codigo}', '{autor}', '{estado}', '{fecha}')";
+            conexion.Actualizar(consulta);
         }
-        public void EditarAutor( string autor, string estado ,string id)
+        public void ActualizarAutor(string autor, string estado)
         {
-            dataBase.Actualizar("Update AUTOR set Autor = '" + autor + "', Estado = '" + estado + "' where IdAutor = '" + id + "'");
+            string consulta = $"Update AUTOR set Autor = '{autor}', Estado = '{estado}' where IdAutor = '{codigo}'";
+            conexion.Actualizar(consulta);
+        }
+        public void LimpiarCampos(frmAgregarOEditarAutor formulario)
+        {
+            formulario.txtDescripcion.Clear();
+            formulario.cbEstado.SelectedIndex = -1;
         }
     }
 }

@@ -22,6 +22,21 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="dtLibros" msprop:Generator_TableClassName="dtLibrosDataTable" msprop:Generator_TableVarName="tabledtLibros" msprop:Generator_TablePropName="dtLibros" msprop:Generator_RowDeletingName="dtLibrosRowDeleting" msprop:Generator_RowChangingName="dtLibrosRowChanging" msprop:Generator_RowEvHandlerName="dtLibrosRowChangeEventHandler" msprop:Generator_RowDeletedName="dtLibrosRowDeleted" msprop:Generator_UserTableName="dtLibros" msprop:Generator_RowChangedName="dtLibrosRowChanged" msprop:Generator_RowEvArgName="dtLibrosRowChangeEvent" msprop:Generator_RowClassName="dtLibrosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdLibro" msprop:Generator_ColumnVarNameInTable="columnIdLibro" msprop:Generator_ColumnPropNameInRow="IdLibro" msprop:Generator_ColumnPropNameInTable="IdLibroColumn" msprop:Generator_UserColumnName="IdLibro" type="xs:string" minOccurs="0" />
+              <xs:element name="Titulo" msprop:Generator_ColumnVarNameInTable="columnTitulo" msprop:Generator_ColumnPropNameInRow="Titulo" msprop:Generator_ColumnPropNameInTable="TituloColumn" msprop:Generator_UserColumnName="Titulo" type="xs:string" minOccurs="0" />
+              <xs:element name="Autores" msprop:Generator_ColumnVarNameInTable="columnAutores" msprop:Generator_ColumnPropNameInRow="Autores" msprop:Generator_ColumnPropNameInTable="AutoresColumn" msprop:Generator_UserColumnName="Autores" type="xs:string" minOccurs="0" />
+              <xs:element name="Genero" msprop:Generator_ColumnVarNameInTable="columnGenero" msprop:Generator_ColumnPropNameInRow="Genero" msprop:Generator_ColumnPropNameInTable="GeneroColumn" msprop:Generator_UserColumnName="Genero" type="xs:string" minOccurs="0" />
+              <xs:element name="Editorial" msprop:Generator_ColumnVarNameInTable="columnEditorial" msprop:Generator_ColumnPropNameInRow="Editorial" msprop:Generator_ColumnPropNameInTable="EditorialColumn" msprop:Generator_UserColumnName="Editorial" type="xs:string" minOccurs="0" />
+              <xs:element name="Ubicacion" msprop:Generator_ColumnVarNameInTable="columnUbicacion" msprop:Generator_ColumnPropNameInRow="Ubicacion" msprop:Generator_ColumnPropNameInTable="UbicacionColumn" msprop:Generator_UserColumnName="Ubicacion" type="xs:string" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:string" minOccurs="0" />
+              <xs:element name="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_UserColumnName="Estado" type="xs:string" minOccurs="0" />
+              <xs:element name="FechaCreacion" msprop:Generator_ColumnVarNameInTable="columnFechaCreacion" msprop:Generator_ColumnPropNameInRow="FechaCreacion" msprop:Generator_ColumnPropNameInTable="FechaCreacionColumn" msprop:Generator_UserColumnName="FechaCreacion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

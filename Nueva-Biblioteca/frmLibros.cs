@@ -24,12 +24,10 @@ namespace Nueva_Biblioteca
             if (instancia == null) { instancia = new frmLibros(); }
             return instancia;
         }
-
         public frmLibros()
         {
             InitializeComponent();
         }
-
         private void btnCrear_Click(object sender, EventArgs e)
         {
             frmAgregarOEditarLibro frm = new frmAgregarOEditarLibro();
@@ -41,12 +39,10 @@ namespace Nueva_Biblioteca
             frm.ShowDialog();
             claseLibro.LimpiarCampos(frm);
         }
-
         private void frmLibros_Load(object sender, EventArgs e)
         {
             claseLibro.MostrarLibros(dgvLibros);
         }
-
         private void dgvLibros_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {   
             if (e.ColumnIndex == dgvLibros.Columns[dgvLibros.ColumnCount - 1].Index && e.RowIndex >= 0) //Boton Editar
@@ -67,15 +63,15 @@ namespace Nueva_Biblioteca
         {
             if (txtBuscar.Text.Length >= 3)
             {
-                string aux = txtBuscar.Text;
-                aux = verificar.VerificarEstado(aux);
-                string consulta = "select L.IdLibro, L.Titulo, A.Autor, G.Genero, E.Editorial, L.Ubicacion, L.Cantidad, L.Estado from LIBRO L join AUTOR_LIBRO AL on L.IdLibro = AL.IdLibro join AUTOR A on A.IdAutor = AL.IdAutor join GENERO G on L.IdGenero = G.IdGenero join EDITORIAL E on L.IdEditorial = E.IdEditorial where L.IdLibro like '%" + txtBuscar.Text + "%'"+ 
-                    "or L.Titulo like '%" + aux + "%' " +
-                    "or A.Autor like '%" + aux + "%'" + 
-                    "or G.Genero like '%" + aux + "%'" +  
-                    "or E.Editorial like '%"+ aux + "%'" +
-                    "or L.Estado like '%" + aux + "%'" +
-                    "or L.Ubicacion like '%" + aux + "%'";
+                string consulta = @"SELECT L.IdLibro, L.Titulo, STRING_AGG(A.Autor, ', ') AS Autores, G.Genero, E.Editorial, L.Ubicacion, L.Cantidad,
+                           CASE WHEN  L.Estado = 1  THEN 'Activo' ELSE 'Inactivo' END AS Estado, L.FechaCreacion 
+                           FROM LIBRO L 
+                           JOIN GENERO G ON G.IdGenero = L.IdGenero 
+                           JOIN EDITORIAL E ON E.IdEditorial = L.IdEditorial 
+                           JOIN AUTOR_LIBRO AL ON AL.IdLibro = L.IdLibro 
+                           JOIN AUTOR A ON  A.IdAutor = AL.IdAutor 
+                           GROUP BY L.IdLibro, L.Titulo, G.Genero, E.Editorial, L.Ubicacion, L.Cantidad, L.Estado, L.FechaCreacion " +
+                           $"HAVING STRING_AGG(A.Autor, ', ') LIKE '%{ txtBuscar.Text}%' OR L.Titulo LIKE '%{txtBuscar.Text}%' OR G.Genero LIKE '%{txtBuscar.Text}%' OR L.Ubicacion LIKE '%{txtBuscar.Text}%'";
                 dgvLibros.Rows.Clear();
                 buscar.Mostrar(dgvLibros, consulta, 1);
             }

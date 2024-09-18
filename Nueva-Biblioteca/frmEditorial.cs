@@ -12,37 +12,31 @@ namespace Nueva_Biblioteca
 {
     public partial class frmEditorial : Form
     {
-        public bool validacion1 = false, validacion2 = false;
+        public bool bandera = false;
         static private frmEditorial instancia = null;
-        static csEditorial clase = new csEditorial();
+        static csEditorial claseEditorial = new csEditorial();
         private csLLenarDataGridView buscar = new csLLenarDataGridView();
         private csReutilizacion verificar = new csReutilizacion();
-
         public static frmEditorial Formulario()
         {
             if (instancia == null) { instancia = new frmEditorial(); }
             return instancia;
         }
-
         public frmEditorial()
         {
             InitializeComponent();
         }
-
         private void frmEditorial_Load(object sender, EventArgs e)
         {
-            clase.Mostrar(dgvEditorial);
+            claseEditorial.Mostrar(dgvEditorial);
         }
-
-        
-
         private void dgvEditorial_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             frmAgregarOEditarEditorial frm = new frmAgregarOEditarEditorial();
             this.AddOwnedForm(frm);
             if (e.ColumnIndex == dgvEditorial.Columns[dgvEditorial.ColumnCount - 1].Index && e.RowIndex >= 0)
             {
-                validacion2 = true;
+                bandera = true;
                 frm.identificador = dgvEditorial.Rows[e.RowIndex].Cells[0].Value.ToString();
                 frm.txtDescripcion.Text = dgvEditorial.Rows[e.RowIndex].Cells[1].Value.ToString();
                 if (dgvEditorial.Rows[e.RowIndex].Cells[2].Value.ToString() == "Activo") { frm.cbEstado.SelectedItem = frm.cbEstado.Items[0]; }
@@ -52,34 +46,25 @@ namespace Nueva_Biblioteca
                 frm.ShowDialog();
             }
         }
-
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            if (txtBuscar.Text.Length > 1)
+            if (txtBuscar.Text.Length >= 3)
             {
-                string estadoTraducido = verificar.VerificarEstado(txtBuscar.Text);
-                string consulta = "SELECT IdEditorial, Editorial, Estado " +
-                                  "FROM EDITORIAL " +
+                string consulta = "SELECT E.IdEditorial, E.Editorial, CASE WHEN  E.Estado = 1  THEN 'Activo' ELSE 'Inactivo' END AS Estado " +
+                                  "FROM EDITORIAL E " +
                                   "WHERE IdEditorial LIKE '%" + txtBuscar.Text + "%' " +
-                                  "OR Editorial LIKE '%" + txtBuscar.Text + "%' " +
-                                  "OR Estado LIKE '%" + estadoTraducido + "%'";
-
-                dgvEditorial.Rows.Clear();
+                                  "OR Editorial LIKE '%" + txtBuscar.Text + "%' ";
                 buscar.Mostrar(dgvEditorial, consulta, 1);
             }
-            else if (txtBuscar.Text.Length == 0)
-            {
-                dgvEditorial.Rows.Clear();
-                clase.Mostrar(dgvEditorial);
-            }
+            else { claseEditorial.Mostrar(dgvEditorial); }
         }
-
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            validacion1 = true;
+            bandera = true;
             frmAgregarOEditarEditorial frm = new frmAgregarOEditarEditorial();
             this.AddOwnedForm(frm);
             frm.btnEditar.Visible = false;
+            frm.cbEstado.SelectedItem = "Activo";
             frm.ShowDialog();
         }
     }

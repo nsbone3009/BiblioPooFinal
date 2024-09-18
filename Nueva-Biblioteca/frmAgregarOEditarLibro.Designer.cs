@@ -48,7 +48,7 @@
             this.ImgLibro = new System.Windows.Forms.PictureBox();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.txtAutor = new System.Windows.Forms.TextBox();
-            this.btnAutor = new System.Windows.Forms.Button();
+            this.btnAgregarAutor = new System.Windows.Forms.Button();
             this.btnLimpiarAutores = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ImgLibro)).BeginInit();
             this.SuspendLayout();
@@ -145,7 +145,7 @@
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(306, 266);
+            this.cbCategoria.Location = new System.Drawing.Point(306, 282);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(282, 32);
             this.cbCategoria.TabIndex = 30;
@@ -154,7 +154,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(302, 243);
+            this.label1.Location = new System.Drawing.Point(302, 259);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 29;
@@ -164,7 +164,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(302, 321);
+            this.label5.Location = new System.Drawing.Point(302, 337);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 20);
             this.label5.TabIndex = 32;
@@ -173,7 +173,7 @@
             // txtUbicacion
             // 
             this.txtUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUbicacion.Location = new System.Drawing.Point(306, 344);
+            this.txtUbicacion.Location = new System.Drawing.Point(306, 360);
             this.txtUbicacion.Name = "txtUbicacion";
             this.txtUbicacion.Size = new System.Drawing.Size(282, 29);
             this.txtUbicacion.TabIndex = 31;
@@ -186,7 +186,7 @@
             this.cbEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cbEstado.Location = new System.Drawing.Point(306, 417);
+            this.cbEstado.Location = new System.Drawing.Point(306, 433);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(282, 32);
             this.cbEstado.TabIndex = 34;
@@ -195,7 +195,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(302, 394);
+            this.label6.Location = new System.Drawing.Point(302, 410);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 20);
             this.label6.TabIndex = 33;
@@ -206,7 +206,7 @@
             this.cbEditorial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEditorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEditorial.FormattingEnabled = true;
-            this.cbEditorial.Location = new System.Drawing.Point(12, 342);
+            this.cbEditorial.Location = new System.Drawing.Point(12, 357);
             this.cbEditorial.Name = "cbEditorial";
             this.cbEditorial.Size = new System.Drawing.Size(282, 32);
             this.cbEditorial.TabIndex = 36;
@@ -215,7 +215,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 319);
+            this.label7.Location = new System.Drawing.Point(8, 334);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 20);
             this.label7.TabIndex = 35;
@@ -225,7 +225,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(8, 397);
+            this.label8.Location = new System.Drawing.Point(8, 412);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 20);
             this.label8.TabIndex = 38;
@@ -234,7 +234,7 @@
             // txtStock
             // 
             this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStock.Location = new System.Drawing.Point(12, 420);
+            this.txtStock.Location = new System.Drawing.Point(12, 435);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(282, 29);
             this.txtStock.TabIndex = 37;
@@ -273,23 +273,23 @@
             this.txtAutor.Location = new System.Drawing.Point(306, 158);
             this.txtAutor.Multiline = true;
             this.txtAutor.Name = "txtAutor";
-            this.txtAutor.Size = new System.Drawing.Size(246, 72);
+            this.txtAutor.Size = new System.Drawing.Size(246, 86);
             this.txtAutor.TabIndex = 41;
             // 
-            // btnAutor
+            // btnAgregarAutor
             // 
-            this.btnAutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(174)))));
-            this.btnAutor.FlatAppearance.BorderSize = 0;
-            this.btnAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAutor.ForeColor = System.Drawing.Color.White;
-            this.btnAutor.Location = new System.Drawing.Point(558, 158);
-            this.btnAutor.Name = "btnAutor";
-            this.btnAutor.Size = new System.Drawing.Size(30, 29);
-            this.btnAutor.TabIndex = 42;
-            this.btnAutor.Text = "...";
-            this.btnAutor.UseVisualStyleBackColor = false;
-            this.btnAutor.Click += new System.EventHandler(this.btnAutor_Click);
+            this.btnAgregarAutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(73)))), ((int)(((byte)(174)))));
+            this.btnAgregarAutor.FlatAppearance.BorderSize = 0;
+            this.btnAgregarAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarAutor.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarAutor.Location = new System.Drawing.Point(558, 158);
+            this.btnAgregarAutor.Name = "btnAgregarAutor";
+            this.btnAgregarAutor.Size = new System.Drawing.Size(30, 29);
+            this.btnAgregarAutor.TabIndex = 42;
+            this.btnAgregarAutor.Text = "...";
+            this.btnAgregarAutor.UseVisualStyleBackColor = false;
+            this.btnAgregarAutor.Click += new System.EventHandler(this.btnAutor_Click);
             // 
             // btnLimpiarAutores
             // 
@@ -298,12 +298,13 @@
             this.btnLimpiarAutores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarAutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarAutores.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiarAutores.Location = new System.Drawing.Point(558, 201);
+            this.btnLimpiarAutores.Location = new System.Drawing.Point(558, 215);
             this.btnLimpiarAutores.Name = "btnLimpiarAutores";
             this.btnLimpiarAutores.Size = new System.Drawing.Size(30, 29);
             this.btnLimpiarAutores.TabIndex = 43;
             this.btnLimpiarAutores.Text = "X";
             this.btnLimpiarAutores.UseVisualStyleBackColor = false;
+            this.btnLimpiarAutores.Click += new System.EventHandler(this.btnLimpiarAutores_Click);
             // 
             // frmAgregarOEditarLibro
             // 
@@ -311,7 +312,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 551);
             this.Controls.Add(this.btnLimpiarAutores);
-            this.Controls.Add(this.btnAutor);
+            this.Controls.Add(this.btnAgregarAutor);
             this.Controls.Add(this.txtAutor);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.ImgLibro);
@@ -364,7 +365,7 @@
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.PictureBox ImgLibro;
         public System.Windows.Forms.Button btnSeleccionar;
-        public System.Windows.Forms.Button btnAutor;
+        public System.Windows.Forms.Button btnAgregarAutor;
         public System.Windows.Forms.Button btnLimpiarAutores;
     }
 }
