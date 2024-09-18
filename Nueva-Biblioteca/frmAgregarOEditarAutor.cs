@@ -31,20 +31,22 @@ namespace Nueva_Biblioteca
                         string x = claseCodigo.GenerarCodigo("SELECT MAX(IdAutor) AS codigo FROM AUTOR", "codigo");
                         claseAutor.RegistrarAutor(x, txtDescripcion.Text, (cbEstado.SelectedItem == cbEstado.Items[0] ? 1 : 0).ToString(), DateTime.Now.ToString("dd-MM-yyyy"));
                         frm.bandera = false;
-                        MessageBox.Show("SE AGREGO CORRECTAMENTE EL AUTOR.");
+                        MessageBox.Show("El autor se ha agregado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
-                    catch { MessageBox.Show("OCURRIO UN ERROR AL AGREGAR EL AUTOR."); }
+                    catch {
+                        MessageBox.Show("Se produjo un error al intentar agregar el autor. Por favor, inténtelo de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);}
                 }
                 else 
                 { 
                     claseAutor.ActualizarAutor(txtDescripcion.Text, (cbEstado.SelectedItem == cbEstado.Items[0] ? 1 : 0).ToString());
-                    MessageBox.Show("SE ACTUALIZO CORRECTAMENTE EL AUTOR");
+                    MessageBox.Show("El autor se ha actualizado correctamente.", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
                 claseAutor.Mostrar(frm.dgvAutores);
             }
-            else { MessageBox.Show("CAMPOS INVALIDOS, TODOS LOS CAMPOS DEBEN ESTAR LLENOS."); }
+            else {
+                MessageBox.Show("Todos los campos deben estar completos. Por favor, asegúrese de llenar todos los campos requeridos.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);}
         }
         private void lbCerrar_Click(object sender, EventArgs e)
         {

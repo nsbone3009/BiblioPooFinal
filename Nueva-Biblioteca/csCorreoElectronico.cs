@@ -118,7 +118,7 @@ namespace Nueva_Biblioteca
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al enviar el correo: " + ex.Message);
+                    MessageBox.Show($"Error al enviar el correo: {ex.Message}", "Error de envío", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
             }

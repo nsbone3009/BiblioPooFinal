@@ -43,26 +43,29 @@ namespace Nueva_Biblioteca
                     {
                         if (claseLibro.RegistrarLibro(txtTitulo.Text, txtAutor.Text, cbCategoria.SelectedItem.ToString(), cbEditorial.SelectedItem.ToString(), txtUbicacion.Text, txtStock.Text, cbEstado.SelectedItem.ToString(), ImgLibro))
                         {
-                            MessageBox.Show("LIBRO AGREGADO CORRECTAMENTE.");
+                            MessageBox.Show("El libro ha sido agregado exitosamente.", "Operación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             frm.bandera = false;
                             this.Close();
                         }
-                        else { MessageBox.Show("OCURRIÓ UN ERROR AL AGREGAR EL LIBRO."); }
+                        else {MessageBox.Show("Ocurrió un error al intentar agregar el libro. Por favor, inténtelo de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);}
                     }
                     else
                     {
                         if (claseLibro.ActualizarLibro(txtTitulo.Text, txtAutor.Text, cbCategoria.SelectedItem.ToString(), cbEditorial.SelectedItem.ToString(), txtUbicacion.Text, txtStock.Text, cbEstado.SelectedItem.ToString(), ImgLibro))
                         {
-                            MessageBox.Show("LIBRO ACTUALIZADO CORRECTAMENTE.");
+                            MessageBox.Show("El libro se ha actualizado correctamente.", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
-                        else { MessageBox.Show("OCURRIÓ UN ERROR AL ACTUALIZAR EL LIBRO."); }
+                        else {
+                            MessageBox.Show("Se produjo un error al intentar actualizar el libro. Por favor, verifique los datos e inténtelo nuevamente.", "Error de actualización", MessageBoxButtons.OK, MessageBoxIcon.Error);}
                     }
                     claseLibro.MostrarLibros(frm.dgvLibros);
                 }
-                else { MessageBox.Show("EL STOCK A AGREGAR DEBE SER DE AL MENOS 1."); }
+                else {
+                    MessageBox.Show("El stock que desea agregar debe ser al menos 1. Por favor, ingrese un valor válido.", "Valor inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);}
             }
-            else { MessageBox.Show("CAMPOS INVALIDOS, TODO LOS CAMPOS DEBEN ESTAR LLENOS."); }
+            else {
+                MessageBox.Show("Por favor, complete todos los campos. No se permiten campos vacíos.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);}
         }
 
         private void btnAutor_Click(object sender, EventArgs e)
