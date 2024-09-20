@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -42,6 +43,7 @@
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.ptbxLogoLogin = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.Reloj = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ptbxLogoLogin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -227,6 +229,10 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "BIENVENIDO/A";
             // 
+            // Reloj
+            // 
+            this.Reloj.Tick += new System.EventHandler(this.Reloj_Tick);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,7 +259,6 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbxLogoLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -275,5 +280,6 @@
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.PictureBox ptbxLogoLogin;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer Reloj;
     }
 }

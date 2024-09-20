@@ -55,6 +55,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.ptbxLogoMenu = new System.Windows.Forms.PictureBox();
             this.contenedorPerfil = new System.Windows.Forms.ListBox();
+            this.Reloj = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbxPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbxBiblioteca)).BeginInit();
@@ -440,6 +441,10 @@
             this.contenedorPerfil.TabIndex = 19;
             this.contenedorPerfil.SelectedIndexChanged += new System.EventHandler(this.contenedorPerfil_SelectedIndexChanged);
             // 
+            // Reloj
+            // 
+            this.Reloj.Tick += new System.EventHandler(this.Reloj_Tick);
+            // 
             // frmPantallaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -498,6 +503,7 @@
         public System.Windows.Forms.PictureBox ptbxLogoMenu;
         public System.Windows.Forms.ListBox contenedorPerfil;
         public System.Windows.Forms.Label lbEmpleado;
+        private System.Windows.Forms.Timer Reloj;
     }
 }
 

@@ -25,6 +25,12 @@ namespace Nueva_Biblioteca
         public frmPantallaPrincipal()
         {
             InitializeComponent();
+            Reloj.Start();
+        }
+        private void MostrarLogo()
+        {
+            string consulta = "Select * from CONFIGURACION where IdConfiguracion = (Select max(IdConfiguracion) from CONFIGURACION)";
+            ptbxLogoMenu = conexion.ExtraerImagen(consulta, "Imagen", ptbxLogoMenu);
         }
 
         private void frmPantallaPrincipal_Load(object sender, EventArgs e)
@@ -40,8 +46,6 @@ namespace Nueva_Biblioteca
             ptbxPrestamo.BackgroundImage = ListaFlecha.Images[0];
             ptbxReporte.BackgroundImage = ListaFlecha.Images[0];
             ptbxConfiguracion.BackgroundImage = ListaFlecha.Images[0];
-            string consulta = "Select * from CONFIGURACION where IdConfiguracion = (Select max(IdConfiguracion) from CONFIGURACION)";
-            ptbxLogoMenu = conexion.ExtraerImagen(consulta, "Imagen", ptbxLogoMenu);
         }
 
         private void btnBiblioteca_Click(object sender, EventArgs e)
@@ -242,6 +246,12 @@ namespace Nueva_Biblioteca
                     break;
             }
         }
+
+        private void Reloj_Tick(object sender, EventArgs e)
+        {
+            MostrarLogo();
+        }
+
         private void contenedorPerfil_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch(contenedorPerfil.SelectedIndex)
