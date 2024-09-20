@@ -302,6 +302,7 @@
             // 
             // txtEstadoLibro
             // 
+            this.txtEstadoLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstadoLibro.Location = new System.Drawing.Point(77, 383);
             this.txtEstadoLibro.Multiline = true;
             this.txtEstadoLibro.Name = "txtEstadoLibro";
