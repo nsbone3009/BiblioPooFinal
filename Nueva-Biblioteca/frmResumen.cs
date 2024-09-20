@@ -13,21 +13,19 @@ namespace Nueva_Biblioteca
     public partial class frmResumen : Form
     {
         static private frmResumen instancia = null;
-
         public static frmResumen Formulario()
         {
             if (instancia == null) { instancia = new frmResumen(); }
             return instancia;
         }
-
         public frmResumen()
         {
             InitializeComponent();
+            Reloj.Start();
         }
-
         private void frmResumen_Load(object sender, EventArgs e)
         {
-            Mostrar();
+            //Mostrar();
         }
         public void Mostrar()
         {
@@ -50,6 +48,11 @@ namespace Nueva_Biblioteca
             charGraficoDatos.Series[0].Points.AddXY("Prestamos Registrados", lbPrestamosRegistrados.Text);
             charGraficoDatos.Series[0].Points.AddXY("Prestamos Pendientes", lbPrestamosPendientes.Text);
             charGraficoDatos.Series[0].Points.AddXY("Usuarios", lbTotalUsuarios.Text);
+        }
+
+        private void Reloj_Tick(object sender, EventArgs e)
+        {
+            Mostrar();
         }
     }
 }

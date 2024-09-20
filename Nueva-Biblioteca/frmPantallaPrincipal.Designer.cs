@@ -49,7 +49,7 @@
             this.btnReportes = new System.Windows.Forms.Button();
             this.contenedorReportes = new System.Windows.Forms.ListBox();
             this.ptbxReporte = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConfiguracion = new System.Windows.Forms.Button();
             this.ptbxConfiguracion = new System.Windows.Forms.PictureBox();
             this.contenedorConfiguracion = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -310,7 +310,7 @@
             this.btnReportes.Text = "Reporte";
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportes.UseVisualStyleBackColor = true;
-            this.btnReportes.Click += new System.EventHandler(this.btnRepo_Click);
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // contenedorReportes
             // 
@@ -340,24 +340,24 @@
             this.ptbxReporte.TabIndex = 15;
             this.ptbxReporte.TabStop = false;
             // 
-            // button1
+            // btnConfiguracion
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 384);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 40);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Configuracion";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnConfiguracion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfiguracion.FlatAppearance.BorderSize = 0;
+            this.btnConfiguracion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnConfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfiguracion.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguracion.ForeColor = System.Drawing.Color.White;
+            this.btnConfiguracion.Location = new System.Drawing.Point(0, 384);
+            this.btnConfiguracion.Margin = new System.Windows.Forms.Padding(0);
+            this.btnConfiguracion.Name = "btnConfiguracion";
+            this.btnConfiguracion.Size = new System.Drawing.Size(180, 40);
+            this.btnConfiguracion.TabIndex = 16;
+            this.btnConfiguracion.Text = "Configuracion";
+            this.btnConfiguracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfiguracion.UseVisualStyleBackColor = true;
+            this.btnConfiguracion.Click += new System.EventHandler(this.btnConfiguracion_Click);
             // 
             // ptbxConfiguracion
             // 
@@ -393,7 +393,7 @@
             this.panel1.Controls.Add(this.ptbxLogoMenu);
             this.panel1.Controls.Add(this.contenedorConfiguracion);
             this.panel1.Controls.Add(this.ptbxConfiguracion);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnConfiguracion);
             this.panel1.Controls.Add(this.ptbxReporte);
             this.panel1.Controls.Add(this.contenedorReportes);
             this.panel1.Controls.Add(this.btnReportes);
@@ -490,7 +490,7 @@
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.ListBox contenedorReportes;
         private System.Windows.Forms.PictureBox ptbxReporte;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConfiguracion;
         private System.Windows.Forms.PictureBox ptbxConfiguracion;
         private System.Windows.Forms.ListBox contenedorConfiguracion;
         private System.Windows.Forms.Panel panel1;

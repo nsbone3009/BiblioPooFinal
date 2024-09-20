@@ -15,7 +15,6 @@ namespace Nueva_Biblioteca
         static csConexionDataBase conexion = new csConexionDataBase();
         static bool biblioteca = false, persona = false, prestamo = false, perfil = false, reporte = false, configuracion = false;
         public string IdEmpleado = "";
-        private Timer timer;
 
         static private frmPantallaPrincipal instancia = null;
         public static frmPantallaPrincipal Formulario()
@@ -23,34 +22,9 @@ namespace Nueva_Biblioteca
             if (instancia == null) { instancia = new frmPantallaPrincipal(); }
             return instancia;
         }
-
         public frmPantallaPrincipal()
         {
             InitializeComponent();
-            Confi();
-        }
-
-        private void Confi()
-        {
-            timer = new Timer();
-            timer.Interval = 60000;
-            timer.Tick += Timer_Tick;
-            timer.Start();
-        }
-
-        private void Timer_Tick(object sender, EventArgs e)
-        {
-            new csEnvioDeAvisoDevolucion().Comparar();
-        }
-
-        private void btnResumen_Click(object sender, EventArgs e)
-        {
-            pnlPrincipal.Controls.Clear();
-            frmResumen frm = frmResumen.Formulario();
-            frm.TopLevel = false;
-            pnlPrincipal.Controls.Add(frm);
-            frm.Mostrar();
-            frm.Show();
         }
 
         private void frmPantallaPrincipal_Load(object sender, EventArgs e)
@@ -76,13 +50,20 @@ namespace Nueva_Biblioteca
             {
                 if (persona) { btnPersona.PerformClick(); }
                 if (prestamo) { btnPrestamo.PerformClick(); }
+                if (reporte) { btnReportes.PerformClick(); }
+                if (configuracion) { btnConfiguracion.PerformClick(); }
                 ptbxBiblioteca.BackgroundImage = ListaFlecha.Images[1];
                 contenedorBiblioteca.Visible = true;
                 contenedorBiblioteca.Location = new Point(12, 213);
                 btnPersona.Location = new Point(0, 291);
                 btnPrestamo.Location = new Point(0, 340);
+                btnReportes.Location = new Point(0, 390);
+                btnConfiguracion.Location = new Point(0, 440);
+
                 ptbxPersona.Location = new Point(150, 303);
                 ptbxPrestamo.Location = new Point(150, 352);
+                ptbxReporte.Location = new Point(150, 402);
+                ptbxConfiguracion.Location = new Point(150, 452);
                 biblioteca = true; 
             }
             else 
@@ -90,11 +71,139 @@ namespace Nueva_Biblioteca
                 ptbxBiblioteca.BackgroundImage = ListaFlecha.Images[0];
                 contenedorBiblioteca.Visible = false;
                 btnPersona.Location = new Point(0, 222);
+                btnPrestamo.Location = new Point(0, 274);
+                btnReportes.Location = new Point(0, 331);
+                btnConfiguracion.Location = new Point(0, 384);
+
                 ptbxPersona.Location = new Point(150, 235);
                 ptbxPrestamo.Location = new Point(150, 287);
-                btnPrestamo.Location = new Point(0, 274);
-                biblioteca = false; 
+                ptbxReporte.Location = new Point(150, 345);
+                ptbxConfiguracion.Location = new Point(150, 397);
+                biblioteca = false;
+                contenedorBiblioteca.SelectedIndex = -1;
             }
+        }
+        private void btnPersona_Click(object sender, EventArgs e)
+        {
+            if (!persona)
+            {
+                if (biblioteca) { btnBiblioteca.PerformClick(); }
+                if (prestamo) { btnPrestamo.PerformClick(); }
+                if (reporte) { btnReportes.PerformClick(); }
+                if (configuracion) { btnConfiguracion.PerformClick(); }
+                ptbxPersona.BackgroundImage = ListaFlecha.Images[1];
+                contenedorPersonas.Visible = true;
+                contenedorPersonas.Location = new Point(12, 267);
+                btnPrestamo.Location = new Point(0, 307);
+                btnReportes.Location = new Point(0, 357);
+                btnConfiguracion.Location = new Point(0, 407);
+
+                ptbxPrestamo.Location = new Point(150, 320);
+                ptbxReporte.Location = new Point(150, 370);
+                ptbxConfiguracion.Location = new Point(150, 420);
+                persona = true;
+            }
+            else
+            {
+                ptbxPersona.BackgroundImage = ListaFlecha.Images[0];
+                btnPrestamo.Location = new Point(0, 274);
+                btnReportes.Location = new Point(0, 331);
+                btnConfiguracion.Location = new Point(0, 384);
+
+                ptbxPrestamo.Location = new Point(150, 287);
+                ptbxReporte.Location = new Point(150, 345);
+                ptbxConfiguracion.Location = new Point(150, 397);
+                contenedorPersonas.Visible = false;
+                persona = false;
+                contenedorPersonas.SelectedIndex = -1;
+            }
+        }
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            if (!reporte)
+            {
+                if(biblioteca) { btnBiblioteca.PerformClick(); }
+                if(persona) { btnPersona.PerformClick(); }
+                if(prestamo) { btnPrestamo.PerformClick(); }
+                if(configuracion) { btnConfiguracion.PerformClick(); }
+                ptbxReporte.BackgroundImage = ListaFlecha.Images[1];
+                contenedorReportes.Visible = true;
+                contenedorReportes.Location = new Point(12, 374);
+                btnConfiguracion.Location = new Point(0, 395);
+
+                ptbxConfiguracion.Location = new Point(150, 408);
+                reporte = true;
+            }
+            else
+            {
+                ptbxReporte.BackgroundImage = ListaFlecha.Images[0];
+                contenedorReportes.Visible = false;
+                btnConfiguracion.Location = new Point(0, 384);
+
+                ptbxConfiguracion.Location = new Point(150, 397);
+                reporte = false;
+                contenedorReportes.SelectedIndex = -1;
+            }
+        }
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+            if (!configuracion)
+            {
+                if (biblioteca) { btnBiblioteca.PerformClick(); }
+                if (persona) { btnPersona.PerformClick(); }
+                if (prestamo) { btnPrestamo.PerformClick(); }
+                if (reporte) { btnReportes.PerformClick(); }
+                contenedorConfiguracion.Visible = true;
+                contenedorConfiguracion.Location = new Point(12, 425);
+                ptbxConfiguracion.BackgroundImage = ListaFlecha.Images[1];
+                configuracion = true;
+            }
+            else
+            {
+                contenedorConfiguracion.Visible = false;
+                ptbxConfiguracion.BackgroundImage = ListaFlecha.Images[0];
+                configuracion = false;
+                contenedorConfiguracion.SelectedIndex = -1;
+            }
+        }
+        private void btnPrestamo_Click(object sender, EventArgs e)
+        {
+            if (!prestamo)
+            {
+                if (biblioteca) { btnBiblioteca.PerformClick(); }
+                if (persona) { btnPersona.PerformClick(); }
+                if (reporte) { btnReportes.PerformClick(); }
+                if (configuracion) { btnConfiguracion.PerformClick(); }
+                ptbxPrestamo.BackgroundImage = ListaFlecha.Images[1];
+                contenedorPrestamos.Visible = true;
+                contenedorPrestamos.Location = new Point(12, 316);
+                btnReportes.Location = new Point(0, 357);
+                btnConfiguracion.Location = new Point(0, 407);
+
+                ptbxReporte.Location = new Point(150, 370);
+                ptbxConfiguracion.Location = new Point(150, 420);
+                prestamo = true;
+            }
+            else
+            {
+                ptbxPrestamo.BackgroundImage = ListaFlecha.Images[0];
+                btnReportes.Location = new Point(0, 331);
+                btnConfiguracion.Location = new Point(0, 384);
+
+                ptbxReporte.Location = new Point(150, 345);
+                ptbxConfiguracion.Location = new Point(150, 397);
+                contenedorPrestamos.Visible = false;
+                prestamo = false;
+                contenedorPrestamos.SelectedIndex = -1;
+            }
+        }
+        private void btnResumen_Click(object sender, EventArgs e)
+        {
+            pnlPrincipal.Controls.Clear();
+            frmResumen frm = frmResumen.Formulario();
+            frm.TopLevel = false;
+            pnlPrincipal.Controls.Add(frm);
+            frm.Show();
         }
 
         private void LlamarFormulario(Form formulario)
@@ -104,30 +213,52 @@ namespace Nueva_Biblioteca
             pnlPrincipal.Controls.Add(formulario);
             formulario.Show();
         }
-
-        private void btnPersona_Click(object sender, EventArgs e)
+        
+        private void ptbxPerfil_Click(object sender, EventArgs e)
         {
-            if (!persona)
-            {
-                if (biblioteca) { btnBiblioteca.PerformClick(); }
-                if (prestamo) { btnPrestamo.PerformClick(); }
-                ptbxPersona.BackgroundImage = ListaFlecha.Images[1];
-                contenedorPersonas.Visible = true;
-                contenedorPersonas.Location = new Point(12, 267);
-                btnPrestamo.Location = new Point(0, 307);
-                ptbxPrestamo.Location = new Point(150, 320);
-                persona = true;
-            }
-            else
-            {
-                ptbxPersona.BackgroundImage = ListaFlecha.Images[0];
-                btnPrestamo.Location = new Point(0, 274);
-                ptbxPrestamo.Location = new Point(150, 287);
-                contenedorPersonas.Visible = false;
-                persona = false;
-            }
+            if(!perfil) { contenedorPerfil.Visible = true;  perfil = true; }
+            else { contenedorPerfil.Visible = false; perfil = false; contenedorPerfil.SelectedIndex = -1; }
+        }
+        private void ptbxPersona_Click(object sender, EventArgs e)
+        {
+            btnPersona.PerformClick();
+        }
+        private void ptbxBiblioteca_Click(object sender, EventArgs e)
+        {
+            btnBiblioteca.PerformClick();
+        }
+        private void ptbxPrestamo_Click(object sender, EventArgs e)
+        {
+            btnPrestamo.PerformClick();
         }
 
+        private void contenedorConfiguracion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch(contenedorConfiguracion.SelectedIndex)
+            {
+                case 0:
+                    frmConfiguracionGeneral frm = frmConfiguracionGeneral.Formulario();
+                    LlamarFormulario(frm);
+                    break;
+            }
+        }
+        private void contenedorPerfil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch(contenedorPerfil.SelectedIndex)
+            {
+                case 0:
+                    frmCambioDeContraseña frmCambio = new frmCambioDeContraseña();
+                    frmCambio.ShowDialog();
+                    break;
+                case 1:
+                    frmLogin frmlog = frmLogin.Formulario();
+                    frmlog.Show();
+                    this.Hide();
+                    contenedorPerfil.Visible = false;
+                    perfil = false;
+                    break;
+            }
+        }
         private void contenedorPersonas_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (contenedorPersonas.SelectedIndex)
@@ -146,10 +277,9 @@ namespace Nueva_Biblioteca
                     }
             }
         }
-
         private void contenedorBiblioteca_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (contenedorBiblioteca.SelectedIndex) 
+            switch (contenedorBiblioteca.SelectedIndex)
             {
                 case 0:
                     {
@@ -177,74 +307,6 @@ namespace Nueva_Biblioteca
                     }
             }
         }
-
-        private void ptbxPerfil_Click(object sender, EventArgs e)
-        {
-            if(!perfil) { contenedorPerfil.Visible = true;  perfil = true; }
-            else { contenedorPerfil.Visible = false; perfil = false; contenedorPerfil.SelectedIndex = -1; }
-        }
-
-        private void ptbxPersona_Click(object sender, EventArgs e)
-        {
-            btnPersona.PerformClick();
-        }
-
-        private void ptbxBiblioteca_Click(object sender, EventArgs e)
-        {
-            btnBiblioteca.PerformClick();
-        }
-
-        private void ptbxPrestamo_Click(object sender, EventArgs e)
-        {
-            btnPrestamo.PerformClick();
-        }
-
-        private void contenedorConfiguracion_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch(contenedorConfiguracion.SelectedIndex)
-            {
-                case 0:
-                    frmConfiguracionGeneral frm = frmConfiguracionGeneral.Formulario();
-                    LlamarFormulario(frm);
-                    break;
-            }
-        }
-
-        private void contenedorPerfil_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch(contenedorPerfil.SelectedIndex)
-            {
-                case 0:
-                    frmCambioDeContraseña frmCambio = new frmCambioDeContraseña();
-                    frmCambio.ShowDialog();
-                    break;
-                case 1:
-                    frmLogin frmlog = frmLogin.Formulario();
-                    frmlog.Show();
-                    this.Hide();
-                    contenedorPerfil.Visible = false;
-                    perfil = false;
-                    break;
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if(!configuracion)
-            {
-                contenedorConfiguracion.Visible = true;
-                contenedorConfiguracion.Location = new Point(12, 425);
-                ptbxConfiguracion.BackgroundImage = ListaFlecha.Images[1];
-                configuracion = true;
-            }
-            else
-            {
-                contenedorConfiguracion.Visible = false;
-                ptbxConfiguracion.BackgroundImage = ListaFlecha.Images[0];
-                configuracion = false;
-            }
-        }
-
         private void contenedorReportes_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch(contenedorReportes.SelectedIndex)
@@ -255,24 +317,6 @@ namespace Nueva_Biblioteca
                     break;
             }  
         }
-
-        private void btnRepo_Click(object sender, EventArgs e)
-        {
-            if (!reporte)
-            {
-                ptbxReporte.BackgroundImage = ListaFlecha.Images[1];
-                contenedorReportes.Visible = true;
-                contenedorReportes.Location = new Point(12, 372);
-                reporte = true;
-            }
-            else
-            {
-                ptbxReporte.BackgroundImage = ListaFlecha.Images[0];
-                contenedorReportes.Visible = false;
-                reporte = false;
-            }
-        }
-
         private void contenedorPrestamos_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (contenedorPrestamos.SelectedIndex)
@@ -289,29 +333,6 @@ namespace Nueva_Biblioteca
                         LlamarFormulario(frm);
                         break;
                     }
-            }
-        }
-
-        private void btnPrestamo_Click(object sender, EventArgs e)
-        {
-            if (!prestamo)
-            {
-                if (biblioteca) { btnBiblioteca.PerformClick(); }
-                if (persona) { btnPersona.PerformClick(); }
-                ptbxPrestamo.BackgroundImage = ListaFlecha.Images[1];
-                contenedorPrestamos.Visible = true;
-                contenedorPrestamos.Location = new Point(12, 316);
-                btnReportes.Location = new Point(0, 360);
-                ptbxReporte.Location = new Point(150, 372);
-                prestamo = true;
-            }
-            else
-            {
-                ptbxPrestamo.BackgroundImage = ListaFlecha.Images[0];
-                btnReportes.Location = new Point(0, 331);
-                ptbxReporte.Location = new Point(150, 347);
-                contenedorPrestamos.Visible = false;
-                prestamo = false;
             }
         }
     }
