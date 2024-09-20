@@ -55,27 +55,37 @@ namespace Nueva_Biblioteca
 
             if (Nombre != string.Empty && Apellido != string.Empty && Correo != string.Empty && Estado != string.Empty && Rol != string.Empty && Contra != string.Empty)
             {
-                Estado = VerificarEstado();
-                string consulta = $"Select COUNT(*) from USUARIO where Correo = '{Correo}'";
-                bool verificar01 = correoV.EsCorreoValido(Correo);
-                bool verificar = VerificarCorreoSQL(Correo, consulta);
-                if (!verificar && verificar01 == true)
+                string[] nombres = Nombre.Trim().Split(' ');
+                string[] apellidos = Apellido.Trim().Split(' ');
+                if (nombres.Length == 2 & apellidos.Length == 2)
                 {
-                    string query02 = "insert into ROL_USUARIO(IdTipoPersona,Rol,Estado,FechaCreacion)values('" + Idrol + "','" + Rol + "','" + Estado + "','" + Fecha + "')";
-                    Actualizar(query02);
-                    string query = "insert into USUARIO(IdUsuario,Nombres,Apellidos,Correo,IdTipoPersona,Estado,FechaCreacion) values('" + IdUsuario + "','" + Nombre + "','" + Apellido + "','" + Correo + "','" + Idrol + "','" + Estado + "','" + Fecha + "')";
-                    Actualizar(query);
-                    Usuario = CreadorUser(); 
-                    CifraClave = encriptar.EncriptarYDesencriptar(Contra);
-                    string query01 = "insert into CREDENCIAL(IdCredencial,IdUsuario,Usuario,Contraseña) values('" + IdCredencial + "','" + IdUsuario + "','" + Usuario + "','" + CifraClave + "')";
-                    Actualizar(query01);
-                    //CrearUserSQL();
-                    mensajes.EnvioDeCorreoUsuarioAgregar(Usuario, Correo);
-                    return true;
+                    Estado = VerificarEstado();
+                    string consulta = $"Select COUNT(*) from USUARIO where Correo = '{Correo}'";
+                    bool verificar01 = correoV.EsCorreoValido(Correo);
+                    bool verificar = VerificarCorreoSQL(Correo, consulta);
+                    if (!verificar && verificar01 == true)
+                    {
+                        string query02 = "insert into ROL_USUARIO(IdTipoPersona,Rol,Estado,FechaCreacion)values('" + Idrol + "','" + Rol + "','" + Estado + "','" + Fecha + "')";
+                        Actualizar(query02);
+                        string query = "insert into USUARIO(IdUsuario,Nombres,Apellidos,Correo,IdTipoPersona,Estado,FechaCreacion) values('" + IdUsuario + "','" + Nombre + "','" + Apellido + "','" + Correo + "','" + Idrol + "','" + Estado + "','" + Fecha + "')";
+                        Actualizar(query);
+                        Usuario = CreadorUser();
+                        CifraClave = encriptar.EncriptarYDesencriptar(Contra);
+                        string query01 = "insert into CREDENCIAL(IdCredencial,IdUsuario,Usuario,Contraseña) values('" + IdCredencial + "','" + IdUsuario + "','" + Usuario + "','" + CifraClave + "')";
+                        Actualizar(query01);
+                        //CrearUserSQL();
+                        mensajes.EnvioDeCorreoUsuarioAgregar(Usuario, Correo);
+                        return true;
+                    }
+                    else
+                    {
+                        mensajes.CorreoNoValidoORegistrado();
+                        return false;
+                    }
                 }
-                else
-                {
-                    mensajes.CorreoNoValidoORegistrado();
+                else 
+                { 
+                    MessageBox.Show("CAMPO NOMBRE O APELLIDO INCOMPLETO, OBLIGATORIAMENTE DOS NOMBBRES Y DOS APELLIDOS");
                     return false;
                 }
             }

@@ -39,7 +39,7 @@ namespace Nueva_Biblioteca
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             frmUsuarios frm = Owner as frmUsuarios;
-            csUsuarios claseUsuario = new csUsuarios(identificador, txtNombre.Text, txtApellido.Text, cbEstado.Text, cbTipo.Text, txtCorreo.Text, txtContraseña.Text,CorreoIgual);
+            csUsuarios claseUsuario = new csUsuarios(identificador, txtNombre.Text, txtApellido.Text, cbEstado.Text, cbTipo.Text, txtCorreo.Text, txtContraseña.Text, CorreoIgual);
             if (frm.bandera)
             {
                 if (claseUsuario.AgregarUsuario())
