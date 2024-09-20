@@ -20,10 +20,25 @@ namespace Nueva_Biblioteca
             if (instancia == null) { instancia = new frmLogin(); }
             return instancia;
         }
-
         public frmLogin()
         {
             InitializeComponent();
+            AccesoDefault();
+        }
+
+        private void AccesoDefault()
+        {
+            string consulta = "IF EXISTS (SELECT 1 FROM CREDENCIAL WHERE (SELECT COUNT(IdCredencial) FROM CREDENCIAL) > 0) SELECT CAST(1 AS BIT) AS RESULTADO ELSE SELECT CAST(0 AS BIT) AS RESULTADO";
+            if (conexion.Extraer(consulta, "RESULTADO") == "False")
+            {
+                string sentencia1 = "Insert into ROL_USUARIO(IdTipoPersona, Rol, Estado, FechaCreacion) Values('000001', 'Administrador', 1, GETDATE())";
+                string sentencia2 = "Insert into USUARIO(IdUsuario, Nombres, Apellidos, Correo, IdTipoPersona, Estado, FechaCreacion) Values('000001', 'Default', 'Default', 'Default@gmail.com', '000001', 1, GETDATE())";
+                string sentencia3 = "Insert into CREDENCIAL(IdCredencial, IdUsuario, Usuario, Contraseña) Values('000001', '000001', 'admin', 'pQ2Zygl/Go8=')";
+
+                conexion.Actualizar(sentencia1);
+                conexion.Actualizar(sentencia2);
+                conexion.Actualizar(sentencia3);
+            }
         }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)

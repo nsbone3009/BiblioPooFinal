@@ -69,7 +69,7 @@ namespace Nueva_Biblioteca
                     CifraClave = encriptar.EncriptarYDesencriptar(Contra);
                     string query01 = "insert into CREDENCIAL(IdCredencial,IdUsuario,Usuario,Contraseña) values('" + IdCredencial + "','" + IdUsuario + "','" + Usuario + "','" + CifraClave + "')";
                     Actualizar(query01);
-                    CrearUserSQL();
+                    //CrearUserSQL();
                     mensajes.EnvioDeCorreoUsuarioAgregar(Usuario, Correo);
                     return true;
                 }
@@ -141,10 +141,10 @@ namespace Nueva_Biblioteca
         }
         private void CrearUserSQL()
         {
-            string query = "CREATE LOGIN [" + Usuario.Trim() + "] WITH PASSWORD = '" + Contra.Trim() + "', CHECK_POLICY = OFF; " +
-                          "CREATE USER [" + Usuario.Trim() + "] FOR LOGIN [" + Usuario.Trim() + "]; " +
-                          "ALTER SERVER ROLE sysadmin ADD MEMBER [" + Usuario.Trim() + "];";
-            Actualizar(query);
+            //string query = "CREATE LOGIN [" + Usuario.Trim() + "] WITH PASSWORD = '" + Contra.Trim() + "', CHECK_POLICY = OFF; " +
+            //              "CREATE USER [" + Usuario.Trim() + "] FOR LOGIN [" + Usuario.Trim() + "]; " +
+            //              "ALTER SERVER ROLE sysadmin ADD MEMBER [" + Usuario.Trim() + "];";
+            //Actualizar(query);
         }
         public string VerificarEstado()
         {
