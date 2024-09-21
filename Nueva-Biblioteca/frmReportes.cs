@@ -32,21 +32,26 @@ namespace Nueva_Biblioteca
         }
         private void cbReporte_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (cbReporte.SelectedItem.ToString())
+            if(cbReporte.SelectedIndex != -1)
             {
-                case "Prestamos por lector":
+                switch (cbReporte.SelectedItem.ToString())
+                {
+                    case "Prestamos por lector":
 
-                    btnGenerar.Enabled = true;
-                    lbBuscarLector.Visible = true;
-                    txtBuscarLector.Visible = true;
-                    btnBuscarLector.Visible = true;
-                    btnGenerar.Enabled = true;
-                    btnLimpiarRepo.Enabled = true;
-                    break;
-                case "Libros Registrados":
-                    btnGenerar.Enabled = true;
-                    btnLimpiarRepo.Enabled = true;
-                    break;
+                        btnGenerar.Enabled = true;
+                        lbBuscarLector.Visible = true;
+                        txtBuscarLector.Visible = true;
+                        btnBuscarLector.Visible = true;
+                        btnLimpiarRepo.Enabled = true;
+                        break;
+                    case "Libros Registrados":
+                        btnGenerar.Enabled = true;
+                        lbBuscarLector.Visible = false;
+                        txtBuscarLector.Visible = false;
+                        btnBuscarLector.Visible = false;
+                        btnLimpiarRepo.Enabled = true;
+                        break;
+                }
             }
         }
         private void btnGenerar_Click(object sender, EventArgs e)
@@ -84,6 +89,13 @@ namespace Nueva_Biblioteca
             frm.repo = true;
             this.AddOwnedForm(frm);
             frm.ShowDialog();
+        }
+
+        private void btnLimpiarRepo_Click(object sender, EventArgs e)
+        {
+            txtBuscarLector.Clear();
+            rptReporte.Clear();
+            cbReporte.SelectedIndex = -1;
         }
     }
 }

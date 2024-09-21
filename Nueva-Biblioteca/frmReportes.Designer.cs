@@ -54,6 +54,7 @@
             this.btnLimpiarRepo.Size = new System.Drawing.Size(41, 37);
             this.btnLimpiarRepo.TabIndex = 40;
             this.btnLimpiarRepo.UseVisualStyleBackColor = false;
+            this.btnLimpiarRepo.Click += new System.EventHandler(this.btnLimpiarRepo_Click);
             // 
             // btnGenerar
             // 
