@@ -1,26 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\",
+  "WorkspaceRootPath": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\khriz\\desktop\\bibliopoofinal\\nueva-biblioteca\\frmgenero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmgenero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\khriz\\desktop\\bibliopoofinal\\nueva-biblioteca\\frmgenero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmgenero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\khriz\\desktop\\bibliopoofinal\\nueva-biblioteca\\frmagregaroeditargenero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmagregaroeditargenero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\khriz\\desktop\\bibliopoofinal\\nueva-biblioteca\\frmagregaroeditargenero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\frmagregaroeditargenero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\khriz\\desktop\\bibliopoofinal\\nueva-biblioteca\\csreutilizaci\u00F3n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\csreutilizaci\u00F3n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|c:\\users\\scarl\\onedrive\\escritorio\\nueva-bilbioteca\\nueva-biblioteca\\csprestamos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8DC9CF3-2ED5-41CD-9F35-C3EFFD524A0C}|Nueva-Biblioteca\\Nueva-Biblioteca.csproj|solutionrelative:nueva-biblioteca\\csprestamos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,81 +14,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmGenero.cs",
-              "DocumentMoniker": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\frmGenero.cs",
-              "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmGenero.cs",
-              "ToolTip": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\frmGenero.cs",
-              "RelativeToolTip": "Nueva-Biblioteca\\frmGenero.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwDoAAABPAAAAAAAAAA==",
+              "Title": "csPrestamos.cs",
+              "DocumentMoniker": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\csPrestamos.cs",
+              "RelativeDocumentMoniker": "Nueva-Biblioteca\\csPrestamos.cs",
+              "ToolTip": "C:\\Users\\scarl\\OneDrive\\Escritorio\\NUEVA-BILBIOTECA\\Nueva-Biblioteca\\csPrestamos.cs",
+              "RelativeToolTip": "Nueva-Biblioteca\\csPrestamos.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAAAFoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T00:57:20.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmGenero.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\frmGenero.cs",
-              "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmGenero.cs",
-              "ToolTip": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\frmGenero.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Nueva-Biblioteca\\frmGenero.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T00:57:17.984Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmAgregarOEditarGenero.cs",
-              "DocumentMoniker": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\frmAgregarOEditarGenero.cs",
-              "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmAgregarOEditarGenero.cs",
-              "ToolTip": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\frmAgregarOEditarGenero.cs",
-              "RelativeToolTip": "Nueva-Biblioteca\\frmAgregarOEditarGenero.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAuwEsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T00:39:28.591Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmAgregarOEditarGenero.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\frmAgregarOEditarGenero.cs",
-              "RelativeDocumentMoniker": "Nueva-Biblioteca\\frmAgregarOEditarGenero.cs",
-              "ToolTip": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\frmAgregarOEditarGenero.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Nueva-Biblioteca\\frmAgregarOEditarGenero.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T00:39:17.626Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "csReutilizaci\u00F3n.cs",
-              "DocumentMoniker": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\csReutilizaci\u00F3n.cs",
-              "RelativeDocumentMoniker": "Nueva-Biblioteca\\csReutilizaci\u00F3n.cs",
-              "ToolTip": "C:\\Users\\Khriz\\Desktop\\BiblioPooFinal\\Nueva-Biblioteca\\csReutilizaci\u00F3n.cs",
-              "RelativeToolTip": "Nueva-Biblioteca\\csReutilizaci\u00F3n.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAEwAwAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T22:58:06.852Z",
+              "WhenOpened": "2024-09-18T03:50:17.514Z",
               "EditorCaption": ""
             }
           ]
