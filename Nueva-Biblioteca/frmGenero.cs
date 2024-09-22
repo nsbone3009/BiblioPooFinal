@@ -51,7 +51,6 @@ namespace Nueva_Biblioteca
         {
             if (txtBuscar.Text.Length >= 3)
             {
-                string estadoTraducido = verificar.VerificarEstado(txtBuscar.Text);
                 string consulta = "SELECT IdGenero, Genero, Estado " +
                                   "FROM GENERO " +
                                   "WHERE IdGenero LIKE '%" + txtBuscar.Text + "%' " +

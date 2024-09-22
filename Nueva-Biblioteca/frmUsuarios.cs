@@ -12,19 +12,17 @@ namespace Nueva_Biblioteca
 {
     public partial class frmUsuarios : Form
     {
-        public bool validacion1 = false, validacion2 = false;
+        public bool bandera = false;
         private csUsuarios usuarios = new csUsuarios();
         private csLLenarDataGridView buscar = new csLLenarDataGridView();
         static private frmUsuarios instancia = null;
         private csReutilizacion verificar = new csReutilizacion();
-
 
         public static frmUsuarios Formulario()
         {
             if (instancia == null) { instancia = new frmUsuarios(); }
             return instancia;
         }
-
         public frmUsuarios()
         {
             InitializeComponent();
@@ -38,46 +36,37 @@ namespace Nueva_Biblioteca
         {
             usuarios.MostrarUsuarios(dgvUsuarios);
         }
-
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            validacion1 = true;
+            bandera = true;
             frmAgregarOEditarUsuario frm = new frmAgregarOEditarUsuario();
             this.AddOwnedForm(frm);
-
+            frm.btnEditar.Enabled = false;
+            frm.cbEstado.SelectedItem = "Activo";
             frm.ShowDialog();
         }
-
         private void lblBuscar_Click(object sender, EventArgs e)
         {
 
         }
-
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-           
-            if (txtBuscar.Text.Length > 1)
+            if (txtBuscar.Text.Length >= 3)
             {
-                string estadoTraducido = verificar.VerificarEstado(txtBuscar.Text);
-                string consulta = "SELECT U.IdUsuario, U.Nombres, U.Apellidos, U.Correo, R.Rol, U.Estado FROM USUARIO AS U INNER JOIN ROL_USUARIO AS R ON U.IdTipoPersona = R.IdTipoPersona WHERE U.IdUsuario LIKE '%" + txtBuscar.Text + "%' OR U.Nombres LIKE '%" + txtBuscar.Text + "%' OR U.Apellidos LIKE '%" + txtBuscar.Text + "%' OR U.Correo LIKE '%" + txtBuscar.Text + "%' OR U.Estado LIKE '%" + estadoTraducido + "%'";
-                dgvUsuarios.Rows.Clear();
+                string consulta = $"SELECT U.IdUsuario, U.Nombres, U.Apellidos, U.Correo, R.Rol, U.Estado FROM USUARIO AS U INNER JOIN ROL_USUARIO AS R ON U.IdTipoPersona = R.IdTipoPersona WHERE U.IdUsuario LIKE '%{txtBuscar.Text}%' OR U.Nombres LIKE '%{txtBuscar.Text}%' OR U.Apellidos LIKE '%{txtBuscar.Text}%' OR U.Correo LIKE '%{txtBuscar.Text}%'";
                 buscar.Mostrar(dgvUsuarios, consulta, 1);
             }
-            if (txtBuscar.Text.Length == 0)
+            else
             {
-                dgvUsuarios.Rows.Clear();
                 usuarios.MostrarUsuarios(dgvUsuarios);
             }
         }
-
-
         private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             frmAgregarOEditarUsuario frm = new frmAgregarOEditarUsuario();
             this.AddOwnedForm(frm);
             if (e.ColumnIndex == dgvUsuarios.Columns[dgvUsuarios.ColumnCount - 1].Index && e.RowIndex >= 0)
             {
-                validacion2 = true;
                 frm.identificador= dgvUsuarios.Rows[e.RowIndex].Cells[0].Value.ToString();
                 frm.txtNombre.Text = dgvUsuarios.Rows[e.RowIndex].Cells[1].Value.ToString();
                 frm.txtApellido.Text = dgvUsuarios.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -95,6 +84,5 @@ namespace Nueva_Biblioteca
                 frm.ShowDialog();
             }
         }
-        
     }
 }

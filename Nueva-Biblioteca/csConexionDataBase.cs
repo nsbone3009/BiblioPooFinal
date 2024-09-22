@@ -33,13 +33,10 @@ namespace Nueva_Biblioteca
         }
         public void Actualizar(string consulta)
         {
-            //try
-            //{
-                conexion.Open();
-                SqlCommand comando = new SqlCommand(consulta, conexion);
-                comando.ExecuteNonQuery();
-                conexion.Close();
-            //} catch { conexion.Close(); }
+            conexion.Open();
+            SqlCommand comando = new SqlCommand(consulta, conexion);
+            comando.ExecuteNonQuery();
+            conexion.Close();
         }
         public string Extraer(string consulta, string columna)
         {

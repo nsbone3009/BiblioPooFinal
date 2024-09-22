@@ -12,7 +12,7 @@ namespace Nueva_Biblioteca
     {
         //Atributos
         private Random rnd = new Random(DateTime.Now.Millisecond);
-
+        private static csReutilizacion claseCodigo = new csReutilizacion();
         private csMensajesDCorreosYMensajitos mensajes = new csMensajesDCorreosYMensajitos();
         private string codigo, nombre, apellido, fecha, correo, estado, correoIgual;
 
@@ -50,12 +50,13 @@ namespace Nueva_Biblioteca
             Correo = correo.Trim();
             Estado = estado.Trim();
             CorreoIgual=igual.Trim();
-
         }
 
         public void MostrarLectores(DataGridView tabla)
         {
-            string consulta = "SELECT IdLector, Nombres, Apellidos, Correo, Estado FROM LECTOR";
+            string consulta = @"SELECT L.IdLector, L.Nombres, L.Apellidos, L.Correo,
+                    CASE WHEN  L.Estado = 1  THEN 'Activo' ELSE 'Inactivo' END AS Estado
+                    FROM LECTOR L";
             new csLLenarDataGridView().Mostrar(tabla, consulta, 1);
         }
 
@@ -64,7 +65,7 @@ namespace Nueva_Biblioteca
             if (Nombre != string.Empty && Apellido != string.Empty && Correo != string.Empty && Estado != string.Empty)
             {
                 csLogin verifcarC = new csLogin();
-                codigo = rnd.Next(1000, 99999).ToString();
+                codigo = claseCodigo.GenerarCodigo("SELECT MAX(IdLector) AS codigo FROM LECTOR", "codigo");
                 Estado = VerificarEstado();
                 string consulta = $"Select COUNT(*) from LECTOR where Correo = '{Correo}'";
                 bool verificar01 = EsCorreoValido(correo);

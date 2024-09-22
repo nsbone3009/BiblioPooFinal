@@ -14,10 +14,7 @@ namespace Nueva_Biblioteca
         private csConexionDataBase conexionSQL = new csConexionDataBase();
         csCorreoElectronico correo = new csCorreoElectronico();
 
-        public csPrestamos()
-        {
-        }
-
+        public csPrestamos() {}
         public bool RegistrarPrestamo(string idPrestamo, string idLector, string idLibro, string FechaDevolucion, string FechaCreacion, string estadoentregado)
         {
             try
@@ -81,7 +78,6 @@ namespace Nueva_Biblioteca
                 conexionSQL.CerrarConexion();
             }
         }
-
         public bool enviarcorreo(string autor, string libro, string fechadevol, string email)
         {
             string cuerpoC = $"Estimado(a) {autor}:\n\n" +

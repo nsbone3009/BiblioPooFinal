@@ -70,7 +70,6 @@ namespace Nueva_Biblioteca
             formulario.txtStock.Enabled = valor;
             formulario.txtTitulo.Enabled = valor;
             formulario.txtUbicacion.Enabled = valor;
-            formulario.txtAutor.Enabled = valor;
             formulario.btnSeleccionar.Enabled = valor;
             formulario.btnGuardar.Enabled = valor;
             formulario.btnAgregarAutor.Enabled = valor;

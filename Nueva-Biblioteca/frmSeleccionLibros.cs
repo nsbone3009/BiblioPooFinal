@@ -26,7 +26,15 @@ namespace Nueva_Biblioteca
 
         private void frmSeleccionLibros_Load(object sender, EventArgs e)
         {
-
+            string consulta = @"SELECT L.IdLibro, L.Titulo, STRING_AGG(A.Autor, ', ') AS Autores, G.Genero, E.Editorial
+                           FROM LIBRO L 
+                           JOIN GENERO G ON G.IdGenero = L.IdGenero 
+                           JOIN EDITORIAL E ON E.IdEditorial = L.IdEditorial 
+                           JOIN AUTOR_LIBRO AL ON AL.IdLibro = L.IdLibro 
+                           JOIN AUTOR A ON  A.IdAutor = AL.IdAutor 
+                           WHERE L.Estado = 1
+                           GROUP BY L.IdLibro, L.Titulo, G.Genero, E.Editorial";
+            new csLLenarDataGridView().Mostrar(dgvLibros, consulta, 2);
         }
 
         private void dgvLibros_CellContentClick(object sender, DataGridViewCellEventArgs e)

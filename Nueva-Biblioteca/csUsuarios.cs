@@ -10,6 +10,7 @@ namespace Nueva_Biblioteca
 {
     internal class csUsuarios : csConexionDataBase
     {
+        private static csReutilizacion claseCodigo = new csReutilizacion();
         private csLectores correoV = new csLectores();
         private csMensajesDCorreosYMensajitos mensajes = new csMensajesDCorreosYMensajitos();
         private Random random = new Random(DateTime.Now.Millisecond);
@@ -29,28 +30,29 @@ namespace Nueva_Biblioteca
         public string IdUsuarip { get => idUsuarip; set => idUsuarip = value; }
         public string Correoigual { get => correoigual; set => correoigual = value; }
 
-        public csUsuarios()
-        { }
-
+        public csUsuarios() { }
         public csUsuarios(string IdU, string nombre, string apellido, string estado, string rol, string correo, string contra, string igual)
         {
             Nombre = nombre.Trim(); Apellido = apellido.Trim(); Estado = estado.Trim();
             Contra = contra.Trim(); Correo = correo.Trim(); Rol = rol.Trim(); IdUsuario = IdU.Trim(); Correoigual = igual.Trim();
         }
-
         public void MostrarUsuarios(DataGridView tabla)
         {
-            string consulta = "select IdUsuario,Nombres,Apellidos,Correo,Rol,U.Estado from USUARIO as U inner join ROL_USUARIO as R on U.IdTipoPersona=R.IdTipoPersona";
+            string consulta = @"SELECT U.IdUsuario, U.Nombres, U.Apellidos, U.Correo, R.Rol,
+                    CASE WHEN  U.Estado = 1  THEN 'Activo' ELSE 'Inactivo' END AS Estado
+                    FROM USUARIO as U
+                    JOIN ROL_USUARIO as R on U.IdTipoPersona = R.IdTipoPersona";
             new csLLenarDataGridView().Mostrar(tabla, consulta, 1);
         }
-
         public bool AgregarUsuario()
         {
             csLogin encriptar = new csLogin();
-            Fecha = DateTime.Now.ToString("yyyy-MM-dd");
-            IdUsuario = random.Next(1000, 99999).ToString();
-            IdCredencial = random.Next(1000, 99999).ToString();
-            Idrol = random.Next(1000, 99999).ToString();
+            Fecha = DateTime.Now.ToString("dd-MM-yyyy");
+
+            IdUsuario = claseCodigo.GenerarCodigo("SELECT MAX(IdUsuario) AS codigo FROM USUARIO", "codigo");
+            IdCredencial = claseCodigo.GenerarCodigo("SELECT MAX(IdCredencial) AS codigo FROM CREDENCIAL", "codigo");
+            Idrol = claseCodigo.GenerarCodigo("SELECT MAX(IdTipoPersona) AS codigo FROM ROL_USUARIO", "codigo");
+
             if (Nombre != string.Empty && Apellido != string.Empty && Correo != string.Empty && Estado != string.Empty && Rol != string.Empty && Contra != string.Empty)
             {
                 Estado = VerificarEstado();
@@ -63,7 +65,8 @@ namespace Nueva_Biblioteca
                     Actualizar(query02);
                     string query = "insert into USUARIO(IdUsuario,Nombres,Apellidos,Correo,IdTipoPersona,Estado,FechaCreacion) values('" + IdUsuario + "','" + Nombre + "','" + Apellido + "','" + Correo + "','" + Idrol + "','" + Estado + "','" + Fecha + "')";
                     Actualizar(query);
-                    Usuario = CreadorUser(); CifraClave = encriptar.EncriptarYDesencriptar(Contra);
+                    Usuario = CreadorUser(); 
+                    CifraClave = encriptar.EncriptarYDesencriptar(Contra);
                     string query01 = "insert into CREDENCIAL(IdCredencial,IdUsuario,Usuario,Contraseña) values('" + IdCredencial + "','" + IdUsuario + "','" + Usuario + "','" + CifraClave + "')";
                     Actualizar(query01);
                     CrearUserSQL();
@@ -82,7 +85,6 @@ namespace Nueva_Biblioteca
                 return false;
             }
         }
-
         public bool EditarUsuario()
         {
             if (Nombre != string.Empty && Apellido != string.Empty && Correo != string.Empty && Estado != string.Empty && Rol != string.Empty)
@@ -137,7 +139,6 @@ namespace Nueva_Biblioteca
                 return false;
             }
         }
-
         private void CrearUserSQL()
         {
             string query = "CREATE LOGIN [" + Usuario.Trim() + "] WITH PASSWORD = '" + Contra.Trim() + "', CHECK_POLICY = OFF; " +
@@ -145,7 +146,6 @@ namespace Nueva_Biblioteca
                           "ALTER SERVER ROLE sysadmin ADD MEMBER [" + Usuario.Trim() + "];";
             Actualizar(query);
         }
-
         public string VerificarEstado()
         {
             if (Estado == "Activo")
@@ -153,13 +153,14 @@ namespace Nueva_Biblioteca
             else
                 return 0.ToString();
         }
-
         public string CreadorUser()
         {
-            string user = Nombre[0].ToString().ToLower();
-            user = user + Apellido.ToLower();
+            string nombre = Nombre + " " + Apellido;
+            string[] vector = nombre.Split(' ');
+            string user = vector[0].Substring(0, 1).ToLower() +
+                vector[1].Substring(0, 1).ToLower() + vector[2].Trim().ToLower() +
+                vector[3].Substring(0, 1).ToLower() + new Random().Next(10, 100);
             return user;
         }
-
     }
 }

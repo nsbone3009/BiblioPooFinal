@@ -251,7 +251,6 @@
             this.Name = "frmAgregarOEditarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAgregarOEditarUsuario";
-            this.Load += new System.EventHandler(this.frmAgregarOEditarUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

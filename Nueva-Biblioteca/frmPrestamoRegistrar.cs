@@ -12,9 +12,10 @@ namespace Nueva_Biblioteca
 {
     public partial class frmPrestamoRegistrar : Form
     {
+        static csReutilizacion claseCodigo = new csReutilizacion();
+        public string correo = "";
         csPrestamos prestamos=new csPrestamos();
         public string idlibro;
-        public string correo="sanchezvera243@gmail.com";
         public frmPrestamoRegistrar()
         {
             InitializeComponent();
@@ -72,7 +73,7 @@ namespace Nueva_Biblioteca
                     {
                         try
                         {
-                            string idprestamo = csReutilizacion.GenerarId("PRE");
+                            string idprestamo = claseCodigo.GenerarCodigo("SELECT MAX(IdPrestamo) AS codigo FROM PRESTAMO", "codigo");
                             string idlector = txtCodigo.Text;
 
                             // Intentar registrar el préstamo
@@ -83,7 +84,6 @@ namespace Nueva_Biblioteca
                             {
                                 MessageBox.Show($"El libro \"{txtLibro.Text}\" ha sido prestado correctamente a {txtNombre.Text}.", "Préstamo exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 prestamos.enviarcorreo(txtNombre.Text, txtLibro.Text, txtFechaDevolucion.Text, correo);
-
                                 // Restablecer el formulario
                                 btnRegistrar.Location = new Point(370, 373);
                                 btnCancelar.Location = new Point(521, 373);
@@ -123,7 +123,6 @@ namespace Nueva_Biblioteca
             btnCancelar.Enabled = !string.IsNullOrWhiteSpace(txtLibro.Text);
             btnRegistrar.Enabled = !string.IsNullOrWhiteSpace(txtLibro.Text);
         }
-
         private void Calendario_DateSelected(object sender, DateRangeEventArgs e)
         {
             DateTime fechaSeleccionada = Calendario.SelectionStart;
@@ -140,7 +139,8 @@ namespace Nueva_Biblioteca
             }
             else
             {
-                txtFechaDevolucion.Text = fechaSeleccionada.ToString("yyyy-MM-dd");
+                txtFechaDevolucion.Text = fechaSeleccionada.ToString("dd-MM-yyyy");
+                Calendario.Visible = false;
             }
         }
     }
